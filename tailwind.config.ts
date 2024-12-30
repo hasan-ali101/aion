@@ -12,6 +12,25 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
+        rotate: {
+          "0%": {
+            transform: "rotate(0deg)",
+          },
+          "100%": {
+            transform: "rotate(360deg)",
+          },
+        },
+      },
+      animation: {
+        wiggle: "wiggle 1s ease-in-out infinite",
+        rotate: "rotate 5s linear infinite",
+        reverseRotate: "rotate 5s linear infinite reverse",
+      },
     },
   },
   plugins: [],

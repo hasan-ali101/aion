@@ -1,114 +1,118 @@
+import { Montserrat } from "next/font/google";
+import { motion } from "motion/react";
+
+import { cn } from "@/utils";
+import { ArrowBigDown, ArrowDown, ChevronDown, Menu } from "lucide-react";
+import Link from "next/link";
 import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const montserrat = Montserrat({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const circles = Array.from({ length: 10 })
+  .map((_, i) => {
+    return (
+      <circle
+        key={i}
+        r={120 + i * 120}
+        cx="50%"
+        cy="50%"
+        className={cn(
+          (i + 1) % 2 ? "animate-rotate" : "animate-reverseRotate",
+          i < 2 && "md:hidden",
+          "fill-slate-100 stroke-slate-200 stroke-2"
+        )}
+        style={{
+          filter: "drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.3))",
+          transformBox: "fill-box",
+          transformOrigin: "50% 50%",
+        }}
+      />
+    );
+  })
+  .reverse();
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/pages/index.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="flex flex-col">
+      <div
+        className={`${montserrat.className} text-white relative min-h-screen h-screen min-w-screen overflow-clip flex justify-center`}
+      >
+        <div>
+          <svg
+            className="w-[2000px] h-[900px] "
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            {circles}
+          </svg>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="absolute z-50 bg-[#0E281C]/80 w-full h-screen flex flex-col justify-between items-center">
+          <div className="h-20 w-full flex justify-between px-10 md:px-16 pt-6 items-center">
+            <p className="text-2xl font-medium md:text-3xl">^ION</p>
+            <div className="md:flex hidden gap-10 text-xl font-medium text-white">
+              <Link href="#what">What</Link>
+              <Link href="#how">How</Link>
+              <Link href="#why">Why</Link>
+              <Link href="#about">About</Link>
+            </div>
+            <Menu className="md:hidden" />
+          </div>
+          <div className="flex text-center flex-col gap-8  w-full h-full items-center justify-center px-12">
+            <h1 className="text-3xl md:text-5xl tracking-[0.2em]">
+              Welcome to AION
+            </h1>
+            <p className="text-xl md:text-3xl mb-4 tracking-[0.2em]">
+              Ketamine-assisted Pschotherapy{" "}
+            </p>
+            <div className="flex md:flex-row flex-col-reverse gap-4 justify-center text-sm md:text-base mb-4">
+              <Link href="#what">
+                <button className="px-6 py-3 border rounded-md hover:bg-white/5 font-semibold ">
+                  Learn more
+                </button>
+              </Link>
+              <button className="px-6 py-3 border rounded-md bg-white text-[#0E281C]/80 hover:bg-white/90 font-semibold">
+                Get Started
+              </button>
+            </div>
+            <p className="text-base md:text-lg mb-4 tracking-[0.3em]">
+              A new solution to breaking old habits
+            </p>
+          </div>
+          <div className="w-full h-20  flex flex-col justify-center items-center">
+            <Image
+              src="/wave-3.png"
+              width="1000"
+              height="100"
+              alt="wave"
+              className="h-10 w-full"
+            />
+            <div className="w-full h-20 bg-[#DEDCD8] flex flex-col justify-center items-center">
+              <Link href="#what">
+                <ChevronDown className="cursor-pointer mb-2 stroke-[#0E281C]/80 sm:w-12 sm:h-12 w-10 h-10 hover:animate-bounce delay-150" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="what"
+        className="w-full min-h-[70vh] bg-[#DEDCD8] scroll-m-4"
+      ></div>
+      <div id="how" className="w-full min-h-[70vh] bg-[#F7F0E6]">
+        <Image
+          src="/wave-4.png"
+          width="1000"
+          height="100"
+          alt="wave"
+          className="h-10 w-full -mt-10"
+        />
+      </div>
+      <div
+        id="why"
+        className="w-full min-h-[70vh] bg-[#0E281C]/80 scroll-m-4"
+      />
+      <div id="about" className="w-full min-h-[70vh] bg-[#DEDCD8] "></div>
     </div>
   );
 }
