@@ -15,16 +15,16 @@ const circles = Array.from({ length: 10 })
     return (
       <circle
         key={i}
-        r={120 + i * 120}
+        r={150 + i * 120}
         cx="50%"
         cy="50%"
         className={cn(
           (i + 1) % 2 ? "animate-rotate" : "animate-reverseRotate",
           i < 2 && "md:hidden",
-          "fill-slate-100 stroke-slate-200 stroke-2"
+          "fill-slate-100 stroke-slate-200 stroke-[3]"
         )}
         style={{
-          filter: "drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.3))",
+          filter: "drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.2))",
           transformBox: "fill-box",
           transformOrigin: "50% 50%",
         }}
