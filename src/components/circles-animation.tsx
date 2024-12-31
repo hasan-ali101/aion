@@ -1,13 +1,23 @@
 import { cn } from "@/utils";
-
 const CirclesAnimation = () => {
   return (
     <div>
       <svg
-        className="w-screen h-full absolute top-0 left-0 z-0"
+        className="w-screen h-full absolute top-0 -z-10"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {Array.from({ length: 10 })
+        <defs>
+          <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
+            <feDropShadow
+              dx="8"
+              dy="8"
+              stdDeviation="10"
+              flood-color="rgba(0, 0, 0, 0.2)"
+            />
+          </filter>
+        </defs>
+
+        {Array.from({ length: 6 })
           .map((_, i) => {
             return (
               <circle
@@ -21,7 +31,7 @@ const CirclesAnimation = () => {
                   "fill-slate-100 stroke-slate-200 stroke-[3]"
                 )}
                 style={{
-                  filter: "drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.2))",
+                  filter: "url(#dropShadow)",
                   transformBox: "fill-box",
                   transformOrigin: "50% 50%",
                 }}

@@ -18,7 +18,7 @@ const Nav = () => {
     <div
       className={cn(
         isTop ? "text-white" : "bg-white text-primary/80 shadow-md",
-        "h-20 w-full flex justify-between px-10 md:px-16 py-4 fixed transition-all z-50 top-0 items-center duration-300"
+        " w-full flex justify-between px-10 md:px-16 py-4  fixed transition-all z-50 top-0 items-center duration-300"
       )}
     >
       <p className="text-2xl font-medium md:text-3xl">^ION</p>
