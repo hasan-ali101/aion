@@ -11,6 +11,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#0E281C",
+        muted: "#DEDCD8",
+        beige: "#F7F0E6",
       },
       keyframes: {
         wiggle: {
