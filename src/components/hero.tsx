@@ -5,7 +5,7 @@ import CirclesAnimation from "./circles-animation";
 
 const Hero = () => {
   return (
-    <div className="relative text-white w-full h-[100lvh]">
+    <div className="relative text-white w-full h-dvh">
       <CirclesAnimation />
       <div className="flex absolute z-10  w-full h-full overflow-clip flex-col justify-between items-center bg-primary/80">
         <div className="flex text-center flex-col gap-6 md:gap-8 w-full h-full items-center justify-center px-12 ">
