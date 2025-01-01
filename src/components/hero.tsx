@@ -5,7 +5,7 @@ import CirclesAnimation from "./circles-animation";
 
 const Hero = () => {
   return (
-    <div className="relative text-white w-full min-h-dvh bg-primary/80 flex justify-center items-center">
+    <div className="relative text-white w-full min-h-svh bg-primary/80 flex justify-center items-center">
       <CirclesAnimation />
       <div className="flex text-center flex-col gap-6 md:gap-8 w-full h-full items-center justify-center px-12 mt-20 mb-28">
         <h1 className="text-xl font-semibold sm:text-3xl md:text-4xl tracking-[0.1em]">
