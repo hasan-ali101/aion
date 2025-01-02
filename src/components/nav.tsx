@@ -6,7 +6,7 @@ import { useCallback, useEffect, useState } from "react";
 const Nav = () => {
   const [isTop, setIsTop] = useState(true);
   const handleScroll = useCallback(() => {
-    setIsTop(window.scrollY === 0);
+    setIsTop(window.scrollY <= 0);
   }, []);
 
   useEffect(() => {
@@ -18,15 +18,47 @@ const Nav = () => {
     <div
       className={cn(
         isTop ? "text-white" : "bg-white text-primary/80 shadow-md",
-        " w-full flex justify-between px-10 md:px-16 py-4  fixed  z-50 top-0 items-center"
+        " w-full flex justify-between px-10 md:px-16 py-4 md:py-6 transition-all duration-200 fixed  z-50 top-0 items-center"
       )}
     >
       <p className="text-2xl font-medium md:text-3xl">^ION</p>
-      <div className="md:flex hidden gap-10 h-full items-center font-medium ">
-        <Link href="#what">What</Link>
-        <Link href="#how">How</Link>
-        <Link href="#why">Why</Link>
-        <Link href="#about">About</Link>
+      <div className="md:flex hidden gap-6 h-full items-center font-medium ">
+        <Link
+          className={cn(
+            isTop ? "hover:bg-white/20" : "hover:bg-muted/40",
+            " py-1 transition-colors px-4"
+          )}
+          href="#what"
+        >
+          What
+        </Link>
+        <Link
+          className={cn(
+            isTop ? "hover:bg-white/20" : "hover:bg-muted/40",
+            " py-1 transition-colors px-4"
+          )}
+          href="#how"
+        >
+          How
+        </Link>
+        <Link
+          className={cn(
+            isTop ? "hover:bg-white/20" : "hover:bg-muted/40",
+            " py-1 transition-colors px-4"
+          )}
+          href="#why"
+        >
+          Why
+        </Link>
+        <Link
+          className={cn(
+            isTop ? "hover:bg-white/20" : "hover:bg-muted/40",
+            " py-1 transition-colors px-4"
+          )}
+          href="#about"
+        >
+          About
+        </Link>
         <button
           className={cn(
             isTop

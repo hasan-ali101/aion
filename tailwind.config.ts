@@ -31,8 +31,8 @@ export default {
       },
       animation: {
         wiggle: "wiggle 1s ease-in-out infinite",
-        rotate: "rotate 5s linear infinite",
-        reverseRotate: "rotate 5s linear infinite reverse",
+        rotate: "rotate 6s linear infinite",
+        reverseRotate: "rotate 6s linear infinite reverse",
       },
     },
   },
