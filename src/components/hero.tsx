@@ -1,34 +1,75 @@
-import { ChevronDown } from "lucide-react";
+import { ArrowRight, ChevronDown, Timer } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import CirclesAnimation from "./circles-animation";
+import { Sora } from "next/font/google";
+
+import { cn } from "@/utils";
+
+const sora = Sora({
+  subsets: ["latin"],
+});
 
 const Hero = () => {
   return (
-    <div className="relative text-white w-full min-h-svh bg-primary/80 flex justify-center items-center">
+    <div className="relative text-white w-full min-h-svh bg-primaryDark flex justify-center items-center">
       <CirclesAnimation />
-      <div className="flex text-center flex-col gap-6 md:gap-8 w-full h-full items-center justify-center px-12 mt-20 mb-28">
-        <h1 className="text-xl font-semibold sm:text-3xl md:text-4xl tracking-[0.1em]">
-          Welcome to AION
+      <div className="flex text-center flex-col gap-6 w-full h-full items-center justify-center px-6 mt-20 mb-28">
+        <h1
+          className={cn(
+            sora.className,
+            "text-xl font-semibold sm:text-3xl md:text-4xl tracking-[0.1em]"
+          )}
+        >
+          Welcome to Aion Clinic
         </h1>
-        <p className="text-lg sm:text-xl md:text-2xl  tracking-[0.2em]">
-          Ketamine-assisted Psychotherapy{" "}
+        <p className="text-lg sm:text-lg md:text-xl font-medium  max-w-[480px]">
+          Ketamine-assisted Psychotherapy treatment for mental health and
+          addiction
         </p>
-        <div className="flex flex-row gap-4 justify-center text-xs sm:text-sm md:text-base ">
-          <Link href="#what">
-            <button className="px-4 py-2 border rounded-md hover:bg-white/5 font-semibold ">
-              Learn more
-            </button>
+        <div className="flex flex-col items-center justify-center md:flex-row w-full gap-4 text-left">
+          <Link
+            href="#what"
+            className="w-full md:max-w-64 pt-4 pl-4 font-medium rounded-xl h-40 bg-primary overflow-clip"
+          >
+            <div className="flex gap-2 items-center">
+              <p className="text-white">Start your referral</p>
+              <div className="rounded-full bg-primaryDark flex justify-center items-center p-2">
+                <ArrowRight className="stroke-white w-5 h-5" />
+              </div>
+            </div>
+            <div className="flex px-3 text-sm gap-1 items-center py-1 w-fit bg-white/10 border-white/20 border-2 rounded-md">
+              <Timer className="stroke-white w-4 h-4 mb-0.5" />
+              <p>5min</p>
+            </div>
+            <div className="flex justify-end">
+              <div className="rounded-full -mr-10 -mt-6 bg-primaryLight/20 flex justify-center items-center w-48 h-48"></div>
+            </div>
           </Link>
-          <button className="px-4 py-2 border rounded-md bg-white text-primary/80 hover:bg-white/90 font-semibold">
-            Get Started
-          </button>
+          <Link
+            href="#what"
+            className="w-full md:max-w-64 pt-4 pl-4 font-medium rounded-xl h-40 bg-tertiary overflow-clip"
+          >
+            <div className="flex gap-2 items-center">
+              <p className="text-white">Tell me more</p>
+              <div className="rounded-full bg-tertiaryDark flex justify-center items-center p-2">
+                <ArrowRight className="stroke-white w-5 h-5" />
+              </div>
+            </div>
+            <div className="flex justify-end">
+              <div className="rounded-full -mr-10  bg-[#557585] flex justify-center items-center w-48 h-48"></div>
+            </div>
+          </Link>
         </div>
-        <p className="text-sm sm:text-base md:text-lg tracking-[0.3em]">
-          A new solution to breaking old habits
-        </p>
+        <div className="flex gap-2 flex-col md:flex-row">
+          <p>Certified and reegulated by</p>
+          <div className="flex gap-2">
+            <p className="font-bold">Care Quality Commission</p>
+            <p className="font-bold">ICo</p>
+          </div>
+        </div>
       </div>
-      <div className="absolute bottom-0 w-full h-20 flex flex-col justify-center items-center">
+      <div className="absolute bottom-0 w-full z-20 h-20 flex flex-col justify-center items-center">
         <Image
           src="/wave-3.png"
           width="1000"

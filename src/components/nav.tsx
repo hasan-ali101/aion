@@ -1,7 +1,8 @@
-import { cn } from "@/utils";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
+
+import { cn } from "@/utils";
 
 const Nav = () => {
   const [isTop, setIsTop] = useState(true);

@@ -1,4 +1,4 @@
-import { Montserrat } from "next/font/google";
+import { Montserrat, Sora } from "next/font/google";
 import Image from "next/image";
 
 import Nav from "@/components/nav";
@@ -6,6 +6,10 @@ import Hero from "@/components/hero";
 import { cn } from "@/utils";
 
 const montserrat = Montserrat({
+  subsets: ["latin"],
+});
+
+const sora = Sora({
   subsets: ["latin"],
 });
 

@@ -2,7 +2,7 @@ import { cn } from "@/utils";
 import Image from "next/image";
 const CirclesAnimation = () => {
   return (
-    <div className="w-screen overflow-hidden h-svh absolute left-0 top-0 -z-10 flex justify-center items-center">
+    <div className="w-screen overflow-hidden select-none pointer-events-none h-svh absolute left-0 top-0 opacity-10 z-10 flex justify-center items-center">
       {Array.from({ length: 11 })
         .map((_, i) => {
           return (

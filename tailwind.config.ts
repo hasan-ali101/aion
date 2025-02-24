@@ -11,9 +11,14 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary: "#0E281C",
+        primary: "#2E4E3F",
+        primaryDark: "#1F3D2D",
+        primaryLight: "#39794A",
         muted: "#DEDCD8",
         beige: "#F7F0E6",
+        secondary: "#00796B",
+        tertiary: "#607D8B",
+        tertiaryDark: "#496775",
       },
       keyframes: {
         wiggle: {
