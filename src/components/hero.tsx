@@ -18,7 +18,7 @@ const Hero = () => {
         <h1
           className={cn(
             sora.className,
-            "text-xl font-semibold sm:text-3xl md:text-4xl tracking-[0.1em]"
+            "font-semibold text-4xl md:text-5xl mx-4"
           )}
         >
           Welcome to Aion Clinic
@@ -43,7 +43,15 @@ const Hero = () => {
               <p>5min</p>
             </div>
             <div className="flex justify-end">
-              <div className="rounded-full -mr-10 -mt-6 bg-primaryLight/20 flex justify-center items-center w-48 h-48"></div>
+              <div className="rounded-full relative -mr-10 -mt-6 bg-primaryLight/20 flex justify-center items-center w-48 h-48">
+                <Image
+                  src="/images/hero_1.png"
+                  width={526}
+                  height={438}
+                  className="w-28 absolute top-2"
+                  alt=""
+                />
+              </div>
             </div>
           </Link>
           <Link
@@ -57,15 +65,35 @@ const Hero = () => {
               </div>
             </div>
             <div className="flex justify-end">
-              <div className="rounded-full -mr-10  bg-[#557585] flex justify-center items-center w-48 h-48"></div>
+              <div className="rounded-full relative -mr-10  bg-[#557585] flex justify-center items-center w-48 h-48">
+                <Image
+                  src="/images/hero_2.png"
+                  width={526}
+                  height={438}
+                  className="w-32 absolute top-2 "
+                  alt=""
+                />
+              </div>
             </div>
           </Link>
         </div>
-        <div className="flex gap-2 flex-col md:flex-row">
+        <div className="flex gap-3 flex-col items-center md:flex-row">
           <p>Certified and reegulated by</p>
           <div className="flex gap-2">
-            <p className="font-bold">Care Quality Commission</p>
-            <p className="font-bold">ICo</p>
+            <Image
+              width={164}
+              height={96}
+              src="/images/commissionLogo.png"
+              alt=""
+              className="w-full"
+            />
+            <Image
+              width={164}
+              height={96}
+              src="/images/icoLogo.png"
+              alt=""
+              className="w-full"
+            />
           </div>
         </div>
       </div>
