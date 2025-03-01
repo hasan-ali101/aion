@@ -24,7 +24,7 @@ export const Who = () => {
   return (
     <div
       id="who"
-      className="flex flex-col gap-6 h-full scroll-mt-24 py-10 md:px-8 px-4  bg-secondary md:m-6 lg:m-10 md:rounded-lg"
+      className="flex flex-col gap-6 h-full scroll-mt-24 py-10 md:px-8 px-4  bg-secondary md:p-6 lg:p-10 md:rounded-lg"
     >
       <h1 className="text-3xl text-center md:text-left">
         Eligibility:{" "}
