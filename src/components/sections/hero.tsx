@@ -1,7 +1,7 @@
-import { ArrowRight, ChevronDown, Timer } from "lucide-react";
+import { ArrowRight, Timer } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import CirclesAnimation from "./circles-animation";
+import CirclesAnimation from "../circles-animation";
 import { Sora } from "next/font/google";
 
 import { cn } from "@/utils";
@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <div className="relative text-white w-full min-h-svh bg-primaryDark flex justify-center items-center">
       <CirclesAnimation />
-      <div className="flex text-center flex-col gap-6 w-full h-full items-center justify-center px-6 mt-20 mb-28">
+      <div className="flex text-center flex-col gap-6 md:gap-8 w-full h-full items-center justify-center px-6 mt-24 mb-28">
         <h1
           className={cn(
             sora.className,
@@ -78,26 +78,26 @@ const Hero = () => {
           </Link>
         </div>
         <div className="flex gap-3 flex-col items-center md:flex-row">
-          <p>Certified and reegulated by</p>
+          <p>Certified and regulated by</p>
           <div className="flex gap-2">
             <Image
               width={164}
               height={96}
               src="/images/commissionLogo.png"
               alt=""
-              className="w-full"
+              className="w-full h-14"
             />
             <Image
               width={164}
               height={96}
               src="/images/icoLogo.png"
               alt=""
-              className="w-full"
+              className="w-full h-14"
             />
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 w-full z-20 h-20 flex flex-col justify-center items-center">
+      {/* <div className="absolute bottom-0 w-full z-20 h-20 flex flex-col justify-center items-center">
         <Image
           src="/wave-3.png"
           width="1000"
@@ -105,12 +105,12 @@ const Hero = () => {
           alt="wave"
           className="w-full h-10"
         />
-        <div className="w-full h-20 bg-muted flex flex-col justify-center items-center">
+        <div className="w-full h-20 bg-muted flex flex-col -mt-2 justify-center items-center">
           <Link href="#what">
             <ChevronDown className="cursor-pointer mb-6 stroke-primary/80 sm:w-12 sm:h-12 w-10 h-10 hover:animate-bounce delay-150" />
           </Link>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
