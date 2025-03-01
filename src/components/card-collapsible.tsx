@@ -33,11 +33,11 @@ const CardCollapsible = ({ className, title, content }: CardCollapsible) => {
       </CardHeader>
       <CardContent
         className={cn(
-          expanded ? "max-h-80 py-4" : "max-h-0",
-          "overflow-hidden transition-all duration-300 px-10"
+          expanded ? "max-h-80 h-full" : "max-h-0 h-0",
+          "overflow-clip transition-all px-10 duration-300 ease-in-out"
         )}
       >
-        {content}
+        <div className="py-2">{content}</div>
       </CardContent>
     </Card>
   );
