@@ -3,7 +3,7 @@ import { Hero, What, Who } from "@/components/sections";
 
 export default function Home() {
   return (
-    <div className="flex flex-col relative">
+    <div className="flex flex-col relative text-black">
       <Nav />
       <Hero />
       <What />

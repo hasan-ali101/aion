@@ -71,14 +71,14 @@ export const Hero = () => {
               height={96}
               src="/images/commissionLogo.png"
               alt=""
-              className="w-full h-14"
+              className="w-fit"
             />
             <Image
               width={164}
               height={96}
               src="/images/icoLogo.png"
               alt=""
-              className="w-full h-14"
+              className="w-fit"
             />
           </div>
         </div>

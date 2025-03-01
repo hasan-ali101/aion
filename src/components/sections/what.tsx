@@ -67,7 +67,7 @@ export const What = () => {
   return (
     <div
       id="what"
-      className="w-full cursor-pointer h-full bg-white scroll-m-24 px-3 md:px-10 flex flex-col my-20 items-center gap-6"
+      className="w-full cursor-pointer h-full bg-white scroll-mt-10 px-3 md:px-10 flex flex-col my-20 items-center gap-6"
     >
       <h2 className="font-semibold text-3xl text-center">
         What<span className="text-primary"> We Do</span>

@@ -15,7 +15,7 @@ import { GetStartedButton } from "./get-started-button";
 const Nav = () => {
   const [isTop, setIsTop] = useState(true);
   const handleScroll = useCallback(() => {
-    setIsTop(window.scrollY <= 0);
+    setIsTop(window.scrollY <= 10);
   }, []);
 
   useEffect(() => {
