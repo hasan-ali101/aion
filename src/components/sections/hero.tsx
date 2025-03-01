@@ -3,8 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import CirclesAnimation from "../circles-animation";
 
-import { cn } from "@/utils";
-
 export const Hero = () => {
   return (
     <div className="relative text-white w-full  bg-primaryDark flex justify-center items-center">

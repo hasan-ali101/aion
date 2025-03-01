@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Card } from "../card";
-import { CheckCircle, ChevronDown } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import CardCollapsible from "../card-collapsible";
 
 export const Who = () => {
@@ -42,8 +42,9 @@ export const Who = () => {
                 <p>Clinical diagnosis of one of listed conditions</p>
               </Card>
               <p className="px-2 max-w-[500px]">
-                Currently, ketamine can be prescribed in the UK 'off-label' to
-                treat mental health and addiction disorders.
+                Currently, ketamine can be prescribed in the UK
+                &apos;off-label&apos; to treat mental health and addiction
+                disorders.
               </p>
             </div>
             <div className="gap-y-4 flex flex-col">
