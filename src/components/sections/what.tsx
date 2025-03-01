@@ -1,5 +1,5 @@
 import { CircleCheckBig } from "lucide-react";
-import CardExpandable from "../card-expandable";
+import ImageCardCollapsible from "../image-card-collapsible";
 import {
   Card,
   CardContent,
@@ -63,11 +63,11 @@ const MainCard = ({ className }: { className?: string }) => {
   );
 };
 
-const What = () => {
+export const What = () => {
   return (
     <div
       id="what"
-      className="w-full cursor-pointer min-h-[70vh] h-full bg-white scroll-m-24 px-3 md:px-10 flex flex-col my-20 items-center gap-6"
+      className="w-full cursor-pointer h-full bg-white scroll-m-24 px-3 md:px-10 flex flex-col my-20 items-center gap-6"
     >
       <h2 className="font-semibold text-3xl text-center">
         What<span className="text-primary"> We Do</span>
@@ -79,7 +79,7 @@ const What = () => {
       <div className="flex gap-4  flex-col w-full justify-center items-center">
         <MainCard className="lg:hidden" />
         <div className="flex gap-4 flex-col md:flex-row">
-          <CardExpandable
+          <ImageCardCollapsible
             title="Individual therapy"
             description={
               <div className="flex items-center gap-2">
@@ -122,7 +122,7 @@ const What = () => {
           />
 
           <MainCard className="lg:flex hidden" />
-          <CardExpandable
+          <ImageCardCollapsible
             title="Ketamine Sessions"
             description={
               <div className="flex items-center gap-2">
@@ -168,5 +168,3 @@ const What = () => {
     </div>
   );
 };
-
-export default What;

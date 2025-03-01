@@ -17,20 +17,20 @@ type CardExpandableProps = {
   description: JSX.Element | string;
 };
 
-const CardExpandable = ({
+const ImageCardCollapsible = ({
   backgroundImage,
   content,
   title,
   description,
 }: CardExpandableProps) => {
-  const [expanded, setExpanded] = useState(true);
+  const [expanded, setExpanded] = useState(false);
 
   return (
     <Card
       onClick={() => setExpanded(!expanded)}
       className={cn(
         expanded ? "bg-primary text-white" : "bg-white text-primary",
-        "min-w-64 w-full max-w-96 flex-1 overflow-clip h-fit transition-colors duration-500 font-medium"
+        "min-w-64 w-full max-w-96 flex-1 overflow-clip h-fit transition-colors duration-500 md:duration-200"
       )}
     >
       <CardHeader className="flex-row justify-between gap-2">
@@ -68,7 +68,7 @@ const CardExpandable = ({
             expanded
               ? "h-full max-h-[500px] overflow-auto pb-6"
               : "h-0 max-h-0 lg:h-full lg:max-h-full overflow-clip",
-            "transition-all text-white relative"
+            "transition-all md:duration-200 text-white relative"
           )}
         >
           <div className={cn(!expanded && "lg:hidden", "z-10 sticky")}>
@@ -80,4 +80,4 @@ const CardExpandable = ({
   );
 };
 
-export default CardExpandable;
+export default ImageCardCollapsible;

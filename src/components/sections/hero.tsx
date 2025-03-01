@@ -2,27 +2,15 @@ import { ArrowRight, Timer } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import CirclesAnimation from "../circles-animation";
-import { Sora } from "next/font/google";
 
 import { cn } from "@/utils";
 
-const sora = Sora({
-  subsets: ["latin"],
-});
-
-const Hero = () => {
+export const Hero = () => {
   return (
-    <div className="relative text-white w-full min-h-svh bg-primaryDark flex justify-center items-center">
+    <div className="relative text-white w-full  bg-primaryDark flex justify-center items-center">
       <CirclesAnimation />
       <div className="flex text-center flex-col gap-6 md:gap-8 w-full h-full items-center justify-center px-6 mt-24 mb-28">
-        <h1
-          className={cn(
-            sora.className,
-            "font-semibold text-4xl md:text-5xl mx-4"
-          )}
-        >
-          Welcome to Aion Clinic
-        </h1>
+        <h1 className="mx-4">Welcome to Aion Clinic</h1>
         <p className="text-lg sm:text-lg md:text-xl font-medium  max-w-[480px]">
           Ketamine-assisted Psychotherapy treatment for mental health and
           addiction
@@ -114,5 +102,3 @@ const Hero = () => {
     </div>
   );
 };
-
-export default Hero;

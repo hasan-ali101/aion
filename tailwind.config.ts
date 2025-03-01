@@ -22,7 +22,7 @@ export default {
         primaryLight: "#39794A",
         muted: "#DEDCD8",
         beige: "#F7F0E6",
-        secondary: "#00796B",
+        secondary: "#E0F2F0",
         tertiary: "#607D8B",
         tertiaryDark: "#496775",
       },
