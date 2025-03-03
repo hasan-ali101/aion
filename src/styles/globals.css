@@ -26,14 +26,15 @@ html {
 body {
   @apply font-sans;
 }
-h1, h2 {
+h1,
+h2 {
   @apply font-heading;
 }
 
-h1{
-  @apply font-semibold text-4xl md:text-5xl 
+h1 {
+  @apply text-4xl font-semibold md:text-5xl;
 }
 
-h2{
-  @apply font-semibold text-3xl
+h2 {
+  @apply text-3xl font-semibold;
 }

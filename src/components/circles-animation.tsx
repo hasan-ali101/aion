@@ -2,7 +2,7 @@ import { cn } from "@/utils";
 import Image from "next/image";
 const CirclesAnimation = () => {
   return (
-    <div className="w-screen h-full overflow-hidden select-none pointer-events-none  absolute left-0 top-0 opacity-10 z-10 flex justify-center items-center">
+    <div className="pointer-events-none absolute left-0 top-0 z-10 flex h-full w-screen select-none items-center justify-center overflow-hidden opacity-10">
       {Array.from({ length: 11 })
         .map((_, i) => {
           return (
@@ -13,7 +13,7 @@ const CirclesAnimation = () => {
                 i < 5 && "lg:hidden",
                 i < 4 && "md:hidden",
                 i < 3 && "sm:hidden",
-                `absolute z-[-${i}]`
+                `absolute z-[-${i}]`,
               )}
               style={{
                 width: `${140 + i * 150}px`,

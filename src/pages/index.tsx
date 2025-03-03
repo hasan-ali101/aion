@@ -3,14 +3,14 @@ import { Hero, What, Who } from "@/components/sections";
 
 export default function Home() {
   return (
-    <div className="flex flex-col relative text-black">
+    <div className="relative flex flex-col text-black">
       <Nav />
       <Hero />
       <What />
       <Who />
-      <div id="how" className="w-full min-h-dvh bg-white "></div>
-      <div id="where" className="w-full min-h-dvh bg-white "></div>
-      <div id="us" className="w-full min-h-dvh bg-white "></div>
+      <div id="how" className="min-h-dvh w-full bg-white"></div>
+      <div id="where" className="min-h-dvh w-full bg-white"></div>
+      <div id="us" className="min-h-dvh w-full bg-white"></div>
     </div>
   );
 }

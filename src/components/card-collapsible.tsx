@@ -14,27 +14,27 @@ const CardCollapsible = ({ className, title, content }: CardCollapsible) => {
 
   return (
     <Card
-      className={cn(className, "bg-white  w-full transition-all")}
+      className={cn(className, "w-full bg-white transition-all")}
       onClick={() => {
         setExpanded(!expanded);
       }}
     >
-      <CardHeader className="font-semibold border-b flex flex-row w-full justify-between items-center gap-2 px-4 py-2">
-        <div className="flex gap-3 items-center">
-          <CheckCircle className="text-primary min-w-5 min-h-5 w-5 h-5" />
+      <CardHeader className="flex w-full flex-row items-center justify-between gap-2 border-b px-4 py-2 font-semibold">
+        <div className="flex items-center gap-3">
+          <CheckCircle className="h-5 min-h-5 w-5 min-w-5 text-primary" />
           <p>{title}</p>
         </div>
         <ChevronDown
           className={cn(
             expanded && "rotate-180",
-            "transition-all w-6 h-6 min-w-6 min-h-6 text-primary"
+            "h-6 min-h-6 w-6 min-w-6 text-primary transition-all",
           )}
         />
       </CardHeader>
       <CardContent
         className={cn(
-          expanded ? "max-h-80 h-full" : "max-h-0 h-0",
-          "overflow-clip transition-all px-10 duration-300 ease-in-out"
+          expanded ? "h-full max-h-80" : "h-0 max-h-0",
+          "overflow-clip px-10 transition-all duration-300 ease-in-out",
         )}
       >
         <div className="py-2">{content}</div>

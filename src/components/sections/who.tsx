@@ -24,45 +24,45 @@ export const Who = () => {
   return (
     <div
       id="who"
-      className="flex flex-col gap-6 h-full scroll-mt-24 py-10 md:px-8 px-4  bg-secondary md:p-6 lg:p-10 md:rounded-lg"
+      className="flex h-full scroll-mt-24 flex-col gap-6 bg-secondary px-4 py-10 md:rounded-lg md:p-6 md:px-8 lg:p-10"
     >
-      <h1 className="text-3xl text-center md:text-left">
+      <h1 className="text-center text-3xl md:text-left">
         Eligibility:{" "}
-        <span className="text-primary block md:inline">Who is this for?</span>
+        <span className="block text-primary md:inline">Who is this for?</span>
       </h1>
-      <div className="flex md:items-start flex-col md:flex-row w-full gap-6">
-        <div className="md:w-1/2 font-medium items-center md:items-start w-full flex flex-col gap-y-6">
-          <p className="text-lg text-center md:text-left">
+      <div className="flex w-full flex-col gap-6 md:flex-row md:items-start">
+        <div className="flex w-full flex-col items-center gap-y-6 font-medium md:w-1/2 md:items-start">
+          <p className="text-center text-lg md:text-left">
             We treat those most in need - in order to qualify you must have:
           </p>
-          <div id="mdUp" className="flex-col gap-y-6 hidden md:flex">
-            <div className="gap-y-4 flex flex-col">
-              <Card className="bg-white font-semibold flex w-fit items-center gap-2 px-3 py-2">
-                <CheckCircle className="text-primary w-5 h-5 min-w-5 min-h-5" />
+          <div id="mdUp" className="hidden flex-col gap-y-6 md:flex">
+            <div className="flex flex-col gap-y-4">
+              <Card className="flex w-fit items-center gap-2 bg-white px-3 py-2 font-semibold">
+                <CheckCircle className="h-5 min-h-5 w-5 min-w-5 text-primary" />
                 <p>Clinical diagnosis of one of listed conditions</p>
               </Card>
-              <p className="px-2 max-w-[500px]">
+              <p className="max-w-[500px] px-2">
                 Currently, ketamine can be prescribed in the UK
                 &apos;off-label&apos; to treat mental health and addiction
                 disorders.
               </p>
             </div>
-            <div className="gap-y-4 flex flex-col">
-              <Card className="bg-white font-semibold flex w-fit items-center gap-2 px-3 py-2">
-                <CheckCircle className="text-primary w-5 h-5 min-w-5 min-h-5" />
+            <div className="flex flex-col gap-y-4">
+              <Card className="flex w-fit items-center gap-2 bg-white px-3 py-2 font-semibold">
+                <CheckCircle className="h-5 min-h-5 w-5 min-w-5 text-primary" />
                 <p>Tried at least one form of treatment for it</p>
               </Card>
-              <p className="px-2 max-w-[500px]">
+              <p className="max-w-[500px] px-2">
                 This could be anti-depressant or anxiety medication, therapy or
                 rehabilitation, depending on your condition.
               </p>
             </div>
-            <div className="gap-y-4 flex flex-col">
-              <Card className="bg-white font-semibold flex w-fit items-center gap-2 px-3 py-2">
-                <CheckCircle className="text-primary min-w-5 min-h-5 w-5 h-5" />
+            <div className="flex flex-col gap-y-4">
+              <Card className="flex w-fit items-center gap-2 bg-white px-3 py-2 font-semibold">
+                <CheckCircle className="h-5 min-h-5 w-5 min-w-5 text-primary" />
                 <p>Low neurological or physical risk</p>
               </Card>
-              <p className="px-2 max-w-[500px]">
+              <p className="max-w-[500px] px-2">
                 We check for neurological and physical risk factors and assess
                 potential safety or impact before proceeding.
               </p>
@@ -74,18 +74,18 @@ export const Who = () => {
             className="md:hidden"
           />
         </div>
-        <div id="conditions" className="flex md:w-1/2 w-full flex-col gap-6">
+        <div id="conditions" className="flex w-full flex-col gap-6 md:w-1/2">
           <p className="font-semibold">Conditions we treat:</p>
-          <div className="grid grid-cols-12 gap-y-4 md:gap-y-6 gap-x-2 flex-1">
+          <div className="grid flex-1 grid-cols-12 gap-x-2 gap-y-4 md:gap-y-6">
             {conditions.map((condition: Condition, index: number) => (
               <div
                 key={index}
-                className="col-span-4 flex gap-y-4 flex-col items-center"
+                className="col-span-4 flex flex-col items-center gap-y-4"
               >
                 {" "}
-                <div className="bg-primary/5 p-1.5 lg:p-2 rounded-full">
-                  <div className="bg-primary/5 p-1.5 lg:p-2 rounded-full">
-                    <div className="relative bg-white rounded-full w-fit flex justify-center items-center p-4">
+                <div className="rounded-full bg-primary/5 p-1.5 lg:p-2">
+                  <div className="rounded-full bg-primary/5 p-1.5 lg:p-2">
+                    <div className="relative flex w-fit items-center justify-center rounded-full bg-white p-4">
                       <Image
                         src={condition.imageUrl}
                         alt={condition.name}

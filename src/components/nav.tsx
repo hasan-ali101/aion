@@ -41,8 +41,8 @@ const Nav = () => {
     return (
       <div
         className={cn(
-          "w-full justify-end gap-4 text-sm h-full items-center font-medium",
-          className
+          "h-full w-full items-center justify-end gap-4 text-sm font-medium",
+          className,
         )}
       >
         {links.map(({ href, label }) =>
@@ -51,7 +51,7 @@ const Nav = () => {
               <Link
                 className={cn(
                   isTop ? "hover:bg-white/20" : "hover:bg-muted/40",
-                  "py-1 transition-colors px-4"
+                  "px-4 py-1 transition-colors",
                 )}
                 href={href}
               >
@@ -63,13 +63,13 @@ const Nav = () => {
               key={href}
               className={cn(
                 isTop ? "hover:bg-white/20" : "hover:bg-muted/40",
-                "py-1 transition-colors px-4"
+                "px-4 py-1 transition-colors",
               )}
               href={href}
             >
               {label}
             </Link>
-          )
+          ),
         )}
       </div>
     );
@@ -79,25 +79,25 @@ const Nav = () => {
     <div
       className={cn(
         isTop ? "text-white" : "bg-white text-primary/80 shadow-md",
-        " w-full flex justify-between gap-6 px-6 md:px-16 py-4 md:py-6 transition-all duration-200 fixed  z-50 top-0 items-center"
+        "fixed top-0 z-50 flex w-full items-center justify-between gap-6 px-6 py-4 transition-all duration-200 md:px-16 md:py-6",
       )}
     >
       <div className="flex items-center gap-3">
         <Sheet>
           <SheetTrigger asChild>
-            <Menu className="w-5 h-5" />
+            <Menu className="h-5 w-5" />
           </SheetTrigger>
           <SheetContent side={"left"}>
-            <div className="gap-6 flex flex-col items-center">
+            <div className="flex flex-col items-center gap-6">
               <Image
                 src="/images/logo_white.png"
-                className="w-20 md:w-24 mb-6"
+                className="mb-6 w-20 md:w-24"
                 width={488}
                 height={192}
                 alt="logo"
               />
               <PageLinks
-                className="flex flex-col text-lg font-medium gap-6"
+                className="flex flex-col gap-6 text-lg font-medium"
                 sidebar={true}
               />
               <GetStartedButton variant="inverted" />{" "}

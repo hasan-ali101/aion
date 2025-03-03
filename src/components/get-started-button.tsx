@@ -7,7 +7,7 @@ const GetStartedButton = ({
   variant?: "default" | "inverted";
 }) => {
   return (
-    <Button variant={variant} className="font-semibold w-fit">
+    <Button variant={variant} className="w-fit font-semibold">
       Get Started <ArrowRight className="w-4" />
     </Button>
   );

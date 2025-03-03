@@ -5,36 +5,36 @@ import CirclesAnimation from "../circles-animation";
 
 export const Hero = () => {
   return (
-    <div className="relative text-white w-full  bg-primaryDark flex justify-center items-center">
+    <div className="relative flex w-full items-center justify-center bg-primaryDark text-white">
       <CirclesAnimation />
-      <div className="flex text-center flex-col gap-6 md:gap-8 w-full h-full items-center justify-center px-6 mt-24 mb-28">
+      <div className="mb-28 mt-24 flex h-full w-full flex-col items-center justify-center gap-6 px-6 text-center md:gap-8">
         <h1 className="mx-4">Welcome to Aion Clinic</h1>
-        <p className="text-lg sm:text-lg md:text-xl font-medium  max-w-[480px]">
+        <p className="max-w-[480px] text-lg font-medium sm:text-lg md:text-xl">
           Ketamine-assisted Psychotherapy treatment for mental health and
           addiction
         </p>
-        <div className="flex flex-col items-center justify-center md:flex-row w-full gap-4 text-left">
+        <div className="flex w-full flex-col items-center justify-center gap-4 text-left md:flex-row">
           <Link
             href="#what"
-            className="w-full md:max-w-64 pt-4 pl-4 font-medium rounded-xl h-40 bg-primary overflow-clip"
+            className="h-40 w-full overflow-clip rounded-xl bg-primary pl-4 pt-4 font-medium md:max-w-64"
           >
-            <div className="flex gap-2 items-center">
+            <div className="flex items-center gap-2">
               <p className="text-white">Start your referral</p>
-              <div className="rounded-full bg-primaryDark flex justify-center items-center p-2">
-                <ArrowRight className="stroke-white w-5 h-5" />
+              <div className="flex items-center justify-center rounded-full bg-primaryDark p-2">
+                <ArrowRight className="h-5 w-5 stroke-white" />
               </div>
             </div>
-            <div className="flex px-3 text-sm gap-1 items-center py-1 w-fit bg-white/10 border-white/20 border-2 rounded-md">
-              <Timer className="stroke-white w-4 h-4 mb-0.5" />
+            <div className="flex w-fit items-center gap-1 rounded-md border-2 border-white/20 bg-white/10 px-3 py-1 text-sm">
+              <Timer className="mb-0.5 h-4 w-4 stroke-white" />
               <p>5min</p>
             </div>
             <div className="flex justify-end">
-              <div className="rounded-full relative -mr-10 -mt-6 bg-primaryLight/20 flex justify-center items-center w-48 h-48">
+              <div className="relative -mr-10 -mt-6 flex h-48 w-48 items-center justify-center rounded-full bg-primaryLight/20">
                 <Image
                   src="/images/hero_1.png"
                   width={526}
                   height={438}
-                  className="w-28 absolute top-2"
+                  className="absolute top-2 w-28"
                   alt=""
                 />
               </div>
@@ -42,28 +42,28 @@ export const Hero = () => {
           </Link>
           <Link
             href="#what"
-            className="w-full md:max-w-64 pt-4 pl-4 font-medium rounded-xl h-40 bg-tertiary overflow-clip"
+            className="h-40 w-full overflow-clip rounded-xl bg-tertiary pl-4 pt-4 font-medium md:max-w-64"
           >
-            <div className="flex gap-2 items-center">
+            <div className="flex items-center gap-2">
               <p className="text-white">Tell me more</p>
-              <div className="rounded-full bg-tertiaryDark flex justify-center items-center p-2">
-                <ArrowRight className="stroke-white w-5 h-5" />
+              <div className="flex items-center justify-center rounded-full bg-tertiaryDark p-2">
+                <ArrowRight className="h-5 w-5 stroke-white" />
               </div>
             </div>
             <div className="flex justify-end">
-              <div className="rounded-full relative -mr-10  bg-[#557585] flex justify-center items-center w-48 h-48">
+              <div className="relative -mr-10 flex h-48 w-48 items-center justify-center rounded-full bg-[#557585]">
                 <Image
                   src="/images/hero_2.png"
                   width={526}
                   height={438}
-                  className="w-32 absolute top-2 "
+                  className="absolute top-2 w-32"
                   alt=""
                 />
               </div>
             </div>
           </Link>
         </div>
-        <div className="flex gap-3 flex-col items-center md:flex-row">
+        <div className="flex flex-col items-center gap-3 md:flex-row">
           <p>Certified and regulated by</p>
           <div className="flex gap-2">
             <Image
