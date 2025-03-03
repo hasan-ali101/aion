@@ -1,5 +1,5 @@
 import Nav from "@/components/nav";
-import { Hero, What, Who } from "@/components/sections";
+import { Hero, What, Who, Us } from "@/components/sections";
 
 export default function Home() {
   return (
@@ -8,9 +8,7 @@ export default function Home() {
       <Hero />
       <What />
       <Who />
-      <div id="how" className="min-h-dvh w-full bg-white"></div>
-      <div id="where" className="min-h-dvh w-full bg-white"></div>
-      <div id="us" className="min-h-dvh w-full bg-white"></div>
+      <Us />
     </div>
   );
 }
