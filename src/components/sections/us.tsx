@@ -58,7 +58,7 @@ export const Us = () => {
   return (
     <div
       id="us"
-      className="flex w-full scroll-m-10 justify-center overflow-hidden"
+      className="flex w-full scroll-m-10 justify-center overflow-hidden py-14"
     >
       <div className="flex h-full max-w-[1200px] flex-col gap-10 bg-white p-6 md:flex-row lg:p-10">
         <div className="flex flex-col gap-8 md:w-5/12">
@@ -129,10 +129,10 @@ export const Us = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="mt-8 flex w-full justify-center gap-4 sm:hidden">
+            {/* <div className="mt-8 flex w-full justify-center gap-4 sm:hidden">
               <CarouselPrevious className="sticky" />
               <CarouselNext className="sticky" />
-            </div>
+            </div> */}
             <CarouselPrevious className="hidden sm:flex" />
             <CarouselNext className="hidden sm:flex" />
           </Carousel>
