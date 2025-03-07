@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useState } from "react";
 
 import {
   Carousel,
@@ -7,10 +8,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/carousel";
-import { GetStartedButton } from "../get-started-button";
-import { Card } from "../card";
-import { useState } from "react";
-import CircleImage from "../circle-image";
+import { GetStartedButton } from "@/components/get-started-button";
+import { Card } from "@/components/card";
+import CircleImage from "@/components/circle-image";
 
 type TeamMember = {
   name: string;
@@ -50,7 +50,7 @@ const team: TeamMember[] = [
   },
 ];
 
-export const Us = () => {
+export const Team = () => {
   const [selectedTeamMember, setSelectedTeamMember] = useState<TeamMember>(
     team[1],
   );
@@ -58,7 +58,7 @@ export const Us = () => {
   return (
     <div
       id="us"
-      className="flex w-full scroll-m-10 justify-center overflow-hidden py-14"
+      className="flex w-full scroll-m-20 justify-center overflow-hidden py-10"
     >
       <div className="flex h-full max-w-[1200px] flex-col gap-10 bg-white p-6 md:flex-row lg:p-10">
         <div className="flex flex-col gap-8 md:w-5/12">
@@ -129,10 +129,10 @@ export const Us = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            {/* <div className="mt-8 flex w-full justify-center gap-4 sm:hidden">
+            <div className="mt-8 flex w-full justify-center gap-4 sm:hidden">
               <CarouselPrevious className="sticky" />
               <CarouselNext className="sticky" />
-            </div> */}
+            </div>
             <CarouselPrevious className="hidden sm:flex" />
             <CarouselNext className="hidden sm:flex" />
           </Carousel>

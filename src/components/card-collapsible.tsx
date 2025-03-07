@@ -14,7 +14,7 @@ const CardCollapsible = ({ className, title, content }: CardCollapsible) => {
 
   return (
     <Card
-      className={cn(className, "w-full bg-white transition-all")}
+      className={cn(className, "w-full cursor-pointer bg-white transition-all")}
       onClick={() => {
         setExpanded(!expanded);
       }}

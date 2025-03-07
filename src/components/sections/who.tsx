@@ -1,9 +1,10 @@
 import Image from "next/image";
-import { Card } from "../card";
 import { CheckCircle } from "lucide-react";
-import CardCollapsible from "../card-collapsible";
 
-export const Who = () => {
+import { Card } from "@/components/card";
+import CardCollapsible from "@/components/card-collapsible";
+
+export const Eligibility = () => {
   type Condition = { name: string; imageUrl: string };
 
   const conditions = [
@@ -25,7 +26,7 @@ export const Who = () => {
     <div className="flex w-full justify-center">
       <div
         id="who"
-        className="md: mx-6 flex h-full max-w-[1200px] scroll-mt-24 flex-col gap-6 bg-secondary px-4 py-10 md:rounded-lg md:p-6 md:px-8 lg:p-14"
+        className="md: mx-6 flex h-full max-w-[1200px] scroll-mt-24 flex-col gap-6 bg-secondary px-4 py-10 md:rounded-lg md:p-14 md:px-8"
       >
         <h1 className="text-center text-3xl md:text-left">
           Eligibility:{" "}
@@ -75,27 +76,25 @@ export const Who = () => {
               className="md:hidden"
             />
           </div>
-          <div id="conditions" className="flex w-full flex-col gap-6 md:w-1/2">
-            <p className="font-semibold">Conditions we treat:</p>
-            <div className="grid flex-1 grid-cols-12 gap-x-2 gap-y-4 md:gap-y-6">
+          <div
+            id="conditions"
+            className="flex w-full flex-col items-center gap-6 md:w-1/2"
+          >
+            <p className="w-full px-10 font-semibold">Conditions we treat:</p>
+            <div className="grid w-fit grid-cols-12 gap-x-2 gap-y-4 md:gap-y-6">
               {conditions.map((condition: Condition, index: number) => (
                 <div
                   key={index}
                   className="col-span-4 flex flex-col items-center gap-y-4"
                 >
-                  {" "}
                   <div className="rounded-full bg-primary/5 p-1.5 lg:p-2">
-                    <div className="rounded-full bg-primary/5 p-1.5 lg:p-2">
-                      <div className="relative flex w-fit items-center justify-center rounded-full bg-white p-4">
-                        <Image
-                          src={condition.imageUrl}
-                          alt={condition.name}
-                          width={164}
-                          height={164}
-                          className="w-20 min-w-10"
-                        />
-                      </div>
-                    </div>
+                    <Image
+                      src={condition.imageUrl}
+                      alt={condition.name}
+                      width={164}
+                      height={164}
+                      className="w-24 rounded-full bg-white p-2 md:p-4"
+                    />
                   </div>
                   <p className="text-center font-medium">{condition.name}</p>
                 </div>

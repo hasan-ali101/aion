@@ -1,16 +1,11 @@
 import { Menu } from "lucide-react";
-import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 
 import { cn } from "@/utils";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-  SheetClose,
-} from "@/components/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/sheet";
 import { GetStartedButton } from "./get-started-button";
+import { PageLinks } from "./page-links";
 
 const Nav = () => {
   const [isTop, setIsTop] = useState(true);
@@ -22,58 +17,6 @@ const Nav = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
-
-  const PageLinks = ({
-    className,
-    sidebar,
-  }: {
-    className?: string;
-    sidebar?: boolean;
-  }) => {
-    const links = [
-      { href: "#what", label: "What" },
-      { href: "#who", label: "Who" },
-      { href: "#how", label: "How" },
-      { href: "#where", label: "Where" },
-      { href: "#us", label: "Us" },
-    ];
-
-    return (
-      <div
-        className={cn(
-          "h-full w-full items-center justify-end gap-4 text-sm font-medium",
-          className,
-        )}
-      >
-        {links.map(({ href, label }) =>
-          sidebar ? (
-            <SheetClose asChild key={href}>
-              <Link
-                className={cn(
-                  isTop ? "hover:bg-white/20" : "hover:bg-muted/40",
-                  "px-4 py-1 transition-colors",
-                )}
-                href={href}
-              >
-                {label}
-              </Link>
-            </SheetClose>
-          ) : (
-            <Link
-              key={href}
-              className={cn(
-                isTop ? "hover:bg-white/20" : "hover:bg-muted/40",
-                "px-4 py-1 transition-colors",
-              )}
-              href={href}
-            >
-              {label}
-            </Link>
-          ),
-        )}
-      </div>
-    );
-  };
 
   return (
     <div

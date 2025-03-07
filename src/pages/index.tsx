@@ -1,5 +1,13 @@
 import Nav from "@/components/nav";
-import { Hero, What, Who, Us, Where } from "@/components/sections";
+import {
+  Hero,
+  What,
+  Where,
+  Questions,
+  Eligibility,
+  Footer,
+  Team,
+} from "@/components/sections";
 
 export default function Home() {
   return (
@@ -7,9 +15,11 @@ export default function Home() {
       <Nav />
       <Hero />
       <What />
-      <Who />
-      <Us />
+      <Eligibility />
+      <Team />
       <Where />
+      <Questions />
+      <Footer />
     </div>
   );
 }

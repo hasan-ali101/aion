@@ -1,3 +1,4 @@
+import { section } from "motion/react-client";
 import { Montserrat } from "next/font/google";
 import type { Config } from "tailwindcss";
 
@@ -14,6 +15,9 @@ export default {
       heading: ["Sora"], // Heading font
     },
     extend: {
+      maxWidth: {
+        section: "1200px",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -39,11 +43,21 @@ export default {
             transform: "rotate(360deg)",
           },
         },
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
       },
       animation: {
         wiggle: "wiggle 1s ease-in-out infinite",
         rotate: "rotate 6s linear infinite",
         reverseRotate: "rotate 6s linear infinite reverse",
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },

@@ -1,5 +1,7 @@
+import Link from "next/link";
+import Image from "next/image";
 import { CircleCheckBig } from "lucide-react";
-import ImageCardCollapsible from "../image-card-collapsible";
+
 import {
   Card,
   CardContent,
@@ -7,10 +9,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/card";
-import { GetStartedButton } from "../get-started-button";
-import Link from "next/link";
+import ImageCardCollapsible from "@/components/image-card-collapsible";
+import { GetStartedButton } from "@/components/get-started-button";
 import { cn } from "@/utils";
-import Image from "next/image";
 
 const MainCard = ({ className }: { className?: string }) => {
   return (
@@ -78,7 +79,7 @@ export const What = () => {
       </p>
       <div className="flex w-full flex-col items-center justify-center gap-4">
         <MainCard className="lg:hidden" />
-        <div className="flex flex-col gap-4 md:flex-row">
+        <div className="flex flex-col gap-4 lg:flex-row">
           <ImageCardCollapsible
             title="Individual therapy"
             description={
