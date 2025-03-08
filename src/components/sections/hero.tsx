@@ -7,7 +7,7 @@ export const Hero = () => {
   return (
     <div className="relative flex w-full items-center justify-center bg-primaryDark text-white">
       <CirclesAnimation />
-      <div className="mb-28 mt-24 flex h-full w-full flex-col items-center justify-center gap-6 px-6 text-center md:gap-8">
+      <div className="mb-28 mt-28 flex h-full w-full flex-col items-center justify-center gap-6 px-6 text-center md:gap-8">
         <h1 className="mx-4">Welcome to Aion Clinic</h1>
         <p className="max-w-[480px] text-lg font-medium sm:text-lg md:text-xl">
           Ketamine-assisted Psychotherapy treatment for mental health and

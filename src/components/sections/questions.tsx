@@ -7,7 +7,7 @@ import {
 
 export const Questions = () => {
   return (
-    <div className="flex flex-col items-center gap-6 px-10 py-20 md:px-20">
+    <div className="flex flex-col items-center gap-6 px-10 pb-20 pt-10 md:px-20">
       <h2 className="text-center">
         Got Questions?
         <span className="text-primary">
@@ -15,7 +15,7 @@ export const Questions = () => {
           We Have Answers
         </span>
       </h2>
-      <div className="max-w-section flex w-full flex-col md:flex-row md:gap-6">
+      <div className="flex w-full max-w-section flex-col md:flex-row md:gap-6">
         <Accordion type="single" collapsible className="w-full md:w-1/2">
           <AccordionItem value="item-1">
             <AccordionTrigger>How does the treatment work?</AccordionTrigger>
