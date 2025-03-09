@@ -50,7 +50,7 @@ export const Where = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-12 gap-4 rounded-lg bg-secondary px-4 py-6 lg:w-7/12">
+          <div className="grid grid-cols-12 gap-2 rounded-lg bg-secondary px-4 py-6 lg:w-7/12">
             <p className="col-span-12 mb-2 font-semibold">
               If you would like to contact us or come visit, please get in touch
             </p>

@@ -52,7 +52,7 @@ const team: TeamMember[] = [
 
 export const Team = () => {
   const [selectedTeamMember, setSelectedTeamMember] = useState<TeamMember>(
-    team[1],
+    team[0],
   );
 
   return (
