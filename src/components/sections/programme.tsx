@@ -110,7 +110,7 @@ export const Programme = () => {
         <CarouselContent>
           {treatmentSteps.map((step, index) => (
             <CarouselItem key={index} className="flex flex-col items-center">
-              <Card className="relative flex h-[350px] flex-col items-center justify-center gap-3 overflow-auto rounded-lg bg-tertiary px-8 text-white sm:h-64">
+              <Card className="relative flex h-[350px] flex-col items-center justify-center gap-3 overflow-y-auto overflow-x-clip rounded-lg bg-tertiary px-4 text-white sm:h-64">
                 <Image
                   alt="alt"
                   width={1200}
@@ -136,14 +136,14 @@ export const Programme = () => {
                   )}
                 />
                 <div className="flex items-center justify-center rounded-full bg-primary/20 p-2">
-                  <div className="h-4 w-4 rounded-full bg-primary" />
+                  <div className="h-4 w-4 rounded-full bg-tertiary/60" />
                 </div>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="bg-primary/50 text-white hover:bg-primary/30" />
-        <CarouselNext className="bg-primary/50 text-white hover:bg-primary/30" />
+        <CarouselPrevious className="bg-tertiary/80 text-white hover:bg-tertiary/70" />
+        <CarouselNext className="bg-tertiary/80 text-white hover:bg-tertiary/70" />
       </Carousel>
       <div className="-mt-12 w-screen border border-dashed border-black/30"></div>
       <div className="text-muted-foreground py-2 text-center text-sm">

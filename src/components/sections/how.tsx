@@ -78,7 +78,7 @@ export const How = () => {
         <CarouselContent>
           {screeningSteps.map((step, index) => (
             <CarouselItem key={index} className="flex flex-col items-center">
-              <Card className="relative flex h-[350px] flex-col items-center justify-center gap-3 overflow-auto rounded-lg bg-primary px-8 text-white sm:h-64">
+              <Card className="relative flex h-[350px] flex-col items-center justify-center gap-3 overflow-y-auto overflow-x-clip rounded-lg bg-primary px-4 text-white sm:h-64">
                 <Image
                   alt="alt"
                   width={1200}
@@ -104,14 +104,14 @@ export const How = () => {
                   )}
                 />
                 <div className="flex items-center justify-center rounded-full bg-primary/20 p-2">
-                  <div className="h-4 w-4 rounded-full bg-primary" />
+                  <div className="h-4 w-4 rounded-full bg-primary/60" />
                 </div>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="bg-primary/80 text-white hover:bg-primary/70" />
+        <CarouselNext className="bg-primary/80 text-white hover:bg-primary/70" />
       </Carousel>
       <div className="-mt-12 w-screen border border-dashed border-black/30"></div>
       <div className="text-muted-foreground py-2 text-center text-sm">
