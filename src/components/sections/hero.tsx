@@ -2,6 +2,7 @@ import { ArrowRight, Timer } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import CirclesAnimation from "../circles-animation";
+import { TypeFormButton } from "../type-form-button";
 
 export const Hero = () => {
   return (
@@ -14,32 +15,31 @@ export const Hero = () => {
           addiction
         </p>
         <div className="flex w-full flex-col items-center justify-center gap-4 text-left md:flex-row">
-          <Link
-            href="#what"
-            className="h-40 w-full overflow-clip rounded-xl bg-primary pl-4 pt-4 font-medium md:max-w-64"
-          >
-            <div className="flex items-center gap-2">
-              <p className="text-white">Start your referral</p>
-              <div className="flex items-center justify-center rounded-full bg-primaryDark p-2">
-                <ArrowRight className="h-5 w-5 stroke-white" />
+          <TypeFormButton className="h-40 w-full overflow-clip rounded-xl bg-primary pl-4 pt-4 font-medium md:max-w-64">
+            <div>
+              <div className="flex items-center gap-2">
+                <p className="text-white">Start your referral</p>
+                <div className="flex items-center justify-center rounded-full bg-primaryDark p-2">
+                  <ArrowRight className="h-5 w-5 stroke-white" />
+                </div>
+              </div>
+              <div className="flex w-fit items-center gap-1 rounded-md border-2 border-white/20 bg-white/10 px-3 py-1 text-sm">
+                <Timer className="mb-0.5 h-4 w-4 stroke-white" />
+                <p>5min</p>
+              </div>
+              <div className="flex justify-end">
+                <div className="relative -mr-10 -mt-6 flex h-48 w-48 items-center justify-center rounded-full bg-primaryLight/20">
+                  <Image
+                    src="/images/hero_1.png"
+                    width={526}
+                    height={438}
+                    className="absolute top-2 w-28"
+                    alt=""
+                  />
+                </div>
               </div>
             </div>
-            <div className="flex w-fit items-center gap-1 rounded-md border-2 border-white/20 bg-white/10 px-3 py-1 text-sm">
-              <Timer className="mb-0.5 h-4 w-4 stroke-white" />
-              <p>5min</p>
-            </div>
-            <div className="flex justify-end">
-              <div className="relative -mr-10 -mt-6 flex h-48 w-48 items-center justify-center rounded-full bg-primaryLight/20">
-                <Image
-                  src="/images/hero_1.png"
-                  width={526}
-                  height={438}
-                  className="absolute top-2 w-28"
-                  alt=""
-                />
-              </div>
-            </div>
-          </Link>
+          </TypeFormButton>
           <Link
             href="#what"
             className="h-40 w-full overflow-clip rounded-xl bg-tertiary pl-4 pt-4 font-medium md:max-w-64"
@@ -71,14 +71,14 @@ export const Hero = () => {
               height={96}
               src="/images/commissionLogo.png"
               alt=""
-              className="w-fit"
+              className="h-12 w-fit"
             />
             <Image
               width={164}
               height={96}
               src="/images/icoLogo.png"
               alt=""
-              className="w-fit"
+              className="h-12 w-fit"
             />
           </div>
         </div>

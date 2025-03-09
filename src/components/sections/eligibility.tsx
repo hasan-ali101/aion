@@ -26,7 +26,7 @@ export const Eligibility = () => {
     <div className="flex w-full justify-center">
       <div
         id="who"
-        className="flex h-full w-full max-w-section scroll-mt-24 flex-col gap-8 bg-secondary px-4 py-20 md:mx-6 md:rounded-lg md:px-8 md:py-14"
+        className="flex h-full w-full max-w-section scroll-mt-24 flex-col gap-8 bg-secondary px-6 py-20 md:mx-6 md:rounded-lg md:px-8 md:py-14"
       >
         <h1 className="text-center text-3xl md:text-left">
           Eligibility:{" "}

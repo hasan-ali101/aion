@@ -43,7 +43,7 @@ const Nav = () => {
                 className="flex flex-col gap-6 text-lg font-medium"
                 sidebar={true}
               />
-              <GetStartedButton variant="inverted" />{" "}
+              <GetStartedButton variant="inverted" />
             </div>
           </SheetContent>
         </Sheet>
@@ -66,7 +66,7 @@ const Nav = () => {
         )}
       </div>
       <PageLinks className="hidden md:flex" />
-      <GetStartedButton variant="inverted" />
+      <GetStartedButton variant={isTop ? "inverted" : "default"} />
     </div>
   );
 };

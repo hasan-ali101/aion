@@ -7,7 +7,7 @@ import {
 
 export const Questions = () => {
   return (
-    <div className="flex flex-col items-center gap-6 px-10 pb-20 pt-10 md:px-20">
+    <div className="flex flex-col items-center gap-6 px-4 pb-20 pt-10 md:px-20">
       <h2 className="text-center">
         Got Questions?
         <span className="text-primary">

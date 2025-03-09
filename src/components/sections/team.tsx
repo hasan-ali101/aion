@@ -58,7 +58,7 @@ export const Team = () => {
   return (
     <div
       id="us"
-      className="flex w-full scroll-m-20 justify-center overflow-hidden py-10"
+      className="flex w-full scroll-m-20 justify-center overflow-hidden pb-2 pt-10"
     >
       <div className="flex h-full max-w-[1200px] flex-col gap-10 bg-white p-6 md:flex-row lg:p-10">
         <div className="flex flex-col gap-8 md:w-5/12">

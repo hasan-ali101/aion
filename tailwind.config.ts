@@ -1,5 +1,3 @@
-import { section } from "motion/react-client";
-import { Montserrat } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 export default {
