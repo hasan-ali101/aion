@@ -65,7 +65,7 @@ export const Team = () => {
           <h2>
             Meet <span className="text-primary">Our Team</span>
           </h2>
-          <p className="font-semibold">
+          <p>
             Professional, quality care delivered by our highly experienced
             clinical team.
           </p>
