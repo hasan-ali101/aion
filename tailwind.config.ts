@@ -41,6 +41,12 @@ export default {
             transform: "rotate(360deg)",
           },
         },
+        ping: {
+          "75%, 100%": {
+            transform: "scale(1.5)",
+            opacity: "0",
+          },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },

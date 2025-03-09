@@ -5,3 +5,5 @@ export { Team } from "./team";
 export { Where } from "./where";
 export { Questions } from "./questions";
 export { Footer } from "./footer";
+export { How } from "./how";
+export { Programme } from "./programme";

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { CircleCheckBig } from "lucide-react";
 
 import {
   Card,
@@ -9,6 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/card";
+import { CheckBullet } from "@/components/check-bullet";
 import ImageCardCollapsible from "@/components/image-card-collapsible";
 import { GetStartedButton } from "@/components/get-started-button";
 import { cn } from "@/utils";
@@ -34,14 +34,8 @@ const MainCard = ({ className }: { className?: string }) => {
       <CardContent className="flex flex-col gap-6 pb-10 text-sm">
         <div className="flex items-center justify-between gap-2">
           <div className="flex flex-col gap-4">
-            <div className="flex items-center gap-2">
-              <CircleCheckBig className="h-4 min-h-4 w-4 min-w-4" />
-              <p>15 hours of treatment </p>
-            </div>
-            <div className="flex items-center gap-2">
-              <CircleCheckBig className="h-4 min-h-4 w-4 min-w-4" />
-              <p>8 week course</p>
-            </div>
+            <CheckBullet>15 hours of treatment</CheckBullet>
+            <CheckBullet>8 week course</CheckBullet>
           </div>
           <div className="flex min-h-24 min-w-24 flex-col justify-center rounded-full bg-white text-center text-primary">
             <p className="font-bold">£4,000</p>
@@ -83,10 +77,7 @@ export const What = () => {
           <ImageCardCollapsible
             title="Individual therapy"
             description={
-              <div className="flex items-center gap-2">
-                <CircleCheckBig className="h-4 min-h-4 w-4 min-w-4" />
-                <p>7 hours included in treatment</p>
-              </div>
+              <CheckBullet>7 hours included in treatment</CheckBullet>
             }
             content={
               <div className="flex flex-col gap-y-4 p-2 text-sm">
@@ -105,18 +96,12 @@ export const What = () => {
                     manage painful and stressful moments
                   </li>
                 </ol>
-                <div className="flex items-center gap-2">
-                  <CircleCheckBig className="h-4 min-h-4 w-4 min-w-4" />
-                  <p>
-                    In-person or remote session with your allocated therapist
-                  </p>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CircleCheckBig className="h-4 min-h-4 w-4 min-w-4" />
-                  <p>
-                    Clinical team on stand-by (nurse, consultant psychiatrist)
-                  </p>
-                </div>
+                <CheckBullet>
+                  In-person or remote session with your allocated therapist
+                </CheckBullet>
+                <CheckBullet>
+                  Clinical team on stand-by (nurse, consultant psychiatrist)
+                </CheckBullet>
               </div>
             }
             backgroundImage="/images/therapist_1.png"
@@ -126,10 +111,7 @@ export const What = () => {
           <ImageCardCollapsible
             title="Ketamine Sessions"
             description={
-              <div className="flex items-center gap-2">
-                <CircleCheckBig className="h-4 min-h-4 w-4 min-w-4" />
-                <p>7 hours included in treatment</p>
-              </div>
+              <CheckBullet>7 7 hours included in treatment</CheckBullet>
             }
             content={
               <div className="flex flex-col gap-y-4 p-2 text-sm">
@@ -146,21 +128,16 @@ export const What = () => {
                   Simply put, ketamine can make the brain more responsive and
                   adaptive to change.
                 </p>
-                <div className="flex items-center gap-2">
-                  <CircleCheckBig className="h-4 min-h-4 w-4 min-w-4" />
-                  <p>In-person session with your allocated expert therapist </p>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CircleCheckBig className="h-4 min-h-4 w-4 min-w-4" />
-                  <p>
-                    Clinical team on stand-by (nurse, consultant
-                    psychiatrist){" "}
-                  </p>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CircleCheckBig className="h-4 min-h-4 w-4 min-w-4" />
-                  <p>Intramuscular, collaboratively agreed doses </p>
-                </div>
+                <CheckBullet>
+                  In-person session with your allocated expert therapist{" "}
+                </CheckBullet>
+                <CheckBullet>
+                  Clinical team on stand-by (nurse, consultant
+                  psychiatrist){" "}
+                </CheckBullet>
+                <CheckBullet>
+                  Intramuscular, collaboratively agreed doses{" "}
+                </CheckBullet>
               </div>
             }
             backgroundImage="/images/therapist_2.png"

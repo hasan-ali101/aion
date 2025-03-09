@@ -7,6 +7,8 @@ import {
   Eligibility,
   Footer,
   Team,
+  How,
+  Programme,
 } from "@/components/sections";
 
 export default function Home() {
@@ -16,6 +18,8 @@ export default function Home() {
       <Hero />
       <What />
       <Eligibility />
+      <How />
+      <Programme />
       <Team />
       <Where />
       <Questions />
