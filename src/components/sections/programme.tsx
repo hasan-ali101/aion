@@ -12,6 +12,7 @@ import { CheckBullet } from "@/components/check-bullet";
 import { Card } from "@/components/card";
 import { cn } from "@/utils";
 import { Step } from "./how";
+import Image from "next/image";
 
 const treatmentSteps: Step[] = [
   {
@@ -109,7 +110,19 @@ export const Programme = () => {
         <CarouselContent>
           {treatmentSteps.map((step, index) => (
             <CarouselItem key={index} className="flex flex-col items-center">
-              <Card className="flex h-[350px] flex-col items-center justify-center gap-3 overflow-auto rounded-lg bg-primary px-8 text-white sm:h-64">
+              <Card className="relative flex h-[350px] flex-col items-center justify-center gap-3 overflow-auto rounded-lg bg-tertiary px-8 text-white sm:h-64">
+                <Image
+                  alt="alt"
+                  width={1200}
+                  height={1000}
+                  src={"/images/circles.jpg"}
+                  className={cn(
+                    index === 0 && "left-0",
+                    index === 1 && "left-auto",
+                    index > 1 && "right-0",
+                    "pointer-events-none absolute h-[350px] min-h-full min-w-[800px] select-none opacity-20 sm:h-64",
+                  )}
+                />
                 {step.icon && step.icon}
                 <div className="text-xl font-semibold">{step.title}</div>
                 <div>{step.description}</div>
