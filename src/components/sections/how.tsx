@@ -114,7 +114,7 @@ export const How = () => {
         <CarouselNext className="bg-primary/80 text-white hover:bg-primary/70" />
       </Carousel>
       <div className="-mt-12 w-screen border border-dashed border-black/30"></div>
-      <div className="text-muted-foreground py-2 text-center text-sm">
+      <div className="py-2">
         {current} of {count}
       </div>
     </div>

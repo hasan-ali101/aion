@@ -7,7 +7,6 @@ const GetStartedButton = ({
 }: {
   variant?: "default" | "inverted";
 }) => {
-  console.log(variant);
   return (
     <TypeFormButton>
       <div
