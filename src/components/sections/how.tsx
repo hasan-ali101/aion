@@ -97,6 +97,9 @@ export const How = () => {
                 {step.icon}
                 <p className="text-lg font-semibold">{step.title}</p>
                 <p>{step.description}</p>
+                <div className="mt-2 flex h-12 w-12 items-center justify-center rounded-full border text-sm font-semibold">
+                  {current} / {count}
+                </div>
               </Card>
               <div className="h-8 border border-dashed border-black/30" />
               <div className="relative flex items-center justify-center">
@@ -117,9 +120,9 @@ export const How = () => {
         <CarouselNext className="bg-primary/80 text-white hover:bg-primary/70" />
       </Carousel>
       <div className="-mt-12 w-screen border border-dashed border-black/30"></div>
-      <div className="py-2">
+      {/* <div className="py-2">
         {current} of {count}
-      </div>
+      </div> */}
     </div>
   );
 };

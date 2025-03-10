@@ -87,7 +87,7 @@ export const Programme = () => {
   }, [api]);
 
   return (
-    <div className="flex flex-col items-center gap-8 bg-secondary px-6 py-20 text-center">
+    <div className="flex flex-col items-center gap-6 bg-secondary px-6 py-20 text-center">
       <h2>
         Experience tangible,{" "}
         <span className="text-primary">lasting results within 8 weeks</span>
@@ -96,7 +96,7 @@ export const Programme = () => {
         Our evidence-based programme combines transformative talking therapy
         with precise ketamine treatment to deliver life-changing experiences.
       </p>
-      <div className="flex flex-col items-center gap-2">
+      <div className="flex flex-col items-center gap-1">
         <CheckBullet>Clinically tested and validated</CheckBullet>
         <CheckBullet>Evidence based protocol</CheckBullet>
       </div>
@@ -110,7 +110,7 @@ export const Programme = () => {
         <CarouselContent>
           {treatmentSteps.map((step, index) => (
             <CarouselItem key={index} className="flex flex-col items-center">
-              <Card className="relative flex h-[350px] flex-col items-center justify-center gap-3 overflow-clip rounded-lg bg-tertiary px-4 text-white sm:h-64">
+              <Card className="relative flex h-[400px] flex-col items-center justify-center gap-3 overflow-clip rounded-lg bg-tertiary px-4 text-white sm:h-80">
                 <Image
                   alt="alt"
                   width={1200}
@@ -120,12 +120,15 @@ export const Programme = () => {
                     index === 0 && "left-0",
                     index === 1 && "left-auto",
                     index > 1 && "right-0",
-                    "pointer-events-none absolute h-[350px] min-h-full min-w-[800px] select-none opacity-20 sm:h-64",
+                    "pointer-events-none absolute h-[400px] min-h-full min-w-[800px] select-none opacity-20 sm:h-80",
                   )}
                 />
                 {step.icon && step.icon}
                 <div className="text-xl font-semibold">{step.title}</div>
                 <div>{step.description}</div>
+                <div className="mt-2 flex h-12 w-12 items-center justify-center rounded-full border text-sm font-semibold">
+                  {current} / {count}
+                </div>
               </Card>
               <div className="h-8 border border-dashed border-black/30" />
               <div className="relative flex items-center justify-center">
@@ -145,10 +148,11 @@ export const Programme = () => {
         <CarouselPrevious className="bg-tertiary/80 text-white hover:bg-tertiary/70" />
         <CarouselNext className="bg-tertiary/80 text-white hover:bg-tertiary/70" />
       </Carousel>
-      <div className="-mt-12 w-screen border border-dashed border-black/30"></div>
-      <div className="py-2">
+
+      <div className="-mt-10 w-screen border border-dashed border-black/30"></div>
+      {/* <div className="py-2">
         {current} of {count}
-      </div>
+      </div> */}
     </div>
   );
 };
