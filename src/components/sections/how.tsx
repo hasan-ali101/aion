@@ -98,7 +98,7 @@ export const How = () => {
                 <p className="text-lg font-semibold">{step.title}</p>
                 <p>{step.description}</p>
               </Card>
-              {/* <div className="h-8 border border-dashed border-black/30" />
+              <div className="h-8 border border-dashed border-black/30" />
               <div className="relative flex items-center justify-center">
                 <div
                   className={cn(
@@ -109,29 +109,14 @@ export const How = () => {
                 <div className="flex items-center justify-center rounded-full bg-primary/20 p-2">
                   <div className="h-4 w-4 rounded-full bg-primary/60" />
                 </div>
-              </div> */}
+              </div>
             </CarouselItem>
           ))}
         </CarouselContent>
         <CarouselPrevious className="bg-primary/80 text-white hover:bg-primary/70" />
         <CarouselNext className="bg-primary/80 text-white hover:bg-primary/70" />
       </Carousel>
-      {/* <div className="-mt-12 w-screen border border-dashed border-black/30"></div> */}
-      <div className="mt-4 flex w-full justify-center gap-2 sm:hidden">
-        {Array.from({ length: count }).map((_, index) => (
-          <div
-            key={index}
-            className="flex items-center justify-center rounded-full bg-primary/20 p-1"
-          >
-            <div
-              className={cn(
-                current === index + 1 ? "bg-primary" : "bg-primary/20",
-                "h-3 w-3 rounded-full border",
-              )}
-            />
-          </div>
-        ))}
-      </div>
+      <div className="-mt-12 w-screen border border-dashed border-black/30"></div>
     </div>
   );
 };
