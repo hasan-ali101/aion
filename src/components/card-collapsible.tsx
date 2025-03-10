@@ -7,10 +7,16 @@ type CardCollapsible = {
   className?: string;
   title: string;
   content: string;
+  open?: boolean;
 };
 
-const CardCollapsible = ({ className, title, content }: CardCollapsible) => {
-  const [expanded, setExpanded] = useState(false);
+const CardCollapsible = ({
+  className,
+  title,
+  content,
+  open = false,
+}: CardCollapsible) => {
+  const [expanded, setExpanded] = useState(open);
 
   return (
     <Card

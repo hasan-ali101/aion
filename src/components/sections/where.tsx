@@ -1,9 +1,9 @@
-import { Clock, Mail, MapPin, TrainFront } from "lucide-react";
+// import { Clock, Mail, MapPin, TrainFront } from "lucide-react";
 import { GoogleMapsEmbed } from "@next/third-parties/google";
 import { YouTubeEmbed } from "@next/third-parties/google";
 import Image from "next/image";
 
-import { Card } from "@/components/card";
+// import { Card } from "@/components/card";
 
 export const Where = () => {
   return (
@@ -21,7 +21,7 @@ export const Where = () => {
           station.
         </div>
         <div className="flex w-full flex-col items-center gap-6 lg:flex-row-reverse lg:gap-4">
-          <div className="h-full w-full lg:w-5/12">
+          <div className="flex h-full w-full items-center lg:w-5/12">
             <div className="grid h-fit w-full grid-cols-12 gap-2">
               <div className="col-span-12 flex w-full justify-center">
                 <div className="col-start-4 aspect-video w-full max-w-[500px] px-4">
@@ -53,24 +53,27 @@ export const Where = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-12 gap-2 rounded-lg bg-secondary px-4 py-6 lg:w-7/12">
-            <p className="col-span-12 mb-2 font-semibold">
-              If you would like to contact us or come visit, please get in touch
+          <div className="grid h-full w-full max-w-[500px] grid-cols-12 gap-2 rounded-lg bg-secondary px-4 py-6 lg:w-7/12 lg:max-w-none">
+            <p className="col-span-12 h-full px-4 text-center font-medium lg:text-left">
+              Find us at 384 city road, London,
+              <br className="lg:hidden" /> EC1V 2QA.
             </p>
-            <p className="col-span-12 mb-2">
-              Find us in the heart of Angel, London - centrally located to bring
-              you ease of access.
-            </p>
-            <Card className="col-span-12 flex items-center gap-4 bg-white px-4 py-3 sm:col-span-6">
+            {/* <Card className="col-span-12 flex h-full items-center gap-4 bg-white p-2 sm:col-span-6">
               <div className="rounded-full bg-secondary p-2">
-                <MapPin />
+                <Mail className="h-4 w-4" />
+              </div>
+              <p className="text-sm"> info@aion-clinic.com</p>
+            </Card>
+            <Card className="col-span-12 flex h-full items-center gap-4 bg-white p-2 sm:col-span-6">
+              <div className="rounded-full bg-secondary p-2">
+                <MapPin className="h-4 w-4" />
               </div>
               <p className="text-sm">
                 384 city road, London,
                 <br /> EC1V 2QA
               </p>
-            </Card>
-            <Card className="col-span-12 flex items-center gap-4 bg-white px-4 py-3 sm:col-span-6">
+            </Card> */}
+            {/* <Card className="col-span-12 flex items-center gap-4 bg-white px-4 py-3 sm:col-span-6">
               <div className="rounded-full bg-secondary p-2">
                 <TrainFront />
               </div>
@@ -87,17 +90,12 @@ export const Where = () => {
                 {" "}
                 Mon - Fri: 08:00 - 21:00 <br /> Sat: 10:00 - 16:00{" "}
               </p>
-            </Card>
-            <Card className="col-span-12 flex items-center gap-4 bg-white px-4 py-3 sm:col-span-6">
-              <div className="rounded-full bg-secondary p-2">
-                <Mail />
-              </div>
-              <p className="text-sm"> info@aion-clinic.com</p>
-            </Card>{" "}
-            <div className="col-span-12 my-2">
+            </Card> */}
+
+            <div className="col-span-12 my-2 h-fit">
               <GoogleMapsEmbed
                 apiKey="AIzaSyD750W67z9joBykjtwRInnViqqBv1VEh7A"
-                height={200}
+                height="300"
                 width="100%"
                 mode="place"
                 zoom="12"

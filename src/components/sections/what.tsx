@@ -111,7 +111,7 @@ export const What = () => {
           <ImageCardCollapsible
             title="Ketamine Sessions"
             description={
-              <CheckBullet>7 7 hours included in treatment</CheckBullet>
+              <CheckBullet>7 hours included in treatment</CheckBullet>
             }
             content={
               <div className="flex flex-col gap-y-4 p-2 text-sm">
