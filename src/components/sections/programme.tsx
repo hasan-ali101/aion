@@ -110,7 +110,7 @@ export const Programme = () => {
         <CarouselContent>
           {treatmentSteps.map((step, index) => (
             <CarouselItem key={index} className="flex flex-col items-center">
-              <Card className="relative flex h-[350px] flex-col items-center justify-center gap-3 overflow-y-auto overflow-x-clip rounded-lg bg-tertiary px-4 text-white sm:h-64">
+              <Card className="relative flex h-[350px] flex-col items-center justify-center gap-3 overflow-clip rounded-lg bg-tertiary px-4 text-white sm:h-64">
                 <Image
                   alt="alt"
                   width={1200}
