@@ -1,15 +1,12 @@
-import Nav from "@/components/nav";
 import {
   Hero,
   What,
   Where,
   Questions,
   Eligibility,
-  Footer,
   Team,
   How,
   Programme,
-  Science,
 } from "@/components/sections";
 
 export default function Home() {
