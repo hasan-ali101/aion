@@ -87,7 +87,10 @@ export const Programme = () => {
   }, [api]);
 
   return (
-    <div className="flex flex-col items-center gap-6 bg-secondary px-6 py-20 text-center">
+    <div
+      id="programme"
+      className="flex flex-col items-center gap-6 bg-secondary px-6 py-20 text-center"
+    >
       <h2>
         Experience tangible,{" "}
         <span className="text-primary">lasting results within 8 weeks</span>

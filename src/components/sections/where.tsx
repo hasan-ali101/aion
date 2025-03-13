@@ -55,7 +55,7 @@ export const Where = () => {
           </div>
           <div className="grid h-full w-full max-w-[500px] grid-cols-12 gap-2 rounded-lg bg-secondary px-4 py-6 lg:w-7/12 lg:max-w-none">
             <p className="col-span-12 h-full px-4 text-center font-medium lg:text-left">
-              Find us at 384 city road, London,
+              Find us at 384 City Road, London,
               <br className="lg:hidden" /> EC1V 2QA.
             </p>
             {/* <Card className="col-span-12 flex h-full items-center gap-4 bg-white p-2 sm:col-span-6">

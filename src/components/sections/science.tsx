@@ -5,18 +5,22 @@ import {
   AccordionTrigger,
 } from "@/components/accordion";
 
-export const Questions = () => {
+export const Science = () => {
   return (
-    <div className="flex flex-col items-center gap-6 px-4 pb-20 pt-10 md:px-20">
-      <h2 className="text-center">
-        Got Questions?
-        <span className="text-primary">
+    <div className="flex flex-col items-center gap-6">
+      <h2 className="text-center text-white">
+        The Science
+        <span className="text-secondary">
           <br />
-          We Have Answers
+          Behind the substance
         </span>
       </h2>
       <div className="flex w-full max-w-section flex-col md:flex-row md:gap-6">
-        <Accordion type="single" collapsible className="w-full md:w-1/2">
+        <Accordion
+          type="single"
+          collapsible
+          className="flex w-full flex-col md:w-1/2"
+        >
           <AccordionItem value="item-1">
             <AccordionTrigger>How does the treatment work?</AccordionTrigger>
             <AccordionContent>
@@ -54,7 +58,7 @@ export const Questions = () => {
               congue mauris. Maecenas euismod tempor molestie.  
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-3">
+          <AccordionItem value="item-4">
             <AccordionTrigger>How much is treatment at Aion?</AccordionTrigger>
             <AccordionContent>
               Donec auctor eget odio vel mattis. Etiam non tristique elit.
@@ -102,7 +106,7 @@ export const Questions = () => {
               congue mauris. Maecenas euismod tempor molestie.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-3">
+          <AccordionItem value="item-4">
             <AccordionTrigger>How much is treatment at Aion?</AccordionTrigger>
             <AccordionContent>
               Donec auctor eget odio vel mattis. Etiam non tristique elit.

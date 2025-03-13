@@ -34,6 +34,7 @@ const MainCard = ({ className }: { className?: string }) => {
       <CardContent className="flex flex-col gap-6 pb-10 text-sm">
         <div className="flex items-center justify-between gap-2">
           <div className="flex flex-col gap-4">
+            <CheckBullet>Comprehensive medical assessment</CheckBullet>
             <CheckBullet>15 hours of treatment</CheckBullet>
             <CheckBullet>8 week course</CheckBullet>
           </div>
@@ -50,7 +51,7 @@ const MainCard = ({ className }: { className?: string }) => {
       </CardContent>
       <CardFooter className="flex h-full flex-col items-center justify-center gap-3 pb-10 lg:flex-row">
         <GetStartedButton variant="inverted" />
-        <Link href="#what" className="text-sm text-white underline">
+        <Link href="#programme" className="text-sm text-white underline">
           See Treatment Plan
         </Link>
       </CardFooter>
@@ -111,7 +112,7 @@ export const What = () => {
           <ImageCardCollapsible
             title="Ketamine Sessions"
             description={
-              <CheckBullet>7 hours included in treatment</CheckBullet>
+              <CheckBullet>8 hours included in treatment</CheckBullet>
             }
             content={
               <div className="flex flex-col gap-y-4 p-2 text-sm">

@@ -6,6 +6,7 @@ import { cn } from "@/utils";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/sheet";
 import { GetStartedButton } from "./get-started-button";
 import { PageLinks } from "./page-links";
+import Link from "next/link";
 
 const Nav = () => {
   const [isTop, setIsTop] = useState(true);
@@ -27,14 +28,14 @@ const Nav = () => {
     >
       <div className="flex items-center gap-3">
         <Sheet>
-          <SheetTrigger asChild>
+          <SheetTrigger asChild className="md:hidden">
             <Menu className="h-5 w-5" />
           </SheetTrigger>
           <SheetContent side={"left"}>
-            <div className="flex flex-col items-center gap-6">
+            <Link href="/" className="flex flex-col items-center gap-6">
               <Image
                 src="/images/logo_white.png"
-                className="mb-6 w-20 md:w-24"
+                className="mb-6 w-32"
                 width={488}
                 height={192}
                 alt="logo"
@@ -44,25 +45,29 @@ const Nav = () => {
                 sidebar={true}
               />
               <GetStartedButton variant="inverted" />
-            </div>
+            </Link>
           </SheetContent>
         </Sheet>
         {isTop ? (
-          <Image
-            src="/images/logo_white.png"
-            className="w-20 md:w-24"
-            width={488}
-            height={192}
-            alt="logo"
-          />
+          <Link href="/">
+            <Image
+              src="/images/logo_white.png"
+              className="w-20 md:w-36"
+              width={488}
+              height={192}
+              alt="logo"
+            />
+          </Link>
         ) : (
-          <Image
-            src="/images/logo_primary.png"
-            className="w-20 md:w-24"
-            width={488}
-            height={192}
-            alt="logo"
-          />
+          <Link href="/">
+            <Image
+              src="/images/logo_primary.png"
+              className="w-20 md:w-36"
+              width={488}
+              height={192}
+              alt="logo"
+            />
+          </Link>
         )}
       </div>
       <PageLinks className="hidden md:flex" />

@@ -26,18 +26,15 @@ const team: TeamMember[] = [
     description: (
       <div className="flex flex-col gap-4">
         <p>
-          Matt is a consultant psychiatrist and group analytic psychotherapist
-          with many years of experience as a clinician across a range of
-          inpatient and community settings with both the NHS and privately.
+          As Chief Medical Officer at Aion, Matt is responsible for overseeing
+          the care delivered, as well as conducting medical assessments to
+          assess suitability for our treatment.
         </p>
         <p>
-          He studied medicine and medical anthropology at University College
-          London and trained in Psychiatry at UCL. 
-        </p>
-        <p>
-          He is now the Chief Medical Officer at Aion where he is excited to be
-          so closely involved in caring for our clients and developing the
-          therapies we offer.
+          Matt has 15+ years of experience as a clinician and psychotherapist
+          across a range of inpatient and community settings, both privately and
+          within the NHS. He studied medicine and medical anthropology at
+          University College London and trained in Psychiatry at UCL.
         </p>
       </div>
     ),
@@ -49,24 +46,16 @@ const team: TeamMember[] = [
     description: (
       <div className="flex flex-col gap-4">
         <p>
-          Dr. Qasim Ali is a qualified medical doctor, graduating from Imperial
-          College London in 2019.
+          As Chief Executive Officer of Aion, Qasim is excited to change the
+          perception around psychedelic medicine and deliver transformative
+          experiences to those most in need.
         </p>
         <p>
-          He has since applied his knowledge and understanding of healthcare
-          across a range of senior roles, most notably supporting on large-scale
-          strategy initiatives with internationally recognised bodies such as
-          NEOM and the NHS.
-        </p>
-        <p>
-          He has helped found and launch several high-growth startups to date,
-          centred around a passion to rethink and improve the way we care for
-          the most vulnerable in our community.
-        </p>
-        <p>
-          He is now Chief Executive Officer and Founder of Aion where he is
-          excited to change the perception around psychedelic medicine and
-          deliver transformative experiences to those most in need.
+          Qasim is a qualified medical doctor, graduating from Imperial College
+          London in 2019, with experience supporting large-scale strategic
+          initiatives across a range of private and public health bodies,
+          including NEOM and NHS. He has successfully helped found and launch
+          several high-growth health startups to date.
         </p>
       </div>
     ),
@@ -78,14 +67,16 @@ const team: TeamMember[] = [
     description: (
       <div className="flex flex-col gap-4">
         <p>
-          Laura brings operational, strategic, and regulatory expertise to Aion,
-          with over 22 years of experience in substance misuse services across
-          the public, private, and voluntary sectors.
+          As Chief Operating Officer, Laura brings an inclusive and
+          patient-centric culture to Aion, ensuring we consistently delivering
+          outstanding care to all our patients.
         </p>
         <p>
-          She brings an inclusive and patient-centric culture to Aion, ensuring
-          we are clear and aligned on delivering outstanding care to all our
-          patients.
+          Laura brings operational, strategic, and regulatory expertise to Aion,
+          with over 22 years of experience in substance misuse services across
+          the public, private, and voluntary sectors. Her significant experience
+          in managing the most vulnerable patients in a sensitive, considerate
+          manner, ensures our patients feel comfortable and safe throughout.
         </p>
       </div>
     ),
@@ -98,22 +89,16 @@ const team: TeamMember[] = [
       <div className="flex flex-col gap-4">
         <p>
           Dominic is a Cognitive Behavioural Therapist and mindfulness teacher
-          with many years’ experience working in the NHS and privately,
-          supporting clients with common mental health problems such as
-          depression, anxiety and post-traumatic stress.
+          with 20+ years experience working in the NHS and privately, supporting
+          clients with common mental health problems such as depression, anxiety
+          and PTSD.
         </p>
         <p>
           He primarily uses third-wave CBT approaches such as Acceptance and
           Commitment Therapy, Compassion-Focussed Therapy and other
-          Mindfulness-based approaches. He has seen how helpful they can be in
-          integrating psychedelic experiences. He is an accredited member of the
-          BABCP and has post-graduate training in Interpersonal Therapy. He has
-          had a meditation practice for over 20 years.
-        </p>
-        <p>
-          “My personal experience of how psychedelics can loosen rigid
-          repertoires of thinking and behaving has inspired me to work with my
-          clients in this way.”
+          mindfulness-based approaches. He is an accredited member of the BABCP
+          and has post-graduate training in Interpersonal Therapy, with his own
+          meditation practice for over 20 years.
         </p>
       </div>
     ),

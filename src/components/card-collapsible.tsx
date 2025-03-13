@@ -4,6 +4,7 @@ import { cn } from "@/utils";
 import { useState } from "react";
 
 type CardCollapsible = {
+  collapsible: boolean;
   className?: string;
   title: string;
   content: string;
@@ -11,6 +12,7 @@ type CardCollapsible = {
 };
 
 const CardCollapsible = ({
+  collapsible = true,
   className,
   title,
   content,
@@ -30,12 +32,14 @@ const CardCollapsible = ({
           <CheckCircle className="h-6 min-h-6 w-6 min-w-6 text-primary" />
           <p>{title}</p>
         </div>
-        <ChevronDown
-          className={cn(
-            expanded && "rotate-180",
-            "h-6 min-h-6 w-6 min-w-6 text-primary transition-all",
-          )}
-        />
+        {collapsible && (
+          <ChevronDown
+            className={cn(
+              expanded && "rotate-180",
+              "h-6 min-h-6 w-6 min-w-6 text-primary transition-all",
+            )}
+          />
+        )}
       </CardHeader>
       <CardContent
         className={cn(
