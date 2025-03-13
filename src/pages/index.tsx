@@ -11,7 +11,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="relative flex flex-col text-black">
+    <div className="relative flex flex-col text-black md:items-center">
       <Hero />
       <What />
       <Eligibility />

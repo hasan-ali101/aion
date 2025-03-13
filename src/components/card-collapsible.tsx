@@ -4,7 +4,6 @@ import { cn } from "@/utils";
 import { useState } from "react";
 
 type CardCollapsible = {
-  collapsible?: boolean;
   className?: string;
   title: string;
   content: string;
@@ -12,7 +11,6 @@ type CardCollapsible = {
 };
 
 const CardCollapsible = ({
-  collapsible = true,
   className,
   title,
   content,
@@ -22,7 +20,10 @@ const CardCollapsible = ({
 
   return (
     <Card
-      className={cn(className, "w-full cursor-pointer bg-white transition-all")}
+      className={cn(
+        className,
+        "w-full cursor-pointer bg-white transition-all lg:pointer-events-none",
+      )}
       onClick={() => {
         setExpanded(!expanded);
       }}
@@ -32,14 +33,12 @@ const CardCollapsible = ({
           <CheckCircle className="h-6 min-h-6 w-6 min-w-6 text-primary" />
           <p>{title}</p>
         </div>
-        {collapsible && (
-          <ChevronDown
-            className={cn(
-              expanded && "rotate-180",
-              "h-6 min-h-6 w-6 min-w-6 text-primary transition-all",
-            )}
-          />
-        )}
+        <ChevronDown
+          className={cn(
+            expanded && "rotate-180",
+            "h-6 min-h-6 w-6 min-w-6 text-primary transition-all lg:hidden",
+          )}
+        />
       </CardHeader>
       <CardContent
         className={cn(
