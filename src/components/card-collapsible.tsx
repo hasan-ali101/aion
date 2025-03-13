@@ -4,7 +4,7 @@ import { cn } from "@/utils";
 import { useState } from "react";
 
 type CardCollapsible = {
-  collapsible: boolean;
+  collapsible?: boolean;
   className?: string;
   title: string;
   content: string;
