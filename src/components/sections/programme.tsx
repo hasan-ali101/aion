@@ -22,7 +22,7 @@ const treatmentSteps: Step[] = [
       </div>
     ),
     description:
-      "4 week period where we deep dive into target areas, using ketamine sessions to augment therapeutic progress.",
+      "We begin with 2 talking therapy sessions, where we explore your targets for the programme and begin engaging with ACT therapy.",
     info: (
       <CheckBullet className="text-left text-sm font-medium">
         2 hours of talking therapy
@@ -36,7 +36,7 @@ const treatmentSteps: Step[] = [
       </div>
     ),
     description:
-      "4 week period where we deep dive into target areas, using ketamine sessions to augment therapeutic progress.",
+      "We integrate ketamine sessions alongside therapy to augment therapeutic progress and deep dive into identified target areas.",
     info: (
       <div>
         <CheckBullet className="text-left text-sm font-medium">
@@ -55,7 +55,7 @@ const treatmentSteps: Step[] = [
       </div>
     ),
     description:
-      "4 week period where we deep dive into target areas, using ketamine sessions to augment therapeutic progress.",
+      "We conclude with a final talking therapy session after a week break, where we reflect on your progress and align on next steps.",
     info: (
       <CheckBullet className="text-left text-sm font-medium">
         1 hour of talking therapy{" "}

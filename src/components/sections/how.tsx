@@ -22,22 +22,22 @@ export type Step = {
 
 const screeningSteps: Step[] = [
   {
-    title: "Submit self referral",
+    title: "Complete self referral form",
     description:
-      "We check your provided information against your Summary Care Record from your GP, which we are happy to gather on your behalf if you provide consent!",
+      "Complete our simple online referral form (~5 minutes) where we ask you to share basic health information about yourself and your case",
     icon: <FileText className="min-h-7 min-w-7" />,
   },
   {
     title: "Gather relevant documentation",
     icon: <FolderCheck className="min-h-7 min-w-7" />,
     description:
-      "We check your provided information against your Summary Care Record from your GP, which we are happy to gather on your behalf if you provide consent!",
+      "We check your provided information against your GP Summary Care Record, which we are happy to request on your behalf if you provide consent!",
   },
   {
     title: "Initial Medical Assessment",
     icon: <ShieldPlus className="min-h-7 min-w-7" />,
     description:
-      "We check your provided information against your Summary Care Record from your GP, which we are happy to gather on your behalf if you provide consent!",
+      "Once clinically reviewed, you are invited to a 1.5 hr session with our consultant psychiatrist to explore your case in detail and assess suitability for our treatment.",
   },
 ];
 
@@ -69,8 +69,8 @@ export const How = () => {
         <span className="text-primary">2 weeks from today</span>
       </h2>
       <p className="max-w-[600px]">
-        We take care to ensure each patient is suitable for the treatment we
-        provide, screening for eligibility criteria and risk factors
+        We take care to ensure each patient is suitable for our treatment, 
+        screening for eligibility criteria and risk factors.
       </p>
       <Carousel
         setApi={setApi}
