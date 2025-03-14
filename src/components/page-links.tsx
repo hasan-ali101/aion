@@ -6,10 +6,12 @@ export const PageLinks = ({
   className,
   sidebar,
   isTop,
+  includeScience = false,
 }: {
   className?: string;
   sidebar?: boolean;
   isTop?: boolean;
+  includeScience?: boolean;
 }) => {
   const links = [
     { href: "#what", label: "What" },
@@ -18,6 +20,10 @@ export const PageLinks = ({
     { href: "#where", label: "Where" },
     { href: "#us", label: "Us" },
   ];
+
+  if (includeScience) {
+    links.push({ href: "/science", label: "Science" });
+  }
 
   return (
     <div

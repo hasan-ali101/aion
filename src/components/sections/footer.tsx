@@ -18,7 +18,10 @@ export const Footer = () => {
             alt="logo"
           />
         </Link>
-        <PageLinks className="flex justify-center gap-5 text-base font-medium text-white sm:gap-10" />
+        <PageLinks
+          includeScience={true}
+          className="flex justify-center gap-5 text-base font-medium text-white sm:gap-10"
+        />
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-4">
             <div className="rounded-full bg-secondary p-1">
