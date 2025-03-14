@@ -21,7 +21,7 @@ export const Eligibility = () => {
   ];
 
   return (
-    <div className="flex w-full justify-center">
+    <div className="flex w-full justify-center bg-white">
       <div
         id="who"
         className="flex h-full w-full max-w-section scroll-mt-24 flex-col gap-8 bg-secondary px-6 py-20 lg:mx-6 lg:rounded-lg lg:p-12"

@@ -133,7 +133,7 @@ export const Team = () => {
   return (
     <div
       id="us"
-      className="flex w-full scroll-m-20 justify-center overflow-hidden py-14"
+      className="flex w-full scroll-m-20 justify-center overflow-hidden bg-white py-14"
     >
       <div className="flex h-full max-w-section flex-col items-center gap-8 bg-white p-6 sm:px-10 md:px-20 lg:px-40">
         <div className="flex flex-col items-center gap-5 text-center">

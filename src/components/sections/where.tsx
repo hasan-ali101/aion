@@ -9,7 +9,7 @@ export const Where = () => {
   return (
     <div
       id="where"
-      className="flex w-full scroll-m-20 justify-center bg-primary/5 py-10"
+      className="flex w-full scroll-m-20 justify-center bg-primary/5 bg-white py-10"
     >
       <div className="my-8 flex w-full max-w-[1200px] flex-col items-center gap-6 px-4 md:px-6">
         <h2 className="text-center">
@@ -58,40 +58,6 @@ export const Where = () => {
               Find us at 384 City Road, London,
               <br className="lg:hidden" /> EC1V 2QA.
             </p>
-            {/* <Card className="col-span-12 flex h-full items-center gap-4 bg-white p-2 sm:col-span-6">
-              <div className="rounded-full bg-secondary p-2">
-                <Mail className="h-4 w-4" />
-              </div>
-              <p className="text-sm"> info@aion-clinic.com</p>
-            </Card>
-            <Card className="col-span-12 flex h-full items-center gap-4 bg-white p-2 sm:col-span-6">
-              <div className="rounded-full bg-secondary p-2">
-                <MapPin className="h-4 w-4" />
-              </div>
-              <p className="text-sm">
-                384 city road, London,
-                <br /> EC1V 2QA
-              </p>
-            </Card> */}
-            {/* <Card className="col-span-12 flex items-center gap-4 bg-white px-4 py-3 sm:col-span-6">
-              <div className="rounded-full bg-secondary p-2">
-                <TrainFront />
-              </div>
-              <p className="text-sm">
-                {" "}
-                Angel Station, <br /> 5 minutes walk
-              </p>
-            </Card>{" "}
-            <Card className="col-span-12 flex items-center gap-4 bg-white px-4 py-3 sm:col-span-6">
-              <div className="rounded-full bg-secondary p-2">
-                <Clock />{" "}
-              </div>
-              <p className="text-sm">
-                {" "}
-                Mon - Fri: 08:00 - 21:00 <br /> Sat: 10:00 - 16:00{" "}
-              </p>
-            </Card> */}
-
             <div className="col-span-12 my-2 h-fit">
               <GoogleMapsEmbed
                 apiKey="AIzaSyD750W67z9joBykjtwRInnViqqBv1VEh7A"
