@@ -22,9 +22,9 @@ export type Step = {
 
 const screeningSteps: Step[] = [
   {
-    title: "Complete self referral form",
+    title: "Submit self referral form",
     description:
-      "Complete our simple online referral form (~5 minutes) where we ask you to share basic health information about yourself and your case",
+      "Complete our simple online referral form (~5 minutes) where we ask you to share basic health information about yourself and your case for our clinical team to review.",
     icon: <FileText className="min-h-7 min-w-7" />,
   },
   {
