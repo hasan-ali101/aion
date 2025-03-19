@@ -46,7 +46,7 @@ export const Science = () => {
               Wan, Le-Ben, et al. “Ketamine safety and tolerability in clinical trials for treatment-resistant depression.” The Journal of clinical psychiatry 76.3 (2014): 0-0. <br/> <br/>
               
               <a href="https://www.sciencedirect.com/science/article/abs/pii/S000632230901097X" target="_blank" rel="noopener noreferrer">2010 safety review. </a> <br/>
-              Aan Het Rot, Marije, et al. “Safety and efficacy of repeated-dose intravenous ketamine for treatment-resistant depression.” Biological psychiatry 67.2 (2010): 139-145. <br/> <br/> {" "}
+              Aan Het Rot, Marije, et al. “Safety and efficacy of repeated-dose intravenous ketamine for treatment-resistant depression.” Biological psychiatry 67.2 (2010): 139-145. {" "}
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
