@@ -27,11 +27,11 @@ export const Questions = () => {
               see past experiences in a new light, which in a clinical
               environment, paired with talking therapy from professionals, gives
               you the mental space to overcome that which has held you back. 
-              <br/>
+              <br/> <br/>
               Ketamine is understood to increase brain plasticity (flexibility) 
               and connectivity, meaning it can help a person become more adaptive 
               and open to new perspectives.
-              <br/>
+              <br/> <br/>
               On a neurochemical level, ketamine is an NMDA antagonist working
               across multiple receptors in the brain. At very high doses, it
               acts as an anaesthetic, putting you completely to sleep. At lower
@@ -47,7 +47,7 @@ export const Questions = () => {
               Ketamine is a controlled substance that can be prescribed
               “off-label” in the UK for treatment of mental health and addiction. 
               This means that it can be used legally in controlled clinical
-              environments for clearly defined purposes. <br/> For use in mental
+              environments for clearly defined purposes. <br/> <br/> For use in mental
               health and addiction problems, this means the patient will have a
               clinical diagnosis and have tried at least one form of treatment
               for it already (‘treatment-resistant’ condition).  
@@ -60,9 +60,9 @@ export const Questions = () => {
               casualty departments all over the world as a safe and effective
               anaesthetic for performing minor surgical procedures. This means
               there is a large base of evidence and knowledge in the effects of
-              ketamine. <br/> Ketamine-Assisted Therapy uses significantly lower 
+              ketamine. <br/> <br/> Ketamine-Assisted Therapy uses significantly lower 
               doses that are tailored to the recipient, so the risk is further
-              minimised. <br/> All patients are carefully screened and fully monitored
+              minimised. <br/> <br/> All patients are carefully screened and fully monitored
               throughout sessions by our consultant psychiatrist, lead nurse and
               trained psychotherapist. 
             </AccordionContent>
@@ -74,20 +74,20 @@ export const Questions = () => {
             <AccordionContent>
               As with any treatment, there are potential risks or side effects,
               however we use our considerable experience and expertise to help
-              mitigate these. <br/> The most common psychological side effects are
+              mitigate these. <br/> <br/> The most common psychological side effects are
               feeling disassociated, and you may experience some initial anxiety
               that will pass; our therapists are trained to help you manage
-              this. <br/> Physically, you may feel lightheaded or dizzy at points;
+              this. <br/> <br/> Physically, you may feel lightheaded or dizzy at points;
               whilst some have described feeling nauseous or tired. Again our
               therapists are highly experienced in these sessions and will be
               able to offer immediate support if needed. Less commonly, some
               report low mood or a manic feeling immediately following
               treatment; you must immediately inform the clinical team if you
-              notice these experiences so we can support you. <br/> You will be
+              notice these experiences so we can support you. <br/> <br/> You will be
               closely monitored throughout your treatment, and clinicians will
               use a questionnaire to monitor any side effects and how long they
               last (most typically resolve within an hour) to help us continue
-              to improve your experience and the safety of our procedure. <br/>
+              to improve your experience and the safety of our procedure. <br/> <br/>
               Our clinic has dedicated recovery space which can be used for as long
               as required.
             </AccordionContent>
@@ -103,16 +103,16 @@ export const Questions = () => {
               pressure, heart rate, oxygen saturation) to ensure you are healthy
               and ready for the treatment. We will then walk you through the
               procedure, explain what to expect and how you may feel during the
-              session. <br/> Our nurse will then prepare the ketamine and deliver the
+              session. <br/> <br/> Our nurse will then prepare the ketamine and deliver the
               agreed dose as an injection in the top of your shoulder (similar
-              to how you get vaccinated). <br/> You are then able to lie down, put on
+              to how you get vaccinated). <br/> <br/> You are then able to lie down, put on
               our weighted blanket, headphones and eye mask, getting as
               comfortable as you like; your highly experienced therapist will be
               alongside you the whole time, with our nurse and consultant
-              psychiatrist on standby. <br/> Effects will likely start after five
+              psychiatrist on standby. <br/> <br/> Effects will likely start after five
               minutes and last for around 90 minutes. Once complete, you can
               then relax in our allocated recovery areas within our clinic for
-              as long as needed before going home. <br/> You will not be able to drive
+              as long as needed before going home. <br/> <br/> You will not be able to drive
               yourself home after a drug session; we will request that you are
               accompanied home by a named individual whom you have identified in
               advance of starting the treatment. We can help with this step if
@@ -126,9 +126,9 @@ export const Questions = () => {
             <AccordionContent>
               Ketamine is a “dissociative” drug, meaning you’ll experience a
               sense of detachment. This is sometimes referred to as an ‘out of
-              body’ type experience. <br/> Given the low dose we use, you are likely
+              body’ type experience. <br/> <br/> Given the low dose we use, you are likely
               to feel a gentle sense of detachment, alongside a feeling of fresh
-              perspective, enabling you to review past issues from a new angle. <br/> 
+              perspective, enabling you to review past issues from a new angle. <br/> <br/>
               This, when combined with psychotherapy allows you to see
               psychological problems in a new light and, together with support
               from their therapist, reflect upon and address issues that may
@@ -151,7 +151,7 @@ export const Questions = () => {
               Our treatment protocol is based on a deep bed of scientific
               research, taking evidence and findings generated from years of
               published literature and incorporating them into our model of
-              care.{" "} <br/> 
+              care.{" "} <br/> <br/> 
               <Link className="text-tertiaryDark underline" href="/science">
                 Find out more in our Science section.{" "}
               </Link>
