@@ -14,11 +14,11 @@ export const PageLinks = ({
   includeScience?: boolean;
 }) => {
   const links = [
-    { href: "#what", label: "What" },
-    { href: "#who", label: "Who" },
-    { href: "#how", label: "How" },
-    { href: "#where", label: "Where" },
-    { href: "#us", label: "Us" },
+    { href: "/#what", label: "What" },
+    { href: "/#who", label: "Who" },
+    { href: "/#how", label: "How" },
+    { href: "/#where", label: "Where" },
+    { href: "/#us", label: "Us" },
   ];
 
   if (includeScience) {
@@ -44,7 +44,7 @@ export const PageLinks = ({
             key={href}
             className={cn(
               isTop ? "hover:bg-white/20" : "hover:bg-muted/40",
-              "py-1 transition-colors",
+              "py-1 text-xs transition-colors sm:text-sm",
             )}
             href={href}
           >

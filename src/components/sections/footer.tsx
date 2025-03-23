@@ -27,19 +27,25 @@ export const Footer = () => {
             <div className="rounded-full bg-secondary p-1">
               <Clock className="h-3 w-3" />
             </div>
-            <p className="text-sm text-white"> Sat - Sun: 10:00 - 17:00</p>
+            <p className="text-xs text-white sm:text-sm">
+              {" "}
+              Sat - Sun: 10:00 - 17:00
+            </p>
           </div>
           <div className="flex items-center gap-4">
             <div className="rounded-full bg-secondary p-1">
               <Mail className="h-3 w-3" />
             </div>
-            <p className="text-sm text-white"> info@aion-clinic.com</p>
+            <p className="text-xs text-white sm:text-sm">
+              {" "}
+              info@aion-clinic.com
+            </p>
           </div>
           <div className="flex items-center gap-4">
             <div className="rounded-full bg-secondary p-1">
               <Phone className="h-3 w-3" />
             </div>
-            <p className="text-sm text-white">0800 000 0000</p>
+            <p className="text-xs text-white sm:text-sm">0800 000 0000</p>
           </div>
         </div>
         <div className="flex justify-center gap-6">

@@ -17,7 +17,7 @@ const sora = Sora({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className="flex min-h-screen flex-col justify-between">
+    <div className="flex min-h-screen flex-col justify-between bg-primary">
       <Nav />
       <Component
         className={cn(montserrat.className, sora.className)}
