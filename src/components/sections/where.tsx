@@ -9,7 +9,7 @@ export const Where = () => {
   return (
     <div
       id="where"
-      className="flex w-full scroll-m-20 justify-center bg-primary/5 bg-white py-10"
+      className="flex w-full scroll-m-20 justify-center bg-white/95 py-10"
     >
       <div className="my-8 flex w-full max-w-[1200px] flex-col items-center gap-6 px-4 md:px-6">
         <h2 className="text-center">
