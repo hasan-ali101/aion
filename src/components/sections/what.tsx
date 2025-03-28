@@ -35,11 +35,11 @@ const MainCard = ({ className }: { className?: string }) => {
         <div className="flex items-center justify-between gap-2">
           <div className="flex flex-col gap-4">
             <CheckBullet>Comprehensive medical assessment</CheckBullet>
-            <CheckBullet>15 hours of treatment</CheckBullet>
             <CheckBullet>8 week course</CheckBullet>
+            <CheckBullet>15 hours of treatment</CheckBullet>
           </div>
           <div className="flex min-h-24 min-w-24 flex-col justify-center rounded-full bg-white text-center text-primary">
-            <p className="font-bold">£4,000</p>
+            <p className="font-bold">£4,300</p>
             <p className="text-xs">per patient</p>
           </div>
         </div>
@@ -76,14 +76,14 @@ export const What = () => {
         <MainCard className="lg:hidden" />
         <div className="flex flex-col gap-4 lg:flex-row">
           <ImageCardCollapsible
-            title="Individual therapy"
+            title="Talking Therapy"
             description={
-              <CheckBullet>7 hours included in treatment</CheckBullet>
+              <CheckBullet>7 sessions included in treatment</CheckBullet>
             }
             content={
               <div className="flex flex-col gap-y-4 p-2 text-sm">
                 <p>
-                  We use Acceptance and Commitment Therapy (ACT) our framework
+                  We use Acceptance and Commitment Therapy (ACT) as the framework
                   for our therapeutic intervention.
                 </p>
                 <p>ACT is an evidence-based thesey madel which focuses on:</p>
@@ -93,15 +93,15 @@ export const What = () => {
                     is truly important and meaningful to you
                   </li>
                   <li>
-                    Equip you with the psychological tools to more effectively
-                    manage painful and stressful moments
+                    Equipping you with the psychological tools to more effectively
+                    manage painful and stressful experiences
                   </li>
                 </ol>
                 <CheckBullet>
                   In-person or remote session with your allocated therapist
                 </CheckBullet>
                 <CheckBullet>
-                  Clinical team on stand-by (nurse, consultant psychiatrist)
+                  Personalised, collaboratively designed therapy plan for you
                 </CheckBullet>
               </div>
             }
@@ -112,7 +112,7 @@ export const What = () => {
           <ImageCardCollapsible
             title="Ketamine Sessions"
             description={
-              <CheckBullet>8 hours included in treatment</CheckBullet>
+              <CheckBullet>4 sessions included in treatment</CheckBullet>
             }
             content={
               <div className="flex flex-col gap-y-4 p-2 text-sm">
@@ -130,14 +130,15 @@ export const What = () => {
                   adaptive to change.
                 </p>
                 <CheckBullet>
-                  In-person session with your allocated expert therapist{" "}
+                  2 hour in-person session with your expert therapist{" "}
                 </CheckBullet>
                 <CheckBullet>
-                  Clinical team on stand-by (nurse, consultant
+                  Clinical team in attendance (nurse, consultant
                   psychiatrist){" "}
                 </CheckBullet>
                 <CheckBullet>
-                  Intramuscular, collaboratively agreed doses{" "}
+                  Individually tailored intramuscular ketamine doses collaboratively 
+                  agreed with clinical team{" "}
                 </CheckBullet>
               </div>
             }

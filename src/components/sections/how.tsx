@@ -31,13 +31,13 @@ const screeningSteps: Step[] = [
     title: "Gather relevant documentation",
     icon: <FolderCheck className="min-h-7 min-w-7" />,
     description:
-      "We check your provided information against your GP Summary Care Record, which we are happy to request on your behalf if you provide consent!",
+      "In order to provide safe treatment we will need to see a copy of your GP Summary Care Record; with your consent, we are happy to request this on your behalf.",
   },
   {
-    title: "Initial Medical Assessment",
+    title: "Initial Medical Consultation",
     icon: <ShieldPlus className="min-h-7 min-w-7" />,
     description:
-      "Once clinically reviewed, you are invited to a 1.5 hr session with our consultant psychiatrist to explore your case in detail and assess suitability for our treatment.",
+      "Once clinically reviewed, you are invited to a 1.5 hr session with our consultant psychiatrist to explore your case in detail and confirm that this is the right treatment for you.",
   },
 ];
 

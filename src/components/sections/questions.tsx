@@ -20,7 +20,7 @@ export const Questions = () => {
         <Accordion type="single" collapsible className="w-full md:w-1/2">
           <AccordionItem value="item-1">
             <AccordionTrigger>
-              How does ketamine treatment work?
+              How does ketamine-assisted psychotherapy work?
             </AccordionTrigger>
             <AccordionContent>
               Simply put, ketamine allows your brain to react differently and
@@ -138,7 +138,7 @@ export const Questions = () => {
           <AccordionItem value="item-3">
             <AccordionTrigger>How much is treatment at Aion?</AccordionTrigger>
             <AccordionContent>
-              Our 8-week programme costs £4000 per patient. This includes 16.5
+              Our 8-week programme costs £4300 per patient. This includes 16.5
               hours of clinical care - 8 hours of ketamine dosing, 7 hours of
               talking therapy and 1.5 hours of medical assessment.
             </AccordionContent>

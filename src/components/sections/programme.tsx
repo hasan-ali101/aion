@@ -22,10 +22,10 @@ const treatmentSteps: Step[] = [
       </div>
     ),
     description:
-      "We begin with 2 talking therapy sessions, where we explore your targets for the programme and begin engaging with ACT therapy.",
+      "We begin with two sessions of talking therapy, where we explore your targets for the programme and begin engaging with ACT therapy.",
     info: (
       <CheckBullet className="text-left text-sm font-medium">
-        2 hours of talking therapy
+        2 Talking Therapy sessions
       </CheckBullet>
     ),
   },
@@ -36,14 +36,14 @@ const treatmentSteps: Step[] = [
       </div>
     ),
     description:
-      "We integrate ketamine sessions alongside therapy to augment therapeutic progress and deep dive into identified target areas.",
+      "Ketamine sessions are followed by talking therapy the next day to discuss and integrate experiences, supporting therapeutic change.",
     info: (
       <div>
         <CheckBullet className="text-left text-sm font-medium">
-          8 hours of ketamine sessions
+          4 Ketamine Sessions
         </CheckBullet>
         <CheckBullet className="text-left text-sm font-medium">
-          4 hours of talking therapy{" "}
+          4 Talking Therapy sessions{" "}
         </CheckBullet>
       </div>
     ),
@@ -55,10 +55,10 @@ const treatmentSteps: Step[] = [
       </div>
     ),
     description:
-      "We conclude with a final talking therapy session after a week break, where we reflect on your progress and align on next steps.",
+      "Following a week’s break to consolidate changes, we conclude with a final therapy session to review progress and plan next steps",
     info: (
       <CheckBullet className="text-left text-sm font-medium">
-        1 hour of talking therapy{" "}
+        1 Talking Therapy session{" "}
       </CheckBullet>
     ),
   },
@@ -97,8 +97,9 @@ export const Programme = () => {
         <span className="text-primary">lasting results within 8 weeks</span>
       </h2>
       <p className="max-w-[600px]">
-        Our evidence-based programme combines transformative talking therapy
-        with precise ketamine treatment to deliver life-changing experiences.
+        Our evidence-based approach combines transformative talking therapy
+        with precise ketamine treatment to facilitate therapeutic change and 
+        deliver life-changing experiences.
       </p>
       <div className="flex flex-col items-center gap-1">
         <CheckBullet>Clinically tested and validated</CheckBullet>

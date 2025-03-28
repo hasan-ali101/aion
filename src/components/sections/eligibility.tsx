@@ -13,9 +13,9 @@ export const Eligibility = () => {
       name: "Eating Disorder",
       imageUrl: "/images/conditions/eating-disorder.png",
     },
-    { name: "Alcohol abuse", imageUrl: "/images/conditions/alcohol-abuse.png" },
+    { name: "Alcohol Use Disorder", imageUrl: "/images/conditions/alcohol-abuse.png" },
     {
-      name: "Substance Abuse",
+      name: "Substance Disorder",
       imageUrl: "/images/conditions/substance-abuse.png",
     },
   ];

@@ -26,16 +26,13 @@ const team: TeamMember[] = [
     description: (
       <div className="flex flex-col gap-4">
         <p>
-          As Chief Medical Officer at Aion, Matt is responsible for overseeing
-          the care delivered, as well as conducting medical assessments to
-          assess suitability for our treatment.
+          Matt is a consultant psychiatrist and group analytic psychotherapist with many years’ 
+          experience across inpatient and community settings in the NHS, private and third sectors. 
+          He was previously the Medical Lead to Awakn’s London clinic, which offered ketamine-assisted psychotherapy. 
         </p>
         <p>
-          Matt has 15+ years of experience as a clinician and psychotherapist
-          across a range of inpatient and community settings, both privately and
-          within the NHS. He studied medicine and medical anthropology at
-          University College London and trained in Psychiatry at UCL.
-        </p>
+          His approach is informed by the idea that many of the problems we experience, as well as the resources to improve 
+          these, can be found in our relationships with others.        </p>
       </div>
     ),
     imageUrl: "/images/team_1.png",
