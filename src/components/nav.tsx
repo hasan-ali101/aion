@@ -23,13 +23,13 @@ const Nav = () => {
     <div
       className={cn(
         isTop ? "text-white" : "bg-white text-primary/80 shadow-md",
-        "fixed top-0 z-50 flex w-full items-center justify-between gap-6 px-6 py-4 transition-all duration-200 md:px-16 md:py-6",
+        "fixed top-0 z-40 flex w-full items-center justify-between gap-6 px-6 py-4 transition-all duration-200 md:px-16 md:py-6",
       )}
     >
       <div className="flex items-center gap-3">
         <Sheet>
           <SheetTrigger asChild className="md:hidden">
-            <Menu className="h-5 w-5" />
+            <Menu className="h-5 w-5 cursor-pointer" />
           </SheetTrigger>
           <SheetContent side={"left"}>
             <Link href="/" className="flex flex-col items-center gap-6">
@@ -44,7 +44,7 @@ const Nav = () => {
                 className="flex flex-col gap-6 text-lg font-medium"
                 sidebar={true}
               />
-              <GetStartedButton variant="inverted" />
+              {/* <GetStartedButton variant="inverted" /> */}
             </Link>
           </SheetContent>
         </Sheet>
