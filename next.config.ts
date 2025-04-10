@@ -1,6 +1,6 @@
 const cspHeader = `
     default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com/;
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com/ https://static.cloudflareinsights.com/;
     style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
     img-src 'self' https://i.ytimg.com blob: data: ;
     font-src 'self';
