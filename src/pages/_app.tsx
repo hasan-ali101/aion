@@ -1,4 +1,4 @@
-import type AppProps from "next/app";
+import type { AppProps } from "next/app";
 import { Montserrat, Sora } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
