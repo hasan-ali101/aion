@@ -101,6 +101,27 @@ const team: TeamMember[] = [
     ),
     imageUrl: "/images/team_4.png",
   },
+  {
+    name: "Carol Lawrence",
+    role: "Cognitive Behavioural Psychotherapist",
+    description: (
+      <div className="flex flex-col gap-4">
+        <p>
+          Carol is a BABCP and IPT UK accredited Cognitive Behavioural Psychotherapist 
+          and an Interpersonal Psychotherapist.  She began her career as a mental health 
+          social worker working with more severe and enduring mental health conditions. 
+          She has experience working for the NHS in both Primary and Secondary Care Settings.
+        </p>
+        <p>
+          Carol is passionate about exploring alternative therapy models, such as Internal 
+          Family Systems (IFS).  She has received training in MDMA Assisted Therapy via the 
+          Multidisciplinary Association for Psychedelic Studies (MAPS).
+        </p>
+      </div>
+    ),
+    imageUrl: "/images/team_5.png",
+  },
+
 ];
 
 export const Team = () => {
