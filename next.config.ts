@@ -13,7 +13,6 @@ const cspHeader = `
 `;
 
 const nextConfig = {
-  /* config options here */
   reactStrictMode: true,
   async headers() {
     return [
@@ -22,11 +21,19 @@ const nextConfig = {
         headers: [
           {
             key: "Content-Security-Policy",
-            value: cspHeader.replace(/\n/g, ""),
+            value: "",
           },
         ],
       },
     ];
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+      },
+    ],
   },
 };
 
