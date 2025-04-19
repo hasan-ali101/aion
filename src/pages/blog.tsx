@@ -7,20 +7,11 @@ import {
   CarouselApi,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/carousel";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/button";
 import { Card } from "@/components/card";
-import {
-  ArrowBigRight,
-  ArrowRight,
-  Clock,
-  Heart,
-  Plus,
-  StopCircle,
-} from "lucide-react";
+import { ArrowRight, Clock, Heart } from "lucide-react";
 import Image from "next/image";
 import HeadWrapper from "@/components/headwrapper";
 
@@ -105,7 +96,10 @@ export default function IndexPage({ posts }: { posts: SanityDocument[] }) {
               <div className="flex w-full gap-4 overflow-x-scroll pb-4">
                 {posts.map((post, index) => {
                   return (
-                    <Card className="w-64 min-w-64 bg-secondary p-5">
+                    <Card
+                      key={index}
+                      className="w-64 min-w-64 bg-secondary p-5"
+                    >
                       <div className="flex flex-col items-start gap-3">
                         <img
                           src={post.mainImage.asset.url}
@@ -142,7 +136,10 @@ export default function IndexPage({ posts }: { posts: SanityDocument[] }) {
               <div className="flex w-full gap-4 overflow-x-scroll pb-4">
                 {posts.map((post, index) => {
                   return (
-                    <Card className="w-64 min-w-64 bg-secondary p-5">
+                    <Card
+                      key={index}
+                      className="w-64 min-w-64 bg-secondary p-5"
+                    >
                       <div className="flex flex-col items-start gap-3">
                         <img
                           src={post.mainImage.asset.url}
@@ -226,7 +223,7 @@ export default function IndexPage({ posts }: { posts: SanityDocument[] }) {
             <div className="flex w-full gap-4 overflow-x-scroll pb-4">
               {posts.map((post, index) => {
                 return (
-                  <Card className="w-64 min-w-64 bg-secondary p-5">
+                  <Card key={index} className="w-64 min-w-64 bg-secondary p-5">
                     <div className="flex flex-col items-start gap-3">
                       <img
                         src={post.mainImage.asset.url}
