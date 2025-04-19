@@ -1,6 +1,6 @@
 const cspHeader = `
     default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com/ https://static.cloudflareinsights.com/;
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com/ https://static.cloudflareinsights.com/ https://www.youtube.com/;
     style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
     img-src 'self' https://i.ytimg.com blob: data: ;
     font-src 'self';
@@ -9,7 +9,7 @@ const cspHeader = `
     form-action 'self';
     frame-ancestors 'none';
     upgrade-insecure-requests;
-    frame-src https://www.youtube.com https://www.google.com https://form.typeform.com/;
+    frame-src https://www.youtube.com https://www.google.com https://form.typeform.com/ https://www.youtube.com/ https://www.youtube-nocookie.com/;
 `;
 
 const nextConfig = {
