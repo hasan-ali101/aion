@@ -1,9 +1,10 @@
 const cspHeader = `
     default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com/ https://static.cloudflareinsights.com/ https://www.youtube.com/;
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com/ https://www.google-analytics.com/ https://static.cloudflareinsights.com/ https://www.youtube.com/;
     style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
     img-src 'self' https://i.ytimg.com blob: data: ;
     font-src 'self';
+    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com;
     object-src 'none';
     base-uri 'self';
     form-action 'self';

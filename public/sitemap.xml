@@ -13,4 +13,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Blog Page -->
+  <url>
+    <loc>https://www.aion-clinic.com/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>  
 </urlset>
