@@ -38,7 +38,7 @@ export const Footer = () => {
             </div>
             <p className="text-xs text-white sm:text-sm">
               {" "}
-              info@aion-clinic.com
+              support@aion-clinic.com
             </p>
           </div>
           <div className="flex items-center gap-4">
