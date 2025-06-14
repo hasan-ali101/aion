@@ -25,7 +25,7 @@ export const Where = () => {
             <div className="grid h-fit w-full grid-cols-12 gap-2">
               <div className="col-span-12 flex w-full justify-center">
                 <div className="col-start-4 aspect-video w-full max-w-[500px] px-4">
-                  <YouTubeEmbed videoid="Am_fneVx3qk" params="controls=0" />
+                  <YouTubeEmbed videoid="XaiAMhbPEnM" params="controls=0" />
                 </div>
               </div>
               <div className="col-span-12 flex w-full items-center justify-center gap-2">
