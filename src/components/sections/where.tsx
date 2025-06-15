@@ -33,21 +33,21 @@ export const Where = () => {
                   width={2000}
                   height={1862}
                   alt=""
-                  src="/images/room_1.png"
+                  src="/images/room_4.png"
                   className="w-[30%] max-w-40"
                 />
                 <Image
                   width={2000}
                   height={1862}
                   alt="room-image-2"
-                  src="/images/room_2.png"
+                  src="/images/room_5.png"
                   className="w-[30%] max-w-40"
                 />
                 <Image
                   width={2000}
                   height={1862}
                   alt=""
-                  src="/images/room_3.png"
+                  src="/images/room_6.png"
                   className="w-[30%] max-w-40"
                 />
               </div>
