@@ -39,7 +39,7 @@ const MainCard = ({ className }: { className?: string }) => {
             <CheckBullet>15 hours of treatment</CheckBullet>
           </div>
           <div className="flex min-h-24 min-w-24 flex-col justify-center rounded-full bg-white text-center text-primary">
-            <p className="font-bold">£4,300</p>
+            <p className="font-bold">£5000</p>
             <p className="text-xs">per patient</p>
           </div>
         </div>
@@ -105,7 +105,7 @@ export const What = () => {
                 </CheckBullet>
               </div>
             }
-            backgroundImage="/images/therapist_1.png"
+            backgroundImage="/images/therapist_3.png"
           />
 
           <MainCard className="hidden lg:flex" />
@@ -142,7 +142,7 @@ export const What = () => {
                 </CheckBullet>
               </div>
             }
-            backgroundImage="/images/therapist_2.png"
+            backgroundImage="/images/therapist_4.png"
           />
         </div>
       </div>

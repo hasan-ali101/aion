@@ -1,11 +1,17 @@
-// import { Clock, Mail, MapPin, TrainFront } from "lucide-react";
 import { GoogleMapsEmbed } from "@next/third-parties/google";
 import { YouTubeEmbed } from "@next/third-parties/google";
 import Image from "next/image";
-
-// import { Card } from "@/components/card";
+import { useState } from "react";
 
 export const Where = () => {
+  const [selectedImage, setSelectedImage] = useState("");
+
+  const images = [
+    "/images/room_4.png",
+    "/images/room_5.png",
+    "/images/room_6.png",
+  ];
+
   return (
     <div
       id="where"
@@ -24,32 +30,46 @@ export const Where = () => {
           <div className="flex h-full w-full items-center lg:w-5/12">
             <div className="grid h-fit w-full grid-cols-12 gap-2">
               <div className="col-span-12 flex w-full justify-center">
-                <div className="col-start-4 aspect-video w-full max-w-[500px] px-4">
-                  <YouTubeEmbed videoid="Am_fneVx3qk" params="controls=0" />
-                </div>
+                {selectedImage ? (
+                  <div className="col-start-4 aspect-video w-full max-w-[500px] px-4">
+                    <Image
+                      width={2000}
+                      height={1862}
+                      alt=""
+                      src={selectedImage}
+                      className="w-full"
+                    />
+                  </div>
+                ) : (
+                  <div className="col-start-4 aspect-video w-full max-w-[500px] bg-black/10 py-4">
+                    <YouTubeEmbed videoid="XaiAMhbPEnM" params="controls=0" />
+                  </div>
+                )}
               </div>
               <div className="col-span-12 flex w-full items-center justify-center gap-2">
-                <Image
-                  width={2000}
-                  height={1862}
-                  alt=""
-                  src="/images/room_1.png"
-                  className="w-[30%] max-w-40"
-                />
-                <Image
-                  width={2000}
-                  height={1862}
-                  alt="room-image-2"
-                  src="/images/room_2.png"
-                  className="w-[30%] max-w-40"
-                />
-                <Image
-                  width={2000}
-                  height={1862}
-                  alt=""
-                  src="/images/room_3.png"
-                  className="w-[30%] max-w-40"
-                />
+                {images.map((image) => {
+                  return selectedImage === image ? (
+                    <div
+                      className="aspect-video h-full w-[30%] max-w-40 bg-black py-2"
+                      onClick={() => {
+                        setSelectedImage("");
+                      }}
+                    >
+                      <YouTubeEmbed videoid="XaiAMhbPEnM" params="controls=0" />
+                    </div>
+                  ) : (
+                    <Image
+                      width={2000}
+                      height={1862}
+                      alt=""
+                      src={image}
+                      className="w-[30%] max-w-40"
+                      onClick={() => {
+                        setSelectedImage(image);
+                      }}
+                    />
+                  );
+                })}
               </div>
             </div>
           </div>
