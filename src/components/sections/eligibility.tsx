@@ -80,7 +80,7 @@ export const Eligibility = () => {
               className="max-w-[500px] lg:hidden"
             />
             <CardCollapsible
-              title="Tried more than two forms of treatment for it"
+              title="Tried at least two forms of treatment for it"
               content="This could be anti-depressant or anxiety medication, therapy or rehabilitation, depending on your condition."
               className="hidden max-w-[550px] lg:block"
               open={true}
