@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import Image from "next/image";
+import { useRouter } from "next/router";
 
 import {
   Carousel,
@@ -11,10 +13,8 @@ import {
 import { CheckBullet } from "@/components/check-bullet";
 import { Card } from "@/components/card";
 import { cn } from "@/utils";
-import { Step } from "./how";
-import Image from "next/image";
 
-const treatmentSteps: Step[] = [
+const getTreatmentSteps = (isHomePage: boolean) => [
   {
     title: (
       <div>
@@ -35,12 +35,11 @@ const treatmentSteps: Step[] = [
         Week 3 - 6<br /> Active
       </div>
     ),
-    description:
-      "Ketamine sessions are followed by talking therapy the next day to discuss and integrate experiences, supporting therapeutic change.",
+    description: `${isHomePage ? "Ketamine" : "Dosing"} sessions are followed by talking therapy the next day to discuss and integrate experiences, supporting therapeutic change.`,
     info: (
       <div>
         <CheckBullet className="text-left text-sm font-medium">
-          4 Ketamine Sessions
+          {`4 ${isHomePage ? "Ketamine" : "dosing"} Sessions`}
         </CheckBullet>
         <CheckBullet className="text-left text-sm font-medium">
           4 Talking Therapy sessions{" "}
@@ -72,16 +71,14 @@ export const Programme = () => {
   });
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
-  // const [count, setCount] = useState(0);
+  const { pathname } = useRouter();
+  const isHomePage = pathname === "/";
 
   useEffect(() => {
     if (!api) {
       return;
     }
-
-    // setCount(api.scrollSnapList().length);
     setCurrent(api.selectedScrollSnap() + 1);
-
     api.on("select", () => {
       setCurrent(api.selectedScrollSnap() + 1);
     });
@@ -97,9 +94,9 @@ export const Programme = () => {
         <span className="text-primary">lasting results within 8 weeks</span>
       </h2>
       <p className="max-w-[600px]">
-        Our evidence-based approach combines transformative talking therapy
-        with precise ketamine treatment to facilitate therapeutic change and 
-        deliver life-changing experiences.
+        {`Our evidence-based approach combines transformative talking therapy with
+        precise ${isHomePage ? "ketamine" : "doses of"} treatment to facilitate therapeutic change and deliver
+        life-changing experiences.`}
       </p>
       <div className="flex flex-col items-center gap-1">
         <CheckBullet>Clinically tested and validated</CheckBullet>
@@ -113,7 +110,7 @@ export const Programme = () => {
         className="w-[85%] max-w-section lg:w-full"
       >
         <CarouselContent>
-          {treatmentSteps.map((step, index) => (
+          {getTreatmentSteps(isHomePage).map((step, index) => (
             <CarouselItem
               key={index}
               className="flex flex-col items-center justify-end lg:basis-1/3"
@@ -189,9 +186,6 @@ export const Programme = () => {
           </Card>
         </div>
       </div>
-      {/* <div className="py-2">
-        {current} of {count}
-      </div> */}
     </div>
   );
 };

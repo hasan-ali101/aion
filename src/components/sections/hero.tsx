@@ -3,16 +3,33 @@ import Image from "next/image";
 import Link from "next/link";
 import CirclesAnimation from "../circles-animation";
 import { TypeFormButton } from "../type-form-button";
+import { useRouter } from "next/router";
 
 export const Hero = () => {
+  const { pathname } = useRouter();
+
+  let title = "Welcome to Aion Clinic";
+  let subtitle =
+    "Ketamine-assisted psychotherapy treatment for mental health and addiction";
+
+  switch (pathname) {
+    case "/anxiety":
+      title = "Private Anxiety Treatment in London";
+      subtitle =
+        "Medication assisted psychotherapy treatment programme for anxiety";
+    case "/depression":
+      title = "Private Depression Treatment in London";
+      subtitle =
+        "Medication assisted psychotherapy treatment programme for depression";
+  }
+
   return (
     <div className="relative flex w-full items-center justify-center bg-primaryDark text-white">
       <CirclesAnimation />
       <div className="mb-28 mt-28 flex h-full w-full flex-col items-center justify-center gap-6 px-6 text-center md:gap-8">
-        <h1 className="mx-4">Welcome to Aion Clinic</h1>
+        <h1 className="mx-4 max-w-[700px]">{title}</h1>
         <p className="max-w-[480px] text-lg font-medium sm:text-lg md:text-xl">
-          Ketamine-assisted psychotherapy treatment for mental health and
-          addiction
+          {subtitle}
         </p>
         <div className="flex w-full flex-col items-center justify-center gap-4 text-left md:flex-row">
           <TypeFormButton className="h-40 w-full overflow-clip rounded-xl bg-primary pl-4 pt-4 font-medium md:max-w-64">
@@ -41,7 +58,7 @@ export const Hero = () => {
             </div>
           </TypeFormButton>
           <Link
-            href="#what"
+            href="/#what"
             className="h-40 w-full overflow-clip rounded-xl bg-tertiary pl-4 pt-4 font-medium md:max-w-64"
           >
             <div className="flex items-center gap-2">
@@ -83,17 +100,17 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-      {/* <div className="absolute bottom-0 w-full z-20 h-20 flex flex-col justify-center items-center">
+      {/* <div className="absolute bottom-0 z-20 flex h-20 w-full flex-col items-center justify-center">
         <Image
           src="/wave-3.png"
           width="1000"
           height="100"
           alt="wave"
-          className="w-full h-10"
+          className="h-10 w-full"
         />
-        <div className="w-full h-20 bg-muted flex flex-col -mt-2 justify-center items-center">
-          <Link href="#what">
-            <ChevronDown className="cursor-pointer mb-6 stroke-primary/80 sm:w-12 sm:h-12 w-10 h-10 hover:animate-bounce delay-150" />
+        <div className="-mt-2 flex h-20 w-full flex-col items-center justify-center bg-muted">
+          <Link href="/#what">
+            <ChevronDown className="mb-6 h-10 w-10 cursor-pointer stroke-primary/80 delay-150 hover:animate-bounce sm:h-12 sm:w-12" />
           </Link>
         </div>
       </div> */}

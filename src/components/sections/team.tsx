@@ -1,8 +1,7 @@
-import { JSX, useEffect, useState } from "react";
+import { JSX, useState } from "react";
 
 import {
   Carousel,
-  CarouselApi,
   CarouselContent,
   CarouselItem,
   CarouselNext,
@@ -11,6 +10,7 @@ import {
 import { Card } from "@/components/card";
 import CircleImage from "@/components/circle-image";
 import { cn } from "@/utils";
+import { useRouter } from "next/router";
 
 type TeamMember = {
   name: string;
@@ -19,20 +19,24 @@ type TeamMember = {
   imageUrl: string;
 };
 
-const team: TeamMember[] = [
+const getTeam = (isHomePage: boolean): TeamMember[] => [
   {
     name: " Dr Matthew Liveras ",
     role: "Consultant Psychiatrist & Chief Medical Officer",
     description: (
       <div className="flex flex-col gap-4">
         <p>
-          Matt is a consultant psychiatrist and group analytic psychotherapist with many years’ 
-          experience across inpatient and community settings in the NHS, private and third sectors. 
-          He was previously the Medical Lead to Awakn’s London clinic, which offered ketamine-assisted psychotherapy. 
+          {`Matt is a consultant psychiatrist and group analytic psychotherapist
+          with many years’ experience across inpatient and community settings in
+          the NHS, private and third sectors. He was previously the Medical Lead
+          to Awakn’s London clinic, which offered ${isHomePage ? "ketamine" : "medication"}-assisted
+          psychotherapy.`}
         </p>
         <p>
-          His approach is informed by the idea that many of the problems we experience, as well as the resources to improve 
-          these, can be found in our relationships with others.        </p>
+          His approach is informed by the idea that many of the problems we
+          experience, as well as the resources to improve these, can be found in
+          our relationships with others.{" "}
+        </p>
       </div>
     ),
     imageUrl: "/images/team_1.1.png",
@@ -107,15 +111,17 @@ const team: TeamMember[] = [
     description: (
       <div className="flex flex-col gap-4">
         <p>
-          Carol is a BABCP and IPT UK accredited Cognitive Behavioural Psychotherapist 
-          and an Interpersonal Psychotherapist.  She began her career as a mental health 
-          social worker working with more severe and enduring mental health conditions. 
-          She has experience working for the NHS in both Primary and Secondary Care Settings.
+          Carol is a BABCP and IPT UK accredited Cognitive Behavioural
+          Psychotherapist and an Interpersonal Psychotherapist. She began her
+          career as a mental health social worker working with more severe and
+          enduring mental health conditions. She has experience working for the
+          NHS in both Primary and Secondary Care Settings.
         </p>
         <p>
-          Carol is passionate about exploring alternative therapy models, such as Internal 
-          Family Systems (IFS).  She has received training in MDMA Assisted Therapy via the 
-          Multidisciplinary Association for Psychedelic Studies (MAPS).
+          Carol is passionate about exploring alternative therapy models, such
+          as Internal Family Systems (IFS). She has received training in MDMA
+          Assisted Therapy via the Multidisciplinary Association for Psychedelic
+          Studies (MAPS).
         </p>
       </div>
     ),
@@ -123,31 +129,12 @@ const team: TeamMember[] = [
   },
 ];
 
-
-
 export const Team = () => {
+  const { pathname } = useRouter();
+  const isHomePage = pathname === "/";
   const [selectedTeamMember, setSelectedTeamMember] = useState<TeamMember>(
-    team[0],
+    getTeam(isHomePage)[0],
   );
-  const [api, setApi] = useState<CarouselApi>();
-  const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (!api) {
-      return;
-    }
-
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap() + 1);
-
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap() + 1);
-    });
-    console.log(api.selectedScrollSnap() + 1);
-  }, [api]);
-
-  console.log(current, "of", count);
 
   return (
     <div
@@ -196,14 +183,13 @@ export const Team = () => {
             </div>
           </Card>
           <Carousel
-            setApi={setApi}
             opts={{
               align: "start",
             }}
             className="w-full max-w-xs md:max-w-md"
           >
             <CarouselContent>
-              {team.map((teamMember, index) => (
+              {getTeam(isHomePage).map((teamMember, index) => (
                 <CarouselItem
                   key={index}
                   className="basis-1/3 md:basis-1/4"
@@ -229,31 +215,9 @@ export const Team = () => {
             </div>
             <CarouselPrevious className="hidden sm:flex" />
             <CarouselNext className="hidden sm:flex" />
-            {/* <div className="mt-4 flex w-full justify-center gap-2 sm:hidden">
-              {Array.from({ length: count }).map((_, index) => (
-                <div
-                  className={cn(
-                    current === index + 1 ? "bg-tertiary" : "bg-tertiary/20",
-                    "h-2 w-2 rounded-full border border-black",
-                  )}
-                ></div>
-              ))}
-            </div> */}
           </Carousel>
         </div>
-        {/* <div className="hidden flex-1 items-end lg:flex">
-          <div className="flex items-center gap-x-4 pt-6">
-            <Link className="text-sm text-primary underline" href="/#how">
-              <Button variant="inverted" className="border border-primary/30">
-                {" "}
-                How does it work
-              </Button>
-            </Link>
-            <GetStartedButton />
-          </div>
-        </div> */}
       </div>
     </div>
   );
 };
-
