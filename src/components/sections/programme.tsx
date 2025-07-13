@@ -141,7 +141,6 @@ export const Programme = () => {
                     "pointer-events-none absolute min-h-full min-w-[800px] select-none opacity-20",
                   )}
                 />
-                {step.icon && step.icon}
                 <div className="text-xl font-semibold">{step.title}</div>
                 <div className="flex flex-col items-center gap-4">
                   <p className={cn(!cardExpanded[index] && "lg:hidden")}>

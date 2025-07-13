@@ -6,18 +6,19 @@ import CardCollapsible from "@/components/card-collapsible";
 type Condition = { name: string; imageUrl: string };
 
 export const Eligibility = () => {
-  const { pathname } = useRouter();
+  const { asPath } = useRouter();
+
   let cardTile_1 = "Clinical diagnosis of one of listed conditions";
   let cardContent_1 =
     "Currently, ketamine can be prescribed in the UK 'off-label' to treat mental health and addiction disorders.";
   let cardTile_2 = "Tried more than one form of treatment for it";
   let cardContent_2 =
     "This could be anti-depressant or anxiety medication, therapy or rehabilitation, depending on your condition.";
-  let cardTitle_3 = "Low neurological or physical risk";
-  let cardContent_3 =
+  const cardTitle_3 = "Low neurological or physical risk";
+  const cardContent_3 =
     "We check for neurological and physical risk factors and assess potential safety or impact before proceeding.";
 
-  switch (pathname) {
+  switch (asPath) {
     case "/anxiety":
       cardTile_1 = "Clinical diagnosis of anxiety";
       cardContent_1 =

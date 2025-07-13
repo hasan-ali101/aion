@@ -6,13 +6,13 @@ import { TypeFormButton } from "../type-form-button";
 import { useRouter } from "next/router";
 
 export const Hero = () => {
-  const { pathname } = useRouter();
+  const { asPath } = useRouter();
 
   let title = "Welcome to Aion Clinic";
   let subtitle =
     "Ketamine-assisted psychotherapy treatment for mental health and addiction";
 
-  switch (pathname) {
+  switch (asPath) {
     case "/anxiety":
       title = "Private Anxiety Treatment in London";
       subtitle =
