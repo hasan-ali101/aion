@@ -1,9 +1,41 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import CardCollapsible from "@/components/card-collapsible";
 
+type Condition = { name: string; imageUrl: string };
+
 export const Eligibility = () => {
-  type Condition = { name: string; imageUrl: string };
+  const { asPath } = useRouter();
+
+  let cardTile_1 = "Clinical diagnosis of one of listed conditions";
+  let cardContent_1 =
+    "Currently, ketamine can be prescribed in the UK 'off-label' to treat mental health and addiction disorders.";
+  let cardTile_2 = "Tried more than one form of treatment for it";
+  let cardContent_2 =
+    "This could be anti-depressant or anxiety medication, therapy or rehabilitation, depending on your condition.";
+  const cardTitle_3 = "Low neurological or physical risk";
+  const cardContent_3 =
+    "We check for neurological and physical risk factors and assess potential safety or impact before proceeding.";
+
+  switch (asPath) {
+    case "/anxiety":
+      cardTile_1 = "Clinical diagnosis of anxiety";
+      cardContent_1 =
+        "We require a formal clinical diagnosis of anxiety (or any of the other conditions listed).";
+      cardTile_2 = "Tried anti-anxiety medication and / or talking therapy";
+      cardContent_2 =
+        "This could be medication like sertraline, diazepam or propanalol, or talking therapy with trained therapists.";
+      break;
+    case "/depression":
+      cardTile_1 = "Clinical diagnosis of depression";
+      cardContent_1 =
+        "We require a formal clinical diagnosis of depression (or any of the other conditions listed).";
+      cardTile_2 = "Tried antidepressants and / or talking therapy";
+      cardContent_2 =
+        "This could be medication like sertraline or citalopram, or talking therapy with trained therapists.";
+      break;
+  }
 
   const conditions = [
     { name: "Anxiety", imageUrl: "/images/conditions/anxiety.png" },
@@ -13,7 +45,10 @@ export const Eligibility = () => {
       name: "Eating Disorder",
       imageUrl: "/images/conditions/eating-disorder.png",
     },
-    { name: "Alcohol Use Disorder", imageUrl: "/images/conditions/alcohol-abuse.png" },
+    {
+      name: "Alcohol Use Disorder",
+      imageUrl: "/images/conditions/alcohol-abuse.png",
+    },
     {
       name: "Substance Disorder",
       imageUrl: "/images/conditions/substance-abuse.png",
@@ -35,59 +70,26 @@ export const Eligibility = () => {
             <p className="max-w-[500px] text-center lg:max-w-max lg:text-left">
               We treat those most in need - in order to qualify you must have:
             </p>
-            {/* <div id="lgUp" className="hidden flex-col gap-y-6 lg:flex">
-              <div className="flex max-w-[500px] flex-col gap-y-4">
-                <Card className="flex w-fit items-center gap-2 bg-white px-3 py-2 font-medium">
-                  <CheckCircle className="h-5 min-h-5 w-5 min-w-5 text-primary" />
-                  <p>Clinical diagnosis of one of listed conditions</p>
-                </Card>
-                <p className="px-2">
-                  Currently, ketamine can be prescribed in the UK
-                  &apos;off-label&apos; to treat mental health and addiction
-                  disorders.
-                </p>
-              </div>
-              <div className="flex max-w-[500px] flex-col gap-y-4">
-                <Card className="flex w-fit items-center gap-2 bg-white px-3 py-2 font-medium">
-                  <CheckCircle className="h-5 min-h-5 w-5 min-w-5 text-primary" />
-                  <p>Tried more than one form of treatment for it</p>
-                </Card>
-                <p className="px-2">
-                  This could be anti-depressant or anxiety medication, therapy
-                  or rehabilitation, depending on your condition.
-                </p>
-              </div>
-              <div className="flex max-w-[500px] flex-col gap-y-4">
-                <Card className="flex w-fit items-center gap-2 bg-white px-3 py-2 font-medium">
-                  <CheckCircle className="h-5 min-h-5 w-5 min-w-5 text-primary" />
-                  <p>Low neurological or physical risk</p>
-                </Card>
-                <p className="px-2">
-                  We check for neurological and physical risk factors and assess
-                  potential safety or impact before proceeding.
-                </p>
-              </div>
-            </div> */}
             <CardCollapsible
-              title="Clinical diagnosis of one of listed conditions"
-              content="Currently, ketamine can be prescribed in the UK 'off-label' to treat mental health and addiction disorders."
+              title={cardTile_1}
+              content={cardContent_1}
               className="hidden max-w-[550px] lg:block"
               open={true}
             />
             <CardCollapsible
-              title="Clinical diagnosis of one of listed conditions"
-              content="Currently, ketamine can be prescribed in the UK 'off-label' to treat mental health and addiction disorders."
+              title={cardTile_1}
+              content={cardContent_1}
               className="max-w-[500px] lg:hidden"
             />
             <CardCollapsible
-              title="Tried more than one form of treatment for it"
-              content="This could be anti-depressant or anxiety medication, therapy or rehabilitation, depending on your condition."
+              title={cardTile_2}
+              content={cardContent_2}
               className="hidden max-w-[550px] lg:block"
               open={true}
             />
             <CardCollapsible
-              title="Low neurological or physical risk"
-              content="We check for neurological and physical risk factors and assess potential safety or impact before proceeding."
+              title={cardTitle_3}
+              content={cardContent_3}
               className="hidden max-w-[550px] lg:block"
               open={true}
             />
@@ -119,14 +121,8 @@ export const Eligibility = () => {
             </div>
           </div>
           <div className="flex max-w-[500px] flex-col gap-4 lg:hidden">
-            <CardCollapsible
-              title="Tried more than one form of treatment for it"
-              content="This could be anti-depressant or anxiety medication, therapy or rehabilitation, depending on your condition."
-            />
-            <CardCollapsible
-              title="Low neurological or physical risk"
-              content="We check for neurological and physical risk factors and assess potential safety or impact before proceeding."
-            />
+            <CardCollapsible title={cardTile_2} content={cardContent_2} />
+            <CardCollapsible title={cardTitle_3} content={cardContent_3} />
           </div>
         </div>
       </div>

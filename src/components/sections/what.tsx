@@ -12,8 +12,15 @@ import { CheckBullet } from "@/components/check-bullet";
 import ImageCardCollapsible from "@/components/image-card-collapsible";
 import { GetStartedButton } from "@/components/get-started-button";
 import { cn } from "@/utils";
+import { useRouter } from "next/router";
 
-const MainCard = ({ className }: { className?: string }) => {
+const MainCard = ({
+  className,
+  isHomePage,
+}: {
+  className?: string;
+  isHomePage: boolean;
+}) => {
   return (
     <Card
       className={cn(
@@ -29,7 +36,11 @@ const MainCard = ({ className }: { className?: string }) => {
         className="pointer-events-none absolute min-h-full min-w-[800px] select-none opacity-20"
       />
       <CardHeader>
-        <CardTitle>Ketamine-Assisted Treatment Programme</CardTitle>
+        <CardTitle>
+          {isHomePage
+            ? "Ketamine-Assisted Treatment Programme"
+            : "Medication-Assisted Treatment Programme"}
+        </CardTitle>
       </CardHeader>
       <CardContent className="flex flex-col gap-6 pb-10 text-sm">
         <div className="flex items-center justify-between gap-2">
@@ -44,14 +55,14 @@ const MainCard = ({ className }: { className?: string }) => {
           </div>
         </div>
         <p>
-          We use ketamine dosing sessions to augment and accelerate progress
+          {`We use ${isHomePage ? "ketamine" : ""} dosing sessions to augment and accelerate progress
           made in talking therapy to deliver tangible results within 8 weeks for
-          those most in need.
+          those most in need.`}
         </p>
       </CardContent>
       <CardFooter className="flex h-full flex-col items-center justify-center gap-3 pb-10 lg:flex-row">
         <GetStartedButton variant="inverted" />
-        <Link href="#programme" className="text-sm text-white underline">
+        <Link href="/#programme" className="text-sm text-white underline">
           See Treatment Plan
         </Link>
       </CardFooter>
@@ -60,6 +71,9 @@ const MainCard = ({ className }: { className?: string }) => {
 };
 
 export const What = () => {
+  const { pathname } = useRouter();
+  const isHomePage = pathname === "/";
+
   return (
     <div
       id="what"
@@ -73,18 +87,18 @@ export const What = () => {
         experiences through our evidence-based protocol.
       </p>
       <div className="flex w-full flex-col items-center justify-center gap-4">
-        <MainCard className="lg:hidden" />
+        <MainCard className="lg:hidden" isHomePage={isHomePage} />
         <div className="flex flex-col gap-4 lg:flex-row">
           <ImageCardCollapsible
-            title="Talking Therapy"
+            title={isHomePage ? "Talking Therapy" : "Individual Therapy"}
             description={
               <CheckBullet>7 sessions included in treatment</CheckBullet>
             }
             content={
               <div className="flex flex-col gap-y-4 p-2 text-sm">
                 <p>
-                  We use Acceptance and Commitment Therapy (ACT) as the framework
-                  for our therapeutic intervention.
+                  We use Acceptance and Commitment Therapy (ACT) as the
+                  framework for our therapeutic intervention.
                 </p>
                 <p>ACT is an evidence-based thesey madel which focuses on:</p>
                 <ol className="flex list-decimal flex-col gap-2 pl-2">
@@ -93,8 +107,8 @@ export const What = () => {
                     is truly important and meaningful to you
                   </li>
                   <li>
-                    Equipping you with the psychological tools to more effectively
-                    manage painful and stressful experiences
+                    Equipping you with the psychological tools to more
+                    effectively manage painful and stressful experiences
                   </li>
                 </ol>
                 <CheckBullet>
@@ -108,9 +122,9 @@ export const What = () => {
             backgroundImage="/images/therapist_3.png"
           />
 
-          <MainCard className="hidden lg:flex" />
+          <MainCard className="hidden lg:flex" isHomePage={isHomePage} />
           <ImageCardCollapsible
-            title="Ketamine Sessions"
+            title={isHomePage ? "Ketamine Sessions" : "Dosing Sessions"}
             description={
               <CheckBullet>4 sessions included in treatment</CheckBullet>
             }
@@ -122,12 +136,12 @@ export const What = () => {
                   perspectives.
                 </p>
                 <p>
-                  Scientific research has shown that ketamine, at controlled
-                  doses, can increase plasticity in the brain.
+                  {`Scientific research has shown that ${isHomePage ? "ketamine" : "psychedelics"}, at controlled doses, can
+                  increase plasticity in the brain.`}
                 </p>
                 <p>
-                  Simply put, ketamine can make the brain more responsive and
-                  adaptive to change.
+                  {`Simply put, ${isHomePage ? "ketamine" : ""}  can make the brain more responsive and
+                  adaptive to change.`}
                 </p>
                 <CheckBullet>
                   2 hour in-person session with your expert therapist{" "}
@@ -137,8 +151,8 @@ export const What = () => {
                   psychiatrist){" "}
                 </CheckBullet>
                 <CheckBullet>
-                  Individually tailored intramuscular ketamine doses collaboratively 
-                  agreed with clinical team{" "}
+                  {`Individually tailored intramuscular ${isHomePage ? "ketamine" : ""} doses
+                  collaboratively agreed with clinical team`}
                 </CheckBullet>
               </div>
             }

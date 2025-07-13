@@ -8,3 +8,4 @@ export { Footer } from "./footer";
 export { How } from "./how";
 export { Programme } from "./programme";
 export { Science } from "./science";
+export { Why } from "./why";

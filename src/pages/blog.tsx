@@ -16,7 +16,6 @@ import Image from "next/image";
 import HeadWrapper from "@/components/headwrapper";
 
 export default function IndexPage({ posts }: { posts: SanityDocument[] }) {
-  console.log(posts);
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
