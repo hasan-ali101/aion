@@ -35,7 +35,7 @@ const team: TeamMember[] = [
           these, can be found in our relationships with others.        </p>
       </div>
     ),
-    imageUrl: "/images/team_1.png",
+    imageUrl: "/images/team_1.1.png",
   },
   {
     name: "Dr Qasim Ali",
@@ -77,7 +77,7 @@ const team: TeamMember[] = [
         </p>
       </div>
     ),
-    imageUrl: "/images/team_3.png",
+    imageUrl: "/images/team_3.1.png",
   },
   {
     name: "Dominic Riches",

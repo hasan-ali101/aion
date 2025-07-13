@@ -50,7 +50,7 @@ export const Eligibility = () => {
               <div className="flex max-w-[500px] flex-col gap-y-4">
                 <Card className="flex w-fit items-center gap-2 bg-white px-3 py-2 font-medium">
                   <CheckCircle className="h-5 min-h-5 w-5 min-w-5 text-primary" />
-                  <p>Tried at least two forms of treatment for it</p>
+                  <p>Tried more than one form of treatment for it</p>
                 </Card>
                 <p className="px-2">
                   This could be anti-depressant or anxiety medication, therapy
@@ -80,7 +80,7 @@ export const Eligibility = () => {
               className="max-w-[500px] lg:hidden"
             />
             <CardCollapsible
-              title="Tried at least two forms of treatment for it"
+              title="Tried more than one form of treatment for it"
               content="This could be anti-depressant or anxiety medication, therapy or rehabilitation, depending on your condition."
               className="hidden max-w-[550px] lg:block"
               open={true}
@@ -120,7 +120,7 @@ export const Eligibility = () => {
           </div>
           <div className="flex max-w-[500px] flex-col gap-4 lg:hidden">
             <CardCollapsible
-              title="Tried at least two forms of treatment for it"
+              title="Tried more than one form of treatment for it"
               content="This could be anti-depressant or anxiety medication, therapy or rehabilitation, depending on your condition."
             />
             <CardCollapsible
