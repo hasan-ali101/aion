@@ -69,7 +69,7 @@ export const Hero = () => {
             <Image
               width={164}
               height={96}
-              src="/images/gmclogo.png"
+              src="/images/commissionLogo.png"
               alt=""
               className="h-12 w-auto"
             />

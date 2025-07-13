@@ -45,7 +45,7 @@ export const Footer = () => {
             <div className="rounded-full bg-secondary p-1">
               <Phone className="h-3 w-3" />
             </div>
-            <p className="text-xs text-white sm:text-sm">0800 000 0000</p>
+            <p className="text-xs text-white sm:text-sm">07856 128934</p>
           </div>
         </div>
         <div className="flex justify-center gap-6">
