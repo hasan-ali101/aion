@@ -17,6 +17,7 @@ export const Questions = () => {
 
   return (
     <div
+      id="questions"
       className={cn(
         isHomePage ? "justify-start" : "justify-center",
         "flex min-h-[500px] w-full flex-col items-center gap-6 bg-white px-4 pb-20 pt-10 md:px-20",
@@ -246,9 +247,11 @@ export const Questions = () => {
           </Accordion>
         </div>
       ) : (
-        <Button className="text-lg">
-          Go to FAQs <ArrowRight className="w-4" />
-        </Button>
+        <Link href={"/#questions"} scroll={false}>
+          <Button className="text-lg">
+            Go to FAQs <ArrowRight className="w-4" />
+          </Button>
+        </Link>
       )}
     </div>
   );
