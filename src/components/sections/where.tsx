@@ -23,7 +23,7 @@ export const Where = () => {
         </h2>
         <div className="max-w-2xl text-center">
           Our clinic is designed to help create a calm, relaxing environment for
-          your treatment. We are located in Angel, around 5 minutes from the
+          your treatment. We are located in the heart of Islington, around 5 minutes from Angel
           station.
         </div>
         <div className="flex w-full flex-col items-center gap-6 lg:flex-row-reverse lg:gap-4">
@@ -75,7 +75,7 @@ export const Where = () => {
           </div>
           <div className="grid h-full w-full max-w-[500px] grid-cols-12 gap-2 rounded-lg bg-secondary px-4 py-6 lg:w-7/12 lg:max-w-none">
             <p className="col-span-12 h-full px-4 text-center font-medium lg:text-left">
-              Find us at 384 City Road, London,
+              Find us at 384 City Road, Islington, London,
               <br className="lg:hidden" /> EC1V 2QA.
             </p>
             <div className="col-span-12 my-2 h-fit">
@@ -84,8 +84,8 @@ export const Where = () => {
                 height="300"
                 width="100%"
                 mode="place"
-                zoom="12"
-                q="384 city road, London, EC1V 2QAY"
+                zoom="15"
+                q="place_id:ChIJQ6ZwUbxcvgARUheUsu-zltM"
               />
             </div>
           </div>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import CirclesAnimation from "../circles-animation";
 import { PageLinks } from "../page-links";
-import { Clock, Facebook, Linkedin, Mail, Phone, Twitter } from "lucide-react";
+import { Clock, Facebook, Linkedin, Mail, Phone, Instagram } from "lucide-react";
 import Link from "next/link";
 
 export const Footer = () => {
@@ -69,7 +69,7 @@ export const Footer = () => {
             target="_blank"
             className="rounded-full bg-white p-2"
           >
-            <Twitter className="h-4 w-4 fill-primary text-primary" />
+            <Instagram className="h-4 w-4 fill-primary text-primary" />
           </a>
         </div>
         <p className="text-muted">2025 © Aion. All rights reserved.</p>

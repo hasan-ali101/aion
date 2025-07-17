@@ -10,7 +10,7 @@ export const Why = () => {
     "Our treatment is derived from years of clinical research and refined through practical experience.";
   const cardTitle_3 = "Safe, regulated expert clinical service";
   const cardContent_3 =
-    "We are fully regulated and approved by the CQC, who gave us an ‘Outstanding’ overall rating on inspection.";
+    "We are fully regulated and approved by the CQC to safely run our clinical practice.";
 
   return (
     <div className="flex w-full justify-center bg-white md:pt-10">

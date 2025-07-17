@@ -39,7 +39,7 @@ const getTreatmentSteps = (isHomePage: boolean) => [
     info: (
       <div>
         <CheckBullet className="text-left text-sm font-medium">
-          {`4 ${isHomePage ? "Ketamine" : "dosing"} Sessions`}
+          {`4 ${isHomePage ? "Ketamine" : "Dosing"} Sessions`}
         </CheckBullet>
         <CheckBullet className="text-left text-sm font-medium">
           4 Talking Therapy sessions{" "}
@@ -100,7 +100,8 @@ export const Programme = () => {
       </p>
       <div className="flex flex-col items-center gap-1">
         <CheckBullet>Clinically tested and validated</CheckBullet>
-        <CheckBullet>Evidence based protocol</CheckBullet>
+        <CheckBullet>Evidence-based protocol</CheckBullet>
+        <CheckBullet>Delivered by expert clinical team</CheckBullet>
       </div>
       <Carousel
         setApi={setApi}
