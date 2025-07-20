@@ -1,7 +1,13 @@
+import { useRouter } from "next/router";
+
 import CardCollapsible from "@/components/card-collapsible";
-import { RadialChart } from "../radial-chart";
+import { AnxietyChart } from "@/components/anxiety-chart";
+import { DepressionChart } from "@/components/depression-chart";
 
 export const Why = () => {
+  const router = useRouter();
+  const { condition } = router.query;
+
   const cardTile_1 = "Highly experienced medical team";
   const cardContent_1 =
     "Our clinical team of psychiatrists, nurses & therapists have a wealth of experience with patients under controlled substances.";
@@ -10,7 +16,7 @@ export const Why = () => {
     "Our treatment is derived from years of clinical research and refined through practical experience.";
   const cardTitle_3 = "Safe, regulated expert clinical service";
   const cardContent_3 =
-    "We are fully regulated and approved by the CQC, who gave us an ‘Outstanding’ overall rating on inspection.";
+    "We are fully regulated and approved by the CQC to safely run our clinical practice.";
 
   return (
     <div className="flex w-full justify-center bg-white md:pt-10">
@@ -52,7 +58,11 @@ export const Why = () => {
             />
           </div>
           <div className="flex w-full flex-col items-center gap-6 lg:w-6/12">
-            <RadialChart />
+            {condition === "anxiety-treatment-clinic-uk" ? (
+              <AnxietyChart />
+            ) : (
+              <DepressionChart />
+            )}
           </div>
           <div className="flex max-w-[500px] flex-col gap-4 px-6 lg:hidden">
             <CardCollapsible title={cardTile_2} content={cardContent_2} />

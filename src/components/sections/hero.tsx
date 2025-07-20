@@ -6,21 +6,29 @@ import { TypeFormButton } from "../type-form-button";
 import { useRouter } from "next/router";
 
 export const Hero = () => {
-  const { asPath } = useRouter();
+  const router = useRouter();
+  const { condition } = router.query;
 
   let title = "Welcome to Aion Clinic";
   let subtitle =
     "Ketamine-assisted psychotherapy treatment for mental health and addiction";
 
-  switch (asPath) {
-    case "/anxiety":
+  switch (condition) {
+    case "anxiety-treatment-clinic-uk":
       title = "Private Anxiety Treatment in London";
       subtitle =
-        "Medication assisted psychotherapy treatment programme for anxiety";
-    case "/depression":
+        "Discover our personalised 8-week anxiety-treatment programme delivered by expert clinicians";
+      break;
+    case "depression-treatment-clinic-uk":
       title = "Private Depression Treatment in London";
       subtitle =
-        "Medication assisted psychotherapy treatment programme for depression";
+        "Discover our evidence-based 8-week depression-treatment programme delivered by expert clinicians";
+      break;
+    case "mental-health-clinic":
+      title = "Private Mental Health Clinic in London";
+      subtitle =
+        "Evidence-based innovative mental health care with same-week consultant assessment";
+      break;
   }
 
   return (
@@ -83,37 +91,35 @@ export const Hero = () => {
         <div className="flex flex-col items-center gap-3 md:flex-row">
           <p>Certified and regulated by</p>
           <div className="flex gap-2">
-            <Image
-              width={164}
-              height={96}
-              src="/images/commissionLogo.png"
-              alt=""
-              className="h-12 w-auto"
-            />
-            <Image
-              width={164}
-              height={96}
-              src="/images/icoLogo.png"
-              alt=""
-              className="h-12 w-auto"
-            />
+            <a
+              href="https://www.cqc.org.uk/provider/1-20629833868"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                width={164}
+                height={96}
+                src="/images/commissionLogo.png"
+                alt="Care Quality Commission"
+                className="h-12 w-auto"
+              />
+            </a>
+            <a
+              href="https://ico.org.uk/ESDWebPages/Entry/ZB808864"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                width={164}
+                height={96}
+                src="/images/icoLogo.png"
+                alt="ICO Registration"
+                className="h-12 w-auto"
+              />
+            </a>
           </div>
         </div>
       </div>
-      {/* <div className="absolute bottom-0 z-20 flex h-20 w-full flex-col items-center justify-center">
-        <Image
-          src="/wave-3.png"
-          width="1000"
-          height="100"
-          alt="wave"
-          className="h-10 w-full"
-        />
-        <div className="-mt-2 flex h-20 w-full flex-col items-center justify-center bg-muted">
-          <Link href="/#what">
-            <ChevronDown className="mb-6 h-10 w-10 cursor-pointer stroke-primary/80 delay-150 hover:animate-bounce sm:h-12 sm:w-12" />
-          </Link>
-        </div>
-      </div> */}
     </div>
   );
 };

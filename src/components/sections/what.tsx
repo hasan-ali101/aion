@@ -136,11 +136,11 @@ export const What = () => {
                   perspectives.
                 </p>
                 <p>
-                  {`Scientific research has shown that ${isHomePage ? "ketamine" : "psychedelics"}, at controlled doses, can
+                  {`Scientific research has shown that ${isHomePage ? "ketamine" : "medication"}, at controlled doses, can
                   increase plasticity in the brain.`}
                 </p>
                 <p>
-                  {`Simply put, ${isHomePage ? "ketamine" : ""}  can make the brain more responsive and
+                  {`Simply put, ${isHomePage ? "ketamine" : "our treatment"}  can make the brain more responsive and
                   adaptive to change.`}
                 </p>
                 <CheckBullet>
