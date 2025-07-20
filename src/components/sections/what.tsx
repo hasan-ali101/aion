@@ -90,7 +90,7 @@ export const What = () => {
         <MainCard className="lg:hidden" isHomePage={isHomePage} />
         <div className="flex flex-col gap-4 lg:flex-row">
           <ImageCardCollapsible
-            title={isHomePage ? "Talking Therapy" : "Individual Therapy"}
+            title={isHomePage ? "Talking Therapy" : "Talking Therapy"}
             description={
               <CheckBullet>7 sessions included in treatment</CheckBullet>
             }

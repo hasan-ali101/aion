@@ -100,10 +100,10 @@ export function DepressionChart() {
         <div className="mx-4 flex flex-col items-center gap-2 pt-4 text-center text-xs md:items-end md:text-right">
           <p>
             Cohort Case Report: Ketamine-Assisted Therapy Within a Community of
-            Practice for Healthcare Providers with PTSD and Depression
+            Practice for Healthcare Providers with PTSD and Depression (2022)
           </p>
           <p className="italic">
-            Shannon Dames, Pamela Kryskow, Crosbie Watler
+            Shannon Dames, Pamela Kryskow, Crosbie Watler et al
           </p>
         </div>
       </CardContent>

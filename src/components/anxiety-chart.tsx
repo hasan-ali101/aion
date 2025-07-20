@@ -100,10 +100,10 @@ export function AnxietyChart() {
         <div className="mx-4 flex flex-col items-center gap-2 pt-4 text-center text-xs md:items-end md:text-right">
           <p>
             Ketamine-assisted psychotherapy (KAP): Demographics, Clinical
-            Outcomes, and Practice Data From Three Major Clinics
+            Outcomes, and Practice Data From Three Major Clinics (2019)
           </p>
           <p className="italic">
-            Jennifer Dore, Brent Turnipseed, Shannon Dwyer
+            Jennifer Dore, Brent Turnipseed, Shannon Dwyer et al
           </p>
         </div>
       </CardContent>
