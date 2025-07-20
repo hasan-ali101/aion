@@ -16,7 +16,6 @@ const conditions = [
   "anxiety-treatment-clinic-uk",
   "depression-treatment-clinic-uk",
   "mental-health-clinic",
-  "ketamine-assisted-therapy",
   "ptsd",
   "eating-disorder",
   "alcohol-abuse",

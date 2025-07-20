@@ -9,8 +9,6 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/card";
 import { ChartConfig, ChartContainer } from "@/components/chart";
 
-export const description = "A radial chart with text";
-
 const chartData = [{ percentage: 91, fill: "#2E4E3F" }];
 
 const chartConfig = {
@@ -19,7 +17,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export function RadialChart() {
+export function AnxietyChart() {
   return (
     <Card className="flex h-full w-full flex-col gap-6 shadow-none">
       <CardHeader className="hidden items-center md:flex">
@@ -89,7 +87,7 @@ export function RadialChart() {
                           y={(viewBox.cy || 0) + 66}
                           className="fill-muted-foreground md:text-sm"
                         >
-                          end of trial
+                          end of programme
                         </tspan>
                       </text>
                     );
@@ -99,6 +97,15 @@ export function RadialChart() {
             </PolarRadiusAxis>
           </RadialBarChart>
         </ChartContainer>
+        <div className="mx-4 flex flex-col items-center gap-2 pt-4 text-center text-xs md:items-end md:text-right">
+          <p>
+            Ketamine-assisted psychotherapy (KAP): Demographics, Clinical
+            Outcomes, and Practice Data From Three Major Clinics
+          </p>
+          <p className="italic">
+            Jennifer Dore, Brent Turnipseed, Shannon Dwyer
+          </p>
+        </div>
       </CardContent>
     </Card>
   );

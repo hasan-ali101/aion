@@ -6,24 +6,25 @@ import { TypeFormButton } from "../type-form-button";
 import { useRouter } from "next/router";
 
 export const Hero = () => {
-  const { asPath } = useRouter();
+  const router = useRouter();
+  const { condition } = router.query;
 
   let title = "Welcome to Aion Clinic";
   let subtitle =
     "Ketamine-assisted psychotherapy treatment for mental health and addiction";
 
-  switch (asPath) {
-    case "/anxiety-treatment-clinic-uk":
+  switch (condition) {
+    case "anxiety-treatment-clinic-uk":
       title = "Private Anxiety Treatment in London";
       subtitle =
         "Discover our personalised 8-week anxiety-treatment programme delivered by expert clinicians";
       break;
-    case "/depression-treatment-clinic-uk":
+    case "depression-treatment-clinic-uk":
       title = "Private Depression Treatment in London";
       subtitle =
         "Discover our evidence-based 8-week depression-treatment programme delivered by expert clinicians";
       break;
-    case "/mental-health-clinic":
+    case "mental-health-clinic":
       title = "Private Mental Health Clinic in London";
       subtitle =
         "Evidence-based innovative mental health care with same-week consultant assessment";
