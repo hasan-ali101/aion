@@ -99,7 +99,7 @@ export function AnxietyChart() {
         </ChartContainer>
         <div className="mx-4 flex flex-col items-center gap-2 pt-4 text-center text-xs md:items-end md:text-right">
           <p>
-            Ketamine-assisted psychotherapy (KAP): Demographics, Clinical
+            KAP: Demographics, Clinical
             Outcomes, and Practice Data From Three Major Clinics (2019)
           </p>
           <p className="italic">

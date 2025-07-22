@@ -99,7 +99,7 @@ export function DepressionChart() {
         </ChartContainer>
         <div className="mx-4 flex flex-col items-center gap-2 pt-4 text-center text-xs md:items-end md:text-right">
           <p>
-            Cohort Case Report: Ketamine-Assisted Therapy Within a Community of
+            Cohort Case Report: KAT Within a Community of
             Practice for Healthcare Providers with PTSD and Depression (2022)
           </p>
           <p className="italic">

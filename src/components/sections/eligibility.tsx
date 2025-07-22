@@ -26,7 +26,7 @@ export const Eligibility = () => {
         "We require a formal clinical diagnosis of anxiety (or any of the other conditions listed).";
       cardTile_2 = "Tried anti-anxiety medication and / or talking therapy";
       cardContent_2 =
-        "This could be medication like sertraline, diazepam or propanalol, or talking therapy with trained therapists.";
+        "This could be anti-anxiety or antidepressant medication, or talking therapy with trained therapists.";
       break;
     case "depression-treatment-clinic-uk":
       cardTile_1 = "Clinical diagnosis of depression";
@@ -34,7 +34,7 @@ export const Eligibility = () => {
         "We require a formal clinical diagnosis of depression (or any of the other conditions listed).";
       cardTile_2 = "Tried antidepressants and / or talking therapy";
       cardContent_2 =
-        "This could be medication like sertraline or citalopram, or talking therapy with trained therapists.";
+        "This could be any prescribed anti-depressant medication, or talking therapy with trained therapists.";
       break;
     case "mental-health-clinic":
       cardTile_1 = "Clinical diagnosis of one of the listed conditions";
