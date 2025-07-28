@@ -24,7 +24,7 @@ export const Where = () => {
         <div className="max-w-2xl text-center">
           Our clinic is designed to help create a calm, relaxing environment for
           your treatment. We are located in the heart of Islington, around 5 minutes from Angel
-          station.
+          station in London.
         </div>
         <div className="flex w-full flex-col items-center gap-6 lg:flex-row-reverse lg:gap-4">
           <div className="flex h-full w-full items-center lg:w-5/12">

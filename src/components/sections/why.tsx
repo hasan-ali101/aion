@@ -8,15 +8,15 @@ export const Why = () => {
   const router = useRouter();
   const { condition } = router.query;
 
-  const cardTile_1 = "Highly experienced medical team";
+  const cardTile_1 = "Same-week mental-health asessment";
   const cardContent_1 =
-    "Our clinical team of psychiatrists, nurses & therapists have a wealth of experience with patients under controlled substances.";
-  const cardTile_2 = "Evidence-based treatment protocol";
+    "If your referral is approved, you can book a private 90-minute appointment with our consultant psychiatrist to assess your suitability for treatment at Aion.";
+  const cardTile_2 = "Start treatment within 2 weeks";
   const cardContent_2 =
-    "Our treatment is derived from years of clinical research and refined through practical experience.";
+    "Following your assessment, you will be eligible to begin our 8-week medication-assisted therapy programme at our lovely clinic in Islington, London.";
   const cardTitle_3 = "Safe, regulated expert clinical service";
   const cardContent_3 =
-    "We are fully regulated and approved by the CQC to safely run our clinical practice.";
+    "Our experienced team of psychiatrists, nurses & therapists are fully regulated and approved by the CQC to safely deliver our treatment programme.";
 
   return (
     <div className="flex w-full justify-center bg-white md:pt-10">

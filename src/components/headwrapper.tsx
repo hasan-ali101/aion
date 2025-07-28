@@ -44,9 +44,9 @@ export default function HeadWrapper({
       break;
 
     case "mental-health-clinic":
-      autoTitle = "Private Mental-Health Clinic in London | Aion Clinic";
+      autoTitle = "Private Mental-Health Clinic & Assessment in London | Aion Clinic";
       autoDesc =
-        "Same-week consultant psychiatrist assessments and bespoke, evidence-based treatment plans for mood & anxiety disorders.";
+        "Same-week consultant psychiatrist assessments and personalised medication assisted therapy programmes at our CQC-registered clinic in Islington, London.";
       break;
 
     case "science":

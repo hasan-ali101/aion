@@ -27,7 +27,7 @@ export const Hero = () => {
     case "mental-health-clinic":
       title = "Private Mental Health Clinic in London";
       subtitle =
-        "Evidence-based innovative mental health care with same-week consultant assessment";
+        "Medication-assisted therapy for mental health. Same-week consultant medical assessment to assess eligibility.";
       break;
   }
 

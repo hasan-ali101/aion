@@ -34,7 +34,7 @@ const screeningSteps: Step[] = [
       "In order to provide safe treatment we will need to see a copy of your GP Summary Care Record; with your consent, we are happy to request this on your behalf.",
   },
   {
-    title: "Initial Medical Consultation",
+    title: "Initial Medical Assessment",
     icon: <ShieldPlus className="min-h-7 min-w-7" />,
     description:
       "Once clinically reviewed, you are invited to a 1.5 hr session with our consultant psychiatrist to explore your case in detail and confirm that this is the right treatment for you.",
