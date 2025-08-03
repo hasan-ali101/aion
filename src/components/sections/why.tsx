@@ -14,7 +14,7 @@ export const Why = () => {
   const cardTile_2 = "Start treatment within 2 weeks";
   const cardContent_2 =
     "Following your assessment, you will be eligible to begin our 8-week medication-assisted therapy programme at our lovely clinic in Islington, London.";
-  const cardTitle_3 = "Safe, regulated expert clinical service";
+  const cardTitle_3 = "CQC-registered expert clinical service";
   const cardContent_3 =
     "Our experienced team of psychiatrists, nurses & therapists are fully regulated and approved by the CQC to safely deliver our treatment programme.";
 
