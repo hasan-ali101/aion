@@ -22,7 +22,7 @@ export const Hero = () => {
     case "depression-treatment-clinic-uk":
       title = "Private Depression Treatment in London";
       subtitle =
-        "Discover our evidence-based 8-week depression-treatment programme delivered by expert clinicians";
+        "Evidence-based 8-week medication-assisted programme for treatment-resistant depression";
       break;
     case "mental-health-clinic":
       title = "Private Mental Health Clinic in London";
