@@ -149,6 +149,26 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
     imageUrl: "/images/team_6.png",
   },  
   {
+    name: "Dr Laurie Higbed",
+    role: "Psychologist",
+    description: (
+      <div className="flex flex-col gap-4">
+        <p>
+          Laurie is an experienced clinical psychologist. Laurie has worked as a 
+          lead therapist on clinical trials using MDMA and psilocybin-assisted 
+          psychotherapy. She has a special interest in working with complex trauma, 
+          addictions and the use of psychedelic therapy to treat a range of mental 
+          health difficulties.
+        </p>
+        <p>
+          Laurie is registered with the Health and Care Professions Council (HCPC) 
+          and is a member of the Association of Clinical Psychologists (ACPUK).
+        </p>
+      </div>
+    ),
+    imageUrl: "/images/team_8.png",
+  },  
+  {
     name: "Steve Harper",
     role: "Lead Nurse",
     description: (
