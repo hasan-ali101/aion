@@ -84,6 +84,27 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
     imageUrl: "/images/team_3.1.png",
   },
   {
+    name: "Fardijah Treacher-Morley",
+    role: "Psychotherapist",
+    description: (
+      <div className="flex flex-col gap-4">
+        <p>
+          Fardijah is an Integrative Art Psychotherapist with over 20 years 
+          in the therapeutic field. She is experienced in several areas, including 
+          trauma, addiction and domestic violence.
+        </p>
+        <p>
+          Fardijah holds a certificate in Psychedelic Assisted Therapies and Research 
+          from the California Institute of Integral Studies, which includes the MAPS 
+          MDMA Therapy Training. Fardijah is registered with the Health and Care Professions 
+          Council (HCPC) and holds Master's in Medical Anthropology, Psychoanalytic and 
+          Observational Studies, and Integrative Art Psychotherapy.
+        </p>
+      </div>
+    ),
+    imageUrl: "/images/team_5.png",
+  },  
+  {
     name: "Dominic Riches",
     role: "Cognitive Behavioural Psychotherapist",
     description: (
@@ -125,8 +146,27 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
         </p>
       </div>
     ),
-    imageUrl: "/images/team_5.png",
-  },
+    imageUrl: "/images/team_6.png",
+  },  
+  {
+    name: "Steve Harper",
+    role: "Lead Nurse",
+    description: (
+      <div className="flex flex-col gap-4">
+        <p>
+          Steve is a highly experienced nurse with over 30 years in both general 
+          and psychiatric healthcare. He has worked across NHS and private sectors, 
+          bringing expertise from diverse settings including community mental health, 
+          drug and alcohol services, trauma care, and ketamine-assisted psychotherapy.
+        </p>
+        <p>
+          Known for his holistic and compassionate approach, Steve specialises in supporting 
+          individuals through complex mental health and addiction challenges.
+        </p>
+      </div>
+    ),
+    imageUrl: "/images/team_7.png",
+  },  
 ];
 
 export const Team = () => {
