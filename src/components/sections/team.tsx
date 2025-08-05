@@ -97,7 +97,7 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
           Fardijah holds a certificate in Psychedelic Assisted Therapies and Research 
           from the California Institute of Integral Studies, which includes the MAPS 
           MDMA Therapy Training. Fardijah is registered with the Health and Care Professions 
-          Council (HCPC) and holds Master's in Medical Anthropology, Psychoanalytic and 
+          Council (HCPC) and holds a Masters Degree in Medical Anthropology, Psychoanalytic and 
           Observational Studies, and Integrative Art Psychotherapy.
         </p>
       </div>
