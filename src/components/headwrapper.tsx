@@ -1,15 +1,12 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { ReactNode } from "react";
 
 interface HeadWrapperProps {
-  /** Optional manual <title> override */
   title?: string;
-  /** Optional manual <meta description> override */
   description?: string;
-  /** Optional OG/Twitter image */
   image?: string;
-  children: React.ReactNode;
-  /** true → adds <meta robots="noindex,nofollow"> */
+  children: ReactNode;
   noIndex?: boolean;
 }
 
@@ -23,9 +20,7 @@ export default function HeadWrapper({
   const router = useRouter();
   const { condition } = router.query;
 
-  /* ---------- automatic SEO copy by route ---------- */
-
-  /* default = home page */
+  // --------- Auto SEO by route ---------
   let autoTitle = "AION Clinic | Ketamine Assisted Therapy";
   let autoDesc =
     "Delivering our transformative bespoke 8-week ketamine-assisted psychotherapy programme for those suffering from mental-health or addiction problems.";
@@ -44,7 +39,8 @@ export default function HeadWrapper({
       break;
 
     case "mental-health-clinic":
-      autoTitle = "Private Mental-Health Clinic & Assessment in London | Aion Clinic";
+      autoTitle =
+        "Private Mental-Health Clinic & Assessment in London | Aion Clinic";
       autoDesc =
         "Same-week consultant psychiatrist assessments and personalised medication assisted therapy programmes at our CQC-registered clinic in Islington, London.";
       break;
@@ -69,11 +65,9 @@ export default function HeadWrapper({
       break;
 
     default:
-      // keep home-page defaults
       break;
   }
-
-  /* -------------------------------------------------- */
+  // -------------------------------------
 
   const metaTitle = title || autoTitle;
   const metaDesc = description || autoDesc;
@@ -88,16 +82,8 @@ export default function HeadWrapper({
           name="robots"
           content={noIndex ? "noindex,nofollow" : "index,follow"}
         />
-        {/* ✅ Google Tag Manager */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-KGDQRN8K');`,
-          }}
-          />
+        {/* No GTM here — it's centralized in _document.tsx */}
+        {/* No Meta Pixel here — handled in Browser GTM */}
       </Head>
       {children}
     </>
