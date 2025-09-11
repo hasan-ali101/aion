@@ -12,7 +12,7 @@ const ReferralThankYou = () => {
         Thank you for submitting your referral.
       </h2>
       <p className="mb-8 text-muted-foreground max-w-md">
-        Our clinical team is reviewing your submission and will be in touch shortly over email
+        Our clinical team is reviewing your submission and will be in touch shortly over email.
       </p>
       <Link href="/">
         <Button>
