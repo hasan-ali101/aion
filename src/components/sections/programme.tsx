@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { useRouter } from "next/router";
 
 import {
   Carousel,
@@ -14,7 +13,7 @@ import { CheckBullet } from "@/components/check-bullet";
 import { Card } from "@/components/card";
 import { cn } from "@/utils";
 
-const getTreatmentSteps = (isHomePage: boolean) => [
+const getTreatmentSteps = () => [
   {
     title: (
       <div>
@@ -35,14 +34,15 @@ const getTreatmentSteps = (isHomePage: boolean) => [
         Week 3 - 6<br /> Active
       </div>
     ),
-    description: `Dosing sessions are followed by talking therapy the next day to discuss and integrate experiences, supporting therapeutic change.`,
+    description:
+      "Dosing sessions are followed by talking therapy the next day to discuss and integrate experiences, supporting therapeutic change.",
     info: (
       <div>
         <CheckBullet className="text-left text-sm font-medium">
           4 Dosing Sessions
         </CheckBullet>
         <CheckBullet className="text-left text-sm font-medium">
-          4 Talking Therapy sessions{" "}
+          4 Talking Therapy sessions
         </CheckBullet>
       </div>
     ),
@@ -57,7 +57,7 @@ const getTreatmentSteps = (isHomePage: boolean) => [
       "Following a week’s break to consolidate changes, we conclude with a final therapy session to review progress and plan next steps",
     info: (
       <CheckBullet className="text-left text-sm font-medium">
-        1 Talking Therapy session{" "}
+        1 Talking Therapy session
       </CheckBullet>
     ),
   },
@@ -71,17 +71,11 @@ export const Programme = () => {
   });
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
-  const { pathname } = useRouter();
-  const isHomePage = pathname === "/";
 
   useEffect(() => {
-    if (!api) {
-      return;
-    }
+    if (!api) return;
     setCurrent(api.selectedScrollSnap() + 1);
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap() + 1);
-    });
+    api.on("select", () => setCurrent(api.selectedScrollSnap() + 1));
   }, [api]);
 
   return (
@@ -103,25 +97,21 @@ export const Programme = () => {
         <CheckBullet>Evidence-based protocol</CheckBullet>
         <CheckBullet>Delivered by expert clinical team</CheckBullet>
       </div>
+
       <Carousel
         setApi={setApi}
-        opts={{
-          align: "start",
-        }}
+        opts={{ align: "start" }}
         className="w-[85%] max-w-section lg:w-full"
       >
         <CarouselContent>
-          {getTreatmentSteps(isHomePage).map((step, index) => (
+          {getTreatmentSteps().map((step, index) => (
             <CarouselItem
               key={index}
               className="flex flex-col items-center justify-end lg:basis-1/3"
             >
               <Card
                 onClick={() =>
-                  setCardExpanded((prev) => ({
-                    ...prev,
-                    [index]: !prev[index],
-                  }))
+                  setCardExpanded((prev) => ({ ...prev, [index]: !prev[index] }))
                 }
                 className={cn(
                   cardExpanded[index]
@@ -145,7 +135,6 @@ export const Programme = () => {
                 <div className="text-xl font-semibold">{step.title}</div>
                 <div className="flex flex-col items-center gap-4">
                   <p className={cn(!cardExpanded[index] && "lg:hidden")}>
-                    {" "}
                     {step.description}
                   </p>
                   {step.info}
@@ -176,14 +165,12 @@ export const Programme = () => {
       <div className="-mt-10 w-screen border border-dashed border-black/30" />
       <div className="hidden w-full max-w-section items-start justify-end lg:flex">
         <div className="-mr-3 -mt-9 flex items-center justify-center rounded-full bg-tertiary/30 p-1">
-          <div className="h-3 w-3 rounded-full bg-tertiary/30"></div>
+          <div className="h-3 w-3 rounded-full bg-tertiary/30" />
         </div>
         <div className="-mt-6 h-14 w-px border border-dashed border-black/30" />
         <div className="mt-4 flex items-center">
           <div className="h-px w-10 border border-dashed border-black/30" />
-          <Card className="mr-44 w-fit bg-white px-4 py-1 text-sm">
-            Week 7 Break
-          </Card>
+          <Card className="mr-44 w-fit bg-white px-4 py-1 text-sm">Week 7 Break</Card>
         </div>
       </div>
     </div>

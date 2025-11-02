@@ -1,6 +1,5 @@
 import { ArrowRight, Timer } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import CirclesAnimation from "../circles-animation";
 import { TypeFormButton } from "../type-form-button";
 import { useRouter } from "next/router";

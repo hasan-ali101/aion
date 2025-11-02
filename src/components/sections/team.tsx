@@ -10,7 +10,6 @@ import {
 import { Card } from "@/components/card";
 import CircleImage from "@/components/circle-image";
 import { cn } from "@/utils";
-import { useRouter } from "next/router";
 
 type TeamMember = {
   name: string;
@@ -19,7 +18,7 @@ type TeamMember = {
   imageUrl: string;
 };
 
-const getTeam = (isHomePage: boolean): TeamMember[] => [
+const getTeam = (): TeamMember[] => [
   {
     name: " Dr Matthew Liveras ",
     role: "Consultant Psychiatrist & Chief Medical Officer",
@@ -190,10 +189,8 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
 ];
 
 export const Team = () => {
-  const { pathname } = useRouter();
-  const isHomePage = pathname === "/";
   const [selectedTeamMember, setSelectedTeamMember] = useState<TeamMember>(
-    getTeam(isHomePage)[0],
+    getTeam()[0],
   );
 
   return (
@@ -242,14 +239,9 @@ export const Team = () => {
               {selectedTeamMember.description}
             </div>
           </Card>
-          <Carousel
-            opts={{
-              align: "start",
-            }}
-            className="w-full max-w-xs md:max-w-md"
-          >
+          <Carousel opts={{ align: "start" }} className="w-full max-w-xs md:max-w-md">
             <CarouselContent>
-              {getTeam(isHomePage).map((teamMember, index) => (
+              {getTeam().map((teamMember, index) => (
                 <CarouselItem
                   key={index}
                   className="basis-1/3 md:basis-1/4"
