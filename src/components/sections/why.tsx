@@ -21,7 +21,7 @@ export const Why = () => {
 
   /* ---------- page-specific overrides ---------- */
   switch (condition) {
-    case "anxiety-treatment-clinic-uk": {
+    case "therapy-programme": {
       cardTile_1    = "Same-Week private anxiety assessment";
       cardContent_1 =
         "Private 90-minute assessment with our consultant psychiatrist focused on understanding your medical history & treatment-resistant anxiety.";
@@ -33,7 +33,7 @@ export const Why = () => {
         "Our experienced team of psychiatrists, nurses & therapists are fully regulated and approved by the CQC to safely deliver our anxiety treatment.";
         break;
     }
-    case "depression-treatment-clinic-uk": {
+    case "treatment-clinic-uk": {
       cardTile_1    = "Same-week medical assessment";
       cardContent_1 =
         "Private 90-minute assessment with our consultant psychiatrist focused on understanding your medical history & treatment-resistant depression.";
@@ -87,7 +87,7 @@ export const Why = () => {
             />
           </div>
           <div className="flex w-full flex-col items-center gap-6 lg:w-6/12">
-            {condition === "anxiety-treatment-clinic-uk" ? (
+            {condition === "therapy-programme" ? (
               <AnxietyChart />
             ) : (
               <DepressionChart />

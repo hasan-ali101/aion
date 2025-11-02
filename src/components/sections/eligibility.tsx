@@ -9,18 +9,18 @@ export const Eligibility = () => {
   const router = useRouter();
   const { condition } = router.query;
 
-  let cardTile_1 = "Clinical diagnosis of one of listed conditions";
+  let cardTile_1 = "Clinical diagnosis";
   let cardContent_1 =
-    "Currently, ketamine can be prescribed in the UK 'off-label' to treat mental health and addiction disorders.";
-  let cardTile_2 = "Tried more than one form of treatment for it";
+    "We require a formal clinical diagnosis of depression, anxiety or any of the other conditions listed.";
+  let cardTile_2 = "Tried treatment";
   let cardContent_2 =
-    "This could be anti-depressant or anxiety medication, therapy or rehabilitation, depending on your condition.";
-  const cardTitle_3 = "Low neurological or physical risk";
+    "This could be medication, therapy or rehabilitation, depending on your condition.";
+  const cardTitle_3 = "No contraindications";
   const cardContent_3 =
     "We check for neurological and physical risk factors and assess potential safety or impact before proceeding.";
 
   switch (condition) {
-    case "anxiety-treatment-clinic-uk":
+    case "therapy-programme":
       cardTile_1 = "Clinical diagnosis of anxiety";
       cardContent_1 =
         "We require a formal clinical diagnosis of anxiety (or any of the other conditions listed).";
@@ -28,21 +28,13 @@ export const Eligibility = () => {
       cardContent_2 =
         "This could be anti-anxiety or antidepressant medication, or talking therapy with trained therapists.";
       break;
-    case "depression-treatment-clinic-uk":
+    case "treatment-clinic-uk":
       cardTile_1 = "Clinical diagnosis of depression";
       cardContent_1 =
         "We require a formal clinical diagnosis of depression (or any of the other conditions listed).";
       cardTile_2 = "Tried antidepressants and / or talking therapy";
       cardContent_2 =
         "This could be any prescribed anti-depressant medication, or talking therapy with trained therapists.";
-      break;
-    case "mental-health-clinic":
-      cardTile_1 = "Clinical diagnosis of one of the listed conditions";
-      cardContent_1 =
-        "We require a formal clinical diagnosis of depression, anxiety or any of the other conditions listed.";
-      cardTile_2 = "Tried more than one form of treatment for it";
-      cardContent_2 =
-        "This could be medication or talking therapy, depending on your condition and severity.";
       break;
   }
 

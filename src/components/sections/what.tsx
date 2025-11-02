@@ -38,7 +38,7 @@ const MainCard = ({
       <CardHeader>
         <CardTitle>
           {isHomePage
-            ? "Ketamine-Assisted Treatment Programme"
+            ? "Medication-Assisted Treatment Programme"
             : "Medication-Assisted Treatment Programme"}
         </CardTitle>
       </CardHeader>
@@ -51,20 +51,23 @@ const MainCard = ({
           </div>
           <div className="flex min-h-24 min-w-24 flex-col justify-center rounded-full bg-white text-center text-primary">
             <p className="font-bold">£5000</p>
-            <p className="text-xs">per patient</p>
+            <p className="text-xs">All-inclusive</p>
           </div>
         </div>
         <p>
-          {`We use ${isHomePage ? "ketamine" : ""} dosing sessions to augment and accelerate progress
+          {`We use ${isHomePage ? "" : ""} dosing sessions to augment and accelerate progress
           made in talking therapy to deliver tangible results within 8 weeks for
           those most in need.`}
         </p>
       </CardContent>
       <CardFooter className="flex h-full flex-col items-center justify-center gap-3 pb-10 lg:flex-row">
         <GetStartedButton variant="inverted" />
-        <Link href="/#programme" className="text-sm text-white underline">
+        <a
+          href="https://www.aion-clinic.com/#programme"
+          className="text-sm text-white underline"
+        >
           See Treatment Plan
-        </Link>
+        </a>
       </CardFooter>
     </Card>
   );
@@ -124,7 +127,7 @@ export const What = () => {
 
           <MainCard className="hidden lg:flex" isHomePage={isHomePage} />
           <ImageCardCollapsible
-            title={isHomePage ? "Ketamine Sessions" : "Dosing Sessions"}
+            title={isHomePage ? "Dosing Sessions" : "Dosing Sessions"}
             description={
               <CheckBullet>4 sessions included in treatment</CheckBullet>
             }
@@ -136,11 +139,11 @@ export const What = () => {
                   perspectives.
                 </p>
                 <p>
-                  {`Scientific research has shown that ${isHomePage ? "ketamine" : "medication"}, at controlled doses, can
+                  {`Scientific research has shown that ${isHomePage ? "medication" : "medication"}, at controlled doses, can
                   increase plasticity in the brain.`}
                 </p>
                 <p>
-                  {`Simply put, ${isHomePage ? "ketamine" : "our treatment"}  can make the brain more responsive and
+                  {`Simply put, ${isHomePage ? "our treatment" : "our treatment"}  can make the brain more responsive and
                   adaptive to change.`}
                 </p>
                 <CheckBullet>
@@ -151,7 +154,7 @@ export const What = () => {
                   psychiatrist){" "}
                 </CheckBullet>
                 <CheckBullet>
-                  {`Individually tailored intramuscular ${isHomePage ? "ketamine" : ""} doses
+                  {`Individually tailored intramuscular ${isHomePage ? "" : ""} doses
                   collaboratively agreed with clinical team`}
                 </CheckBullet>
               </div>

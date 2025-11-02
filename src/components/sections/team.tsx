@@ -29,7 +29,7 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
           {`Matt is a consultant psychiatrist and group analytic psychotherapist
           with many years’ experience across inpatient and community settings in
           the NHS, private and third sectors. He was previously the Medical Lead
-          to Awakn’s London clinic, which offered ${isHomePage ? "ketamine" : "medication"}-assisted
+          to Awakn’s London clinic, which offered medication-assisted
           psychotherapy.`}
         </p>
         <p>
@@ -177,7 +177,7 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
           Steve is a highly experienced nurse with over 30 years in both general 
           and psychiatric healthcare. He has worked across NHS and private sectors, 
           bringing expertise from diverse settings including community mental health, 
-          drug and alcohol services, trauma care, and ketamine-assisted psychotherapy.
+          drug and alcohol services, trauma care, and medication-assisted psychotherapy.
         </p>
         <p>
           Known for his holistic and compassionate approach, Steve specialises in supporting 

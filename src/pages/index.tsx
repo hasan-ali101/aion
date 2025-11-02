@@ -7,6 +7,7 @@ import {
   Team,
   How,
   Programme,
+  Why,
 } from "@/components/sections";
 import HeadWrapper from "@/components/headwrapper";
 
@@ -15,6 +16,7 @@ export default function Home() {
     <HeadWrapper>
       <div className="relative flex flex-col text-black md:items-center">
         <Hero />
+        <Why />
         <What />
         <Eligibility />
         <How />

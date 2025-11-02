@@ -22,7 +22,7 @@ const getTreatmentSteps = (isHomePage: boolean) => [
       </div>
     ),
     description:
-      "We begin with two sessions of talking therapy, where we explore your targets for the programme and begin engaging with ACT therapy.",
+      "We start with two sessions of talking therapy, where we explore your targets for the programme and begin engaging with ACT therapy.",
     info: (
       <CheckBullet className="text-left text-sm font-medium">
         2 Talking Therapy sessions
@@ -35,11 +35,11 @@ const getTreatmentSteps = (isHomePage: boolean) => [
         Week 3 - 6<br /> Active
       </div>
     ),
-    description: `${isHomePage ? "Ketamine" : "Dosing"} sessions are followed by talking therapy the next day to discuss and integrate experiences, supporting therapeutic change.`,
+    description: `Dosing sessions are followed by talking therapy the next day to discuss and integrate experiences, supporting therapeutic change.`,
     info: (
       <div>
         <CheckBullet className="text-left text-sm font-medium">
-          {`4 ${isHomePage ? "Ketamine" : "Dosing"} Sessions`}
+          4 Dosing Sessions
         </CheckBullet>
         <CheckBullet className="text-left text-sm font-medium">
           4 Talking Therapy sessions{" "}
@@ -95,7 +95,7 @@ export const Programme = () => {
       </h2>
       <p className="max-w-[600px]">
         {`Our evidence-based approach combines transformative talking therapy with
-        precise ${isHomePage ? "ketamine" : "doses of"} treatment to facilitate therapeutic change and deliver
+        precise doses of treatment to facilitate therapeutic change and deliver
         life-changing experiences.`}
       </p>
       <div className="flex flex-col items-center gap-1">

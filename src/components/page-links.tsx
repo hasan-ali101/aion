@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { SheetClose } from "./sheet";
 import { cn } from "@/utils";
 
@@ -14,15 +13,18 @@ export const PageLinks = ({
   includeScience?: boolean;
 }) => {
   const links = [
-    { href: "/#what", label: "What" },
-    { href: "/#who", label: "Who" },
-    { href: "/#how", label: "How" },
-    { href: "/#where", label: "Where" },
-    { href: "/#us", label: "Us" },
+    { href: "https://www.aion-clinic.com/#what", label: "What" },
+    { href: "https://www.aion-clinic.com/#who", label: "Who" },
+    { href: "https://www.aion-clinic.com/#how", label: "How" },
+    { href: "https://www.aion-clinic.com/#where", label: "Where" },
+    { href: "https://www.aion-clinic.com/#us", label: "Us" },
   ];
 
   if (includeScience) {
-    links.push({ href: "/science", label: "Science" });
+    links.push({
+      href: "https://www.aion-clinic.com/science",
+      label: "Science",
+    });
   }
 
   return (
@@ -35,12 +37,12 @@ export const PageLinks = ({
       {links.map(({ href, label }) =>
         sidebar ? (
           <SheetClose asChild key={href}>
-            <Link className="py-1 transition-colors" href={href}>
+            <a className="py-1 transition-colors" href={href}>
               {label}
-            </Link>
+            </a>
           </SheetClose>
         ) : (
-          <Link
+          <a
             key={href}
             className={cn(
               isTop ? "hover:bg-white/20" : "hover:bg-muted/40",
@@ -49,7 +51,7 @@ export const PageLinks = ({
             href={href}
           >
             {label}
-          </Link>
+          </a>
         ),
       )}
     </div>
