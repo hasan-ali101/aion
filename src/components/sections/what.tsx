@@ -38,8 +38,8 @@ const MainCard = ({
       <CardHeader>
         <CardTitle>
           {isHomePage
-            ? "Ketamine-Assisted Treatment Programme"
-            : "Medication-Assisted Treatment Programme"}
+            ? "Ketamine-Assisted Therapy Programme"
+            : "Medication-Assisted Therapy Programme"}
         </CardTitle>
       </CardHeader>
       <CardContent className="flex flex-col gap-6 pb-10 text-sm">
