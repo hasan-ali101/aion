@@ -58,10 +58,10 @@ export default function HeadWrapper({
         "We are on a mission to demistify psychedelic-assisted treatment options; take a look at our clinically reviewed articles on ketamine assisted therapy, depression, anxiety and many more areas.";
       break;
 
-    case "ketamine-assisted-therapy":
-      autoTitle = "Ketamine-Assisted Therapy Programme | Aion Clinic";
+    case "ketamine-therapy-London":
+      autoTitle = "Ketamine-Assisted Therapy in London | Aion Clinic";
       autoDesc =
-        "In-depth guide to our bespoke 8-week ketamine-assisted treatment protocol: evidence, safety and what to expect at each session.";
+        "Private ketamine clinic in Islington, London; learn more about our treatment, the evidence supporting it, and what to expect at each session.";
       break;
 
     default:
