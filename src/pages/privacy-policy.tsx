@@ -84,12 +84,13 @@ export default function PrivacyPolicy() {
             <h2 id="how-we-use" className="mt-10 mb-4 scroll-mt-24">3. How We Use Your Information</h2>
             <p>
               <strong>3.1 Marketing data</strong> is used to analyse and improve our website and services
-              and to measure the effectiveness of our advertising campaigns.
-            </p>
+              and to measure the effectiveness of our advertising campaigns. The lawful basis for this
+              processing is <strong>legitimate interests</strong>.            </p>
             <p>
-              <strong>3.2 Referral data</strong> is used to progress your referral, assess eligibility for
-              treatment, deliver our healthcare services, and meet legal and regulatory requirements.
-            </p>
+                <strong>3.2 Referral data</strong> is used to progress your referral, assess eligibility for
+                treatment, deliver our healthcare services, and meet legal and regulatory requirements. The
+                lawful basis is <strong>explicit consent</strong> and, where health data is involved,
+                Article 9(2)(h) UK GDPR (provision of healthcare).            </p>
 
             <h2 id="sharing" className="mt-10 mb-4 scroll-mt-24">4. Sharing Your Information</h2>
             <p>4.1 We will never sell your personal data.</p>
@@ -113,8 +114,8 @@ export default function PrivacyPolicy() {
             <h2 id="cookies" className="mt-10 mb-4 scroll-mt-24">6. Cookies and Advertising</h2>
             <p>
               6.1 Our website may use cookies, Google Analytics, and Meta advertising tools (such as
-              the Facebook Pixel) to understand usage and improve performance. You can control or
-              disable cookies via your browser settings.
+              the Facebook Pixel) to understand usage and improve performance. You can manage your cookie preferences at any time using our{" "}
+              <a href="/cookie-policy">cookie banner</a>, or via your browser settings.
             </p>
             <p>
               6.2 When you engage with our ads, any information you provide (such as via a lead
@@ -132,7 +133,7 @@ export default function PrivacyPolicy() {
 
             <h2 id="contact" className="mt-10 mb-4 scroll-mt-24">8. Contact Us</h2>
             <p className="not-prose rounded-xl border bg-neutral-50 p-4 text-sm leading-6">
-              <span className="block font-medium">Data Protection Officer (DPO)</span>
+              <span className="block font-medium">Data Protection Lead</span>
               Dr Qasim Ali
               <br />
               Email: <a href="mailto:support@aion-clinic.com">support@aion-clinic.com</a>
