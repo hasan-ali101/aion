@@ -26,7 +26,7 @@ export default function Document() {
         />
 
         {/* 2. Silktide CSS */}
-        <link rel="stylesheet" href="/cookie-banner/silktide-consent-manager.css" />
+        <style dangerouslySetInnerHTML={{ __html: `@import url('/cookie-banner/silktide-consent-manager.css');` }} />
 
         {/* 3. Google Tag Manager */}
         <script
@@ -56,7 +56,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <script src="//code.tidio.co/owio4o90ktvdhweukqy6pqjube1kjn1u.js" async></script>
 
         {/* 4. Silktide JS */}
-        <script src="/cookie-banner/silktide-consent-manager.js" />
+        <script src="/cookie-banner/silktide-consent-manager.js" async></script>
 
         {/* 5. Silktide config */}
         <script
