@@ -115,7 +115,7 @@ export default function PrivacyPolicy() {
             <p>
               6.1 Our website may use cookies, Google Analytics, and Meta advertising tools (such as
               the Facebook Pixel) to understand usage and improve performance. You can manage your cookie preferences at any time using our{" "}
-              <a href="/cookie-policy">cookie banner</a>, or via your browser settings.
+              <Link href="/cookie-policy">cookie banner</Link>, or via your browser settings.
             </p>
             <p>
               6.2 When you engage with our ads, any information you provide (such as via a lead
