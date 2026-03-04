@@ -1,4 +1,5 @@
 export { Hero } from "./hero";
+export { PatientTestimonials } from "./patient-stories";
 export { What } from "./what";
 export { Eligibility } from "./eligibility";
 export { Team } from "./team";

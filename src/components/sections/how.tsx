@@ -63,7 +63,7 @@ export const How = () => {
     <div className="flex w-full justify-center bg-white">
       <div
         id="how"
-        className="flex w-full max-w-section scroll-m-10 flex-col items-center gap-8 bg-white px-6 pb-24 pt-20 text-center"
+        className="flex w-full max-w-section scroll-m-10 flex-col items-center gap-8 bg-white px-6 py-20 text-center"
       >
         <h2>
           Start treatment within <br />
@@ -78,7 +78,7 @@ export const How = () => {
           opts={{
             align: "start",
           }}
-          className="w-[85%] max-w-[600px]"
+          className="w-[85%] max-w-[600px] overflow-y-visible"
         >
           <CarouselContent>
             {screeningSteps.map((step, index) => (

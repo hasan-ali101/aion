@@ -7,13 +7,6 @@
   --foreground: #171717;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
 body {
   color: var(--foreground);
   background: var(--background);
@@ -40,10 +33,9 @@ h2 {
 }
 
 * {
-  scrollbar-color: #DEDCD8 transparent;
+  scrollbar-color: #dedcd8 transparent;
 }
 
-/* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 15px;
 }
@@ -57,4 +49,8 @@ h2 {
   background-color: primary;
   border-radius: 14px;
   border: 3px solid primary;
+}
+
+#tidio-chat-root {
+  margin-bottom: 24px;
 }

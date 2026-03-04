@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "aion-dev",
+      "runtimeExecutable": "/usr/local/bin/node",
+      "runtimeArgs": ["/Users/qasimali/aion/node_modules/next/dist/bin/next", "dev", "--no-turbo"],
+      "port": 3000
+    }
+  ]
+}
