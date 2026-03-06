@@ -233,8 +233,8 @@ export const Team = () => {
                         alt={"card image"}
                         className="object-cover"
                       />
-                      <div className="absolute inset-0 z-20 overflow-auto bg-primary/0 p-6 transition-colors ease-out hover:bg-black/70 active:bg-black/70">
-                        <span className="text-primary-foreground text-sm text-white opacity-0 transition-opacity ease-out group-hover:opacity-100 group-active:opacity-100">
+                      <div className="absolute inset-0 z-20 overflow-auto bg-black/70 p-6 opacity-0 transition-opacity ease-out group-hover:opacity-100 group-active:opacity-100">
+                        <span className="text-primary-foreground text-sm text-white">
                           {description}
                         </span>
                       </div>
