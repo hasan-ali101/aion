@@ -1,4 +1,3 @@
-import { ArrowDown, Star } from "lucide-react";
 import { motion } from "motion/react";
 
 import { testimonials } from "@/lib/data/testimonials";
