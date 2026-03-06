@@ -22,8 +22,10 @@ const Nav = () => {
   return (
     <div
       className={cn(
-        isTop ? "text-white" : "bg-white text-primary/80 shadow-md",
-        "fixed top-0 z-40 flex w-full items-center justify-between gap-6 px-6 py-4 transition-all duration-200 md:px-16 md:py-6",
+        isTop
+          ? "text-white"
+          : "bg-white/95 text-primary/90 shadow-md backdrop-blur-3xl",
+        "fixed top-0 z-40 flex w-full items-center justify-between gap-6 px-6 py-4 transition-all duration-100 ease-out md:px-16 md:py-6",
       )}
     >
       <div className="flex items-center gap-3">

@@ -20,7 +20,7 @@ export const Questions = () => {
       id="questions"
       className={cn(
         isHomePage ? "justify-start" : "justify-center",
-        "flex min-h-[500px] w-full flex-col items-center gap-6 bg-white px-4 pb-20 pt-10 md:px-20",
+        "flex min-h-[500px] w-full flex-col items-center gap-10 bg-white px-4 py-20 md:px-20",
       )}
     >
       <h2 className="text-center">

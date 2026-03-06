@@ -22,7 +22,7 @@ const CardCollapsible = ({
     <Card
       className={cn(
         className,
-        "w-full cursor-pointer bg-white transition-all lg:pointer-events-none",
+        "w-full cursor-pointer bg-white transition-all ease-out lg:pointer-events-none",
       )}
       onClick={() => {
         setExpanded(!expanded);
@@ -36,20 +36,20 @@ const CardCollapsible = ({
         <ChevronDown
           className={cn(
             expanded && "rotate-180",
-            "h-6 min-h-6 w-6 min-w-6 text-primary transition-all lg:hidden",
+            "h-6 min-h-6 w-6 min-w-6 text-primary transition-all ease-out lg:hidden",
           )}
         />
       </CardHeader>
       <CardContent
         className={cn(
           expanded ? "h-full max-h-80" : "h-0 max-h-0",
-          "overflow-clip px-6 transition-all duration-300",
+          "overflow-clip px-6 transition-all ease-out",
         )}
       >
         <div
           className={cn(
             expanded ? "opacity-100" : "opacity-20",
-            "py-4 transition-all duration-500",
+            "py-4 transition-all ease-out",
           )}
         >
           {content}

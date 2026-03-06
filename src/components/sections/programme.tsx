@@ -71,6 +71,7 @@ export const Programme = () => {
   });
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
   const { pathname } = useRouter();
   const isHomePage = pathname === "/";
 
@@ -84,10 +85,22 @@ export const Programme = () => {
     });
   }, [api]);
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+    setIsLargeScreen(mediaQuery.matches);
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      setIsLargeScreen(e.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
+
   return (
     <div
       id="programme"
-      className="flex w-full flex-col items-center gap-y-6 bg-secondary px-6 py-20 text-center lg:px-12"
+      className="flex w-full flex-col items-center gap-y-6 bg-gradient-to-b from-secondary to-secondary/50 px-6 py-20 text-center lg:px-12"
     >
       <h2>
         Experience tangible, <br />
@@ -107,6 +120,7 @@ export const Programme = () => {
         setApi={setApi}
         opts={{
           align: "start",
+          watchDrag: !isLargeScreen,
         }}
         className="w-[85%] max-w-section lg:w-full"
       >
@@ -127,7 +141,7 @@ export const Programme = () => {
                   cardExpanded[index]
                     ? "h-full lg:bg-tertiary lg:text-white"
                     : "lg:bg-white lg:text-primary/80",
-                  "pointer-events-none relative flex w-full flex-col items-center justify-center gap-3 overflow-clip rounded-lg bg-tertiary px-4 py-8 text-white duration-300 lg:pointer-events-auto lg:cursor-pointer",
+                  "pointer-events-none relative flex w-full flex-col items-center justify-center gap-3 overflow-clip rounded-lg bg-tertiary px-4 py-8 text-white transition ease-out lg:pointer-events-auto lg:cursor-pointer",
                 )}
               >
                 <Image

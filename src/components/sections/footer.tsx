@@ -1,14 +1,23 @@
+import { useEffect } from "react";
 import Image from "next/image";
 import CirclesAnimation from "../circles-animation";
 import { PageLinks } from "../page-links";
-import { Clock, Facebook, Linkedin, Mail, Phone, Instagram } from "lucide-react";
+import {
+  Clock,
+  Facebook,
+  Linkedin,
+  Mail,
+  Phone,
+  Instagram,
+} from "lucide-react";
 import Link from "next/link";
+import Script from "next/script";
 
 export const Footer = () => {
   return (
-    <div className="relative flex w-full justify-center bg-primaryDark p-10">
+    <footer className="relative flex w-full flex-col items-center bg-gradient-to-t from-primaryDark to-primaryDark/85">
       <CirclesAnimation />
-      <div className="flex w-full max-w-section flex-col items-center gap-6">
+      <div className="flex w-full max-w-section flex-col items-center gap-6 py-16">
         <Link href="/">
           <Image
             src="/images/logo_white.png"
@@ -72,8 +81,11 @@ export const Footer = () => {
             <Instagram className="h-4 w-4 fill-primary text-primary" />
           </a>
         </div>
-        <p className="text-muted">2025 © Aion. All rights reserved.</p>
+        <p className="text-muted">2025 © Aion. All rights reserved.</p>
       </div>
-    </div>
+      {/*   <div id="0shzf4xf" className="w-screen opacity-90"></div>
+      <Script src="https://www.doctify.com/get-script?widget_container_id=0shzf4xf&type=horizontal-widget&tenant=athena-uk&language=en&profileType=practice&layoutType=layoutXL&slugs=aion-clinic&background=000"></Script>
+   */}
+    </footer>
   );
 };

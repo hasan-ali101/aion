@@ -1,7 +1,7 @@
 import { type SanityDocument } from "next-sanity";
 
-import { client } from "@/sanity/client";
-import { POSTS_QUERY } from "@/sanity/queries";
+import { client } from "@/lib/sanity/client";
+import { POSTS_QUERY } from "@/lib/sanity/queries";
 import {
   Carousel,
   CarouselApi,
