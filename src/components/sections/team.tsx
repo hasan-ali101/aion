@@ -3,6 +3,7 @@ import { JSX, useState } from "react";
 
 import { Carousel, CarouselContent, CarouselItem } from "@/components/carousel";
 import Image from "next/image";
+import { FadeIn } from "../fade-in";
 
 type TeamMember = {
   name: string;
@@ -193,64 +194,66 @@ export const Team = () => {
   );
 
   return (
-    <div
-      id="us"
-      className="flex w-full scroll-m-20 justify-center overflow-hidden bg-white py-20"
-    >
-      <div className="flex h-full max-w-section flex-col items-center gap-10 bg-white">
-        <div className="flex max-w-3xl flex-col items-center gap-5 px-5 text-center">
-          <h2>
-            Meet <span className="text-primary">Our Team</span>
-          </h2>
-          <p className="font-semibold">
-            Professional, quality care delivered by our highly experienced
-            clinical team.
-          </p>
-          <p>
-            Our multidisciplinary team are some of the most experienced
-            practitioners in psychedelic treatment in the country, ensuring we
-            deliver a safe and effective service for you.
-          </p>
-        </div>
-        <Carousel className="flex w-screen justify-center overscroll-x-none px-6 py-6">
-          <CarouselContent className="-ml-3 md:-ml-5">
-            {getTeam(isHomePage).map((member: TeamMember, i: number) => {
-              const { role, name, imageUrl, description } = member;
-              return (
-                <CarouselItem
-                  key={i}
-                  className="min-w-80 max-w-80 basis-[80%] select-none pl-3 text-left sm:basis-[40%] md:pl-5 lg:basis-[30%] xl:basis-[23%]"
-                >
-                  <div
+    <FadeIn>
+      <div
+        id="us"
+        className="flex w-full scroll-m-20 justify-center overflow-hidden bg-white py-20"
+      >
+        <div className="flex h-full max-w-section flex-col items-center gap-10 bg-white">
+          <div className="flex max-w-3xl flex-col items-center gap-5 px-5 text-center">
+            <h2>
+              Meet <span className="text-primary">Our Team</span>
+            </h2>
+            <p className="font-semibold">
+              Professional, quality care delivered by our highly experienced
+              clinical team.
+            </p>
+            <p>
+              Our multidisciplinary team are some of the most experienced
+              practitioners in psychedelic treatment in the country, ensuring we
+              deliver a safe and effective service for you.
+            </p>
+          </div>
+          <Carousel className="flex w-screen justify-center overscroll-x-none px-6 py-6">
+            <CarouselContent className="-ml-3 md:-ml-5">
+              {getTeam(isHomePage).map((member: TeamMember, i: number) => {
+                const { role, name, imageUrl, description } = member;
+                return (
+                  <CarouselItem
                     key={i}
-                    className="flex flex-col gap-3 overflow-clip rounded-t-lg pt-0 font-light"
+                    className="min-w-80 max-w-80 basis-[80%] select-none pl-3 text-left sm:basis-[40%] md:pl-5 lg:basis-[30%] xl:basis-[23%]"
                   >
-                    <div className="group relative h-96">
-                      <Image
-                        src={imageUrl}
-                        fill={true}
-                        alt={"card image"}
-                        className="object-cover"
-                      />
-                      <div className="absolute inset-0 z-20 overflow-auto bg-primary/0 p-6 transition-colors ease-out hover:bg-black/70 active:bg-black/70">
-                        <span className="text-primary-foreground text-sm text-white opacity-0 transition-opacity ease-out group-hover:opacity-100 group-active:opacity-100">
-                          {description}
-                        </span>
+                    <div
+                      key={i}
+                      className="flex flex-col gap-3 overflow-clip rounded-t-lg pt-0 font-light"
+                    >
+                      <div className="group relative h-96 overflow-clip">
+                        <Image
+                          src={imageUrl}
+                          fill={true}
+                          alt={"card image"}
+                          className="object-cover"
+                        />
+                        <div className="absolute inset-0 z-20 overflow-auto bg-primary/0 p-6 transition-colors ease-out hover:bg-black/70 active:bg-black/70">
+                          <span className="text-primary-foreground text-sm text-white opacity-0 transition-opacity ease-out group-hover:opacity-100 group-active:opacity-100">
+                            {description}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="flex flex-col">
+                        <p className="w-full text-left font-medium">{name}</p>
+                        <p className="text-muted-foreground w-full text-left text-sm">
+                          {role}
+                        </p>
                       </div>
                     </div>
-                    <div className="flex flex-col">
-                      <p className="w-full text-left font-medium">{name}</p>
-                      <p className="text-muted-foreground w-full text-left text-sm">
-                        {role}
-                      </p>
-                    </div>
-                  </div>
-                </CarouselItem>
-              );
-            })}
-          </CarouselContent>
-        </Carousel>
+                  </CarouselItem>
+                );
+              })}
+            </CarouselContent>
+          </Carousel>
+        </div>
       </div>
-    </div>
+    </FadeIn>
   );
 };

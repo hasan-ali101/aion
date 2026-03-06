@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ArrowRight, Timer } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,9 +6,11 @@ import Script from "next/script";
 import CirclesAnimation from "../circles-animation";
 import { TypeFormButton } from "../type-form-button";
 import { useRouter } from "next/router";
+import { cn } from "@/utils";
 
 export const Hero = () => {
   const router = useRouter();
+  const [visible, setVisible] = useState(false);
   const { condition } = router.query;
 
   let title = "Welcome to Aion Clinic";
@@ -34,6 +36,7 @@ export const Hero = () => {
   }
 
   useEffect(() => {
+    setVisible(true);
     const inject = () => {
       if (document.getElementById("doctify-hero-override")) return;
       const style = document.createElement("style");
@@ -52,14 +55,17 @@ export const Hero = () => {
       document.head.appendChild(style);
     };
     inject();
-    const t = setTimeout(inject, 2000);
-    return () => clearTimeout(t);
   }, []);
 
   return (
     <section className="relative flex h-fit w-full items-center justify-center bg-gradient-to-b from-primaryDark to-primaryDark/85 text-white">
       <CirclesAnimation />
-      <div className="mb-16 mt-28 flex h-full w-full flex-col items-center justify-center gap-6 px-6 text-center md:gap-8">
+      <div
+        className={cn(
+          visible ? "translate-y-0" : "-translate-y-5 opacity-0",
+          "mb-16 mt-28 flex h-full w-full flex-col items-center justify-center gap-6 px-6 text-center transition-all duration-1000 ease-out md:gap-8",
+        )}
+      >
         <h1 className="mx-4 max-w-[700px]">{title}</h1>
         <p className="max-w-[480px] text-lg font-medium sm:text-lg md:text-xl">
           {subtitle}
@@ -118,7 +124,7 @@ export const Hero = () => {
           </Link>
         </div>
         {/* Doctify horizontal widget */}
-        <div id="02j93m6v" className="rounded-md" />
+        <div id="02j93m6v" className="h-16 rounded-md" />
         <Script
           src="https://www.doctify.com/get-script?widget_container_id=02j93m6v&type=micro-star-widget&tenant=athena-uk&language=en&profileType=practice&layoutType=layoutE&slugs=aion-clinic&background=transparent"
           strategy="afterInteractive"
