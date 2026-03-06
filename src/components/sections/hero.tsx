@@ -124,7 +124,7 @@ export const Hero = () => {
           </Link>
         </div>
         {/* Doctify horizontal widget */}
-        <div id="02j93m6v" className="h-16 rounded-md" />
+        <div id="02j93m6v" className="h-28 rounded-md sm:h-16" />
         <Script
           src="https://www.doctify.com/get-script?widget_container_id=02j93m6v&type=micro-star-widget&tenant=athena-uk&language=en&profileType=practice&layoutType=layoutE&slugs=aion-clinic&background=transparent"
           strategy="afterInteractive"
