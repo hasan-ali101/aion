@@ -109,7 +109,7 @@ export const testimonials = [
       shirt: "#2c3a5c",
     },
     quote:
-      "The care my daughter received from Matt, Laurie and Steve was warm and supportive whilst also very professional and the clinic provided a calm environment. We are delighted that we found the clinic as **without doubt this is the treatment that has helped her the most**.",
+      "The care my daughter received from **Matt, Laurie and Steve** was warm and supportive whilst also very professional and the clinic provided a calm environment. We are delighted that we found the clinic as **without doubt this is the treatment that has helped her the most**.",
   },
   {
     id: 6,

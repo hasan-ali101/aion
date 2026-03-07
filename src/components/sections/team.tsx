@@ -55,12 +55,74 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
     imageUrl: "/images/team_2.png",
   },
   {
-    name: "Laura Gallagher",
-    role: "Clinic Manager & Chief Operating Officer ",
+    name: "Dr Laurie Higbed",
+    role: "Lead Psychologist",
     description: (
       <div className="flex flex-col gap-4">
         <p>
-          As Chief Operating Officer, Laura brings an inclusive and
+          Laurie is an experienced clinical psychologist. Laurie has worked as a
+          lead therapist on clinical trials using MDMA and psilocybin-assisted
+          psychotherapy. She has a special interest in working with complex
+          trauma, addictions and the use of psychedelic therapy to treat a range
+          of mental health difficulties.
+        </p>
+        <p>
+          Laurie is registered with the Health and Care Professions Council
+          (HCPC) and is a member of the Association of Clinical Psychologists
+          (ACPUK).
+        </p>
+      </div>
+    ),
+    imageUrl: "/images/team_8.png",
+  },
+  {
+    name: "Dr Mia Debidin",
+    role: "Lead Clinical Psychologist",
+    description: (
+      <div className="flex flex-col gap-4">
+        <p>
+        Mia is a forensic and clinical psychologist and psychotherapist with
+        over 32 years of experience across multiple therapeutic models. Mia is licensed with the HCPC and brings a rich,
+        integrative perspective informed by Buddhist psychology, mindfulness,
+        meditation, and breathwork.
+        </p>
+        <p>
+        Mia focuses on building skills for healthy
+        psychological functioning, helping clients connect conscious and
+        unconscious experience, express emotions effectively, and separate
+        present reactions from unmet needs of the past.        </p>
+      </div>
+    ),
+    imageUrl: "/images/team_9.png",
+  },
+  {
+    name: "Dr Lisa Harvey",
+    role: "Psychotherapist",
+    description: (
+      <div className="flex flex-col gap-4">
+        <p>
+          Lisa is a clinical psychologist with a doctorate specialising in
+          cognitive, psychodynamic, behavioural and systemic approaches. She
+          works with compassion, curiosity and containment to help people
+          move through stuck patterns, limiting thoughts, and emotional
+          overwhelm.
+        </p>
+        <p>
+          Her practice draws on CBT, Mindfulness, Acceptance and Commitment
+          Therapy, and somatic practices. Lisa is also a qualified yoga and
+          bodywork practitioner, and is registered with the HCPC.
+        </p>
+      </div>
+    ),
+    imageUrl: "/images/team_10.png",
+  },
+  {
+    name: "Laura Gallagher",
+    role: "Clinic Manager",
+    description: (
+      <div className="flex flex-col gap-4">
+        <p>
+          As Clinic Manager, Laura brings an inclusive and
           patient-centric culture to Aion, ensuring we consistently delivering
           outstanding care to all our patients.
         </p>
@@ -87,9 +149,9 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
         </p>
         <p>
           Fardijah holds a certificate in Psychedelic Assisted Therapies and
-          Research from the California Institute of Integral Studies, which
+          Research from CIIS, which
           includes the MAPS MDMA Therapy Training. Fardijah is registered with
-          the Health and Care Professions Council (HCPC) and holds a Masters
+          the HCPC and holds a Masters
           Degree in Medical Anthropology, Psychoanalytic and Observational
           Studies, and Integrative Art Psychotherapy.
         </p>
@@ -98,30 +160,70 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
     imageUrl: "/images/team_5.png",
   },
   {
-    name: "Dominic Riches",
-    role: "Cognitive Behavioural Psychotherapist",
+    name: "Abi Dewing",
+    role: "Psychotherapist",
     description: (
       <div className="flex flex-col gap-4">
         <p>
-          Dominic is a Cognitive Behavioural Therapist and mindfulness teacher
-          with 20+ years experience working in the NHS and privately, supporting
-          clients with common mental health problems such as depression, anxiety
-          and PTSD.
+          Abi is an Integrative Psychotherapist with over a decade of experience.
+          Her approach draws on a multitude of theories and techniques, adapting
+          to the unique needs of each client, with a special interest in parts
+          work and helping clients reconnect with their authentic selves.
         </p>
         <p>
-          He primarily uses third-wave CBT approaches such as Acceptance and
-          Commitment Therapy, Compassion-Focussed Therapy and other
-          mindfulness-based approaches. He is an accredited member of the BABCP
-          and has post-graduate training in Interpersonal Therapy, with his own
-          meditation practice for over 20 years.
+          Abi holds a BA (Hons) in Humanistic Counselling Practice and a Masters
+          in Integrative Psychotherapy. She is accredited with the National
+          Counselling and Psychotherapy Society (NCPS).
         </p>
       </div>
     ),
-    imageUrl: "/images/team_4.png",
+    imageUrl: "/images/team_11.png",
+  },
+  {
+    name: "Lisa-Marie Koppl-Hurwitz",
+    role: "Psychotherapist",
+    description: (
+      <div className="flex flex-col gap-4">
+        <p>
+        Lisa Marie is a BABCP-registered CBT psychotherapist with an MSc in
+        Addiction Studies from King's College London, where she also conducted
+        clinical research into ketamine. Her background spans the NHS, private
+        practice, and interdisciplinary health research at UCL and the United
+        Nations.
+        </p>
+        <p>
+        She works collaboratively and person-centredly, using ACT and
+        mindfulness to support clients navigating depression, addiction, trauma,
+        and long-term health conditions — helping them turn new insights into
+        lasting, meaningful change.
+        </p>
+      </div>
+    ),
+    imageUrl: "/images/team_12.png",
+  },
+    {
+    name: "Lorelei Green",
+    role: "Psychotherapist",
+    description: (
+      <div className="flex flex-col gap-4">
+        <p>
+        Lorelei is a BACP accredited therapist with a Masters in psychological
+        trauma, working primarily from a humanistic and somatic approach. She
+        has served as lead therapist on several psychedelic clinical trials,
+        bringing specialist expertise to Aion's work.
+        </p>
+        <p>
+        Her practice draws on person-centred therapy, gestalt, ACT, and a range
+        of trauma-informed interventions — adapted flexibly and holistically to
+        each individual's unique needs and journey.     
+        </p>
+      </div>
+    ),
+    imageUrl: "/images/team_13.png",
   },
   {
     name: "Carol Lawrence",
-    role: "Cognitive Behavioural Psychotherapist",
+    role: "Psychotherapist",
     description: (
       <div className="flex flex-col gap-4">
         <p>
@@ -141,26 +243,48 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
     ),
     imageUrl: "/images/team_6.png",
   },
-  {
-    name: "Dr Laurie Higbed",
-    role: "Psychologist",
+    {
+    name: "Steven Ford",
+    role: "Psychotherapist",
     description: (
       <div className="flex flex-col gap-4">
         <p>
-          Laurie is an experienced clinical psychologist. Laurie has worked as a
-          lead therapist on clinical trials using MDMA and psilocybin-assisted
-          psychotherapy. She has a special interest in working with complex
-          trauma, addictions and the use of psychedelic therapy to treat a range
-          of mental health difficulties.
+        Steven is an experienced clinical psychologist and qualified clinical
+        supervisor with over 14 years of experience, specialising in substance
+        misuse and complex trauma. He has worked across research and clinical
+        settings using MDMA, psilocybin, and ketamine-assisted psychotherapy.
         </p>
         <p>
-          Laurie is registered with the Health and Care Professions Council
-          (HCPC) and is a member of the Association of Clinical Psychologists
-          (ACPUK).
+        His collaborative approach draws on ACT, Compassion-Focused Therapy,
+        and DBT to build psychological flexibility — helping clients develop a
+        shared understanding of their difficulties and work towards a life
+        aligned with what truly matters to them. 
         </p>
       </div>
     ),
-    imageUrl: "/images/team_8.png",
+    imageUrl: "/images/team_14.png",
+  },
+  {
+    name: "Dominic Riches",
+    role: "Psychotherapist",
+    description: (
+      <div className="flex flex-col gap-4">
+        <p>
+          Dominic is a Cognitive Behavioural Therapist and mindfulness teacher
+          with 20+ years experience working in the NHS and privately, supporting
+          clients with common mental health problems such as depression, anxiety
+          and PTSD.
+        </p>
+        <p>
+          He primarily uses third-wave CBT approaches such as Acceptance and
+          Commitment Therapy, Compassion-Focussed Therapy and other
+          mindfulness-based approaches. He is an accredited member of the BABCP
+          and has post-graduate training in Interpersonal Therapy, with his own
+          meditation practice for over 20 years.
+        </p>
+      </div>
+    ),
+    imageUrl: "/images/team_4.png",
   },
   {
     name: "Steve Harper",
