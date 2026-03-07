@@ -1,8 +1,8 @@
 export const testimonials = [
   {
     id: 1,
-    name: "Sarah M",
-    age: 49,
+    name: "Charlotte S",
+    age: 23,
     complaint: "Anxiety & Depression",
     platform: "google",
     stars: 5,
@@ -13,14 +13,14 @@ export const testimonials = [
       shirt: "#2E4E3F",
     },
     quote:
-      "I was sceptical at first but the team made me feel so comfortable from day one. My **anxiety is at an all time low** and I finally feel like myself again.",
+      "Amazing clinic! Very impressed with the organisation and the staff are all so lovely. Would really recommend. Thank you Aion!",
   },
   {
     id: 2,
-    name: "James T",
-    age: 28,
-    complaint: "OCD",
-    platform: "doctify",
+    name: "Sean C",
+    age: 43,
+    complaint: "Anxiety & Depression",
+    platform: "aion",
     stars: 5,
     avatar: {
       skin: "#FDDBB4",
@@ -29,14 +29,14 @@ export const testimonials = [
       shirt: "#1a3a5c",
     },
     quote:
-      "After years of struggling, I finally found a place that **truly understood** what I was going through. The progress made in just a few months is incredible.",
+      "I would recommend this treatment to anyone who has suffered long-term mental-health difficulties, because it has been for the me the single most powerful form of support I have ever received. It has restored hope where I truly thought hope was lost. That is priceless.",
   },
   {
     id: 3,
-    name: "Priya S",
+    name: "Anonymous",
     age: 41,
     complaint: "PTSD",
-    platform: "aion",
+    platform: "doctify",
     stars: 5,
     avatar: {
       skin: "#8D5524",
@@ -45,14 +45,14 @@ export const testimonials = [
       shirt: "#4a2c6e",
     },
     quote:
-      "The care and professionalism here is unmatched. I felt **heard and supported** every step of the way. Would recommend to anyone without hesitation.",
+      "Thank you so much to the wonderful team at Aion for the first class care I received throughout treatment. To anyone considering ketamine assisted therapy, you are in very safest hands with this highly experienced team - I couldn’t have asked for a more supportive and caring environment.",
   },
   {
     id: 4,
-    name: "Tom E",
-    age: 22,
-    complaint: "Depression",
-    platform: "doctify",
+    name: "Karen S",
+    age: 51,
+    complaint: "Anxiety",
+    platform: "google",
     stars: 5,
     avatar: {
       skin: "#FDDBB4",
@@ -61,13 +61,13 @@ export const testimonials = [
       shirt: "#2E4E3F",
     },
     quote:
-      "Honestly **life-changing**. I went from barely getting out of bed to feeling motivated and hopeful. The team genuinely cares about your progress.",
+      "I cannot recommend Aion Clinic highly enough. The communication was excellent from the beginning to end of the process. The care my daughter received from Matt, Laurie and Steve was warm and supportive whilst also very professional and the clinic provided a calm environment. We are delighted that we found the clinic as without doubt this is the treatment that has helped her the most.",
   },
   {
     id: 5,
-    name: "Clara H",
-    age: 55,
-    complaint: "Bipolar Disorder",
+    name: "Mick C",
+    age: 47,
+    complaint: "PTSD",
     platform: "doctify",
     stars: 5,
     avatar: {
@@ -81,9 +81,9 @@ export const testimonials = [
   },
   {
     id: 6,
-    name: "Aiden W",
-    age: 31,
-    complaint: "Social Anxiety",
+    name: "Barbara E",
+    age: 73,
+    complaint: "Depression",
     platform: "aion",
     stars: 5,
     avatar: {
@@ -97,9 +97,9 @@ export const testimonials = [
   },
   {
     id: 7,
-    name: "Natalie B",
-    age: 47,
-    complaint: "Burnout & Stress",
+    name: "Jane W",
+    age: 59,
+    complaint: "OCD",
     platform: "doctify",
     stars: 5,
     avatar: {
@@ -109,14 +109,14 @@ export const testimonials = [
       shirt: "#3a1a2c",
     },
     quote:
-      "They helped me **rediscover balance** in my life. I was completely burnt out and now I have strategies that actually work. Fantastic team.",
+      "The consultant psychiatrist and the individual therapist were highly experienced in all respects and were also patient and kind. Very reassuring.",
   },
   {
     id: 8,
-    name: "Liam P",
-    age: 19,
-    complaint: "Anxiety",
-    platform: "google",
+    name: "Sean C",
+    age: 43,
+    complaint: "Anxiety & Depression",
+    platform: "aion",
     stars: 5,
     avatar: {
       skin: "#C68642",
@@ -125,14 +125,14 @@ export const testimonials = [
       shirt: "#2c3a5c",
     },
     quote:
-      "As a young person I was nervous about seeking help but they made it **completely comfortable**. Already seeing huge improvements after just 6 weeks.",
+      "I have experienced a significant improvement, noticeable to friends, colleagues, and family, in my mood, outlook, and indeed my cognitive function: people have commented that I seem in stronger shape than I did even last week. This is excellent.",
   },
   {
     id: 9,
-    name: "Emily R",
-    age: 36,
-    complaint: "Depression & Anxiety",
-    platform: "aion",
+    name: "Harry S",
+    age: 44,
+    complaint: "Anxiety",
+    platform: "doctify",
     stars: 5,
     avatar: {
       skin: "#FFE0BD",
@@ -141,14 +141,14 @@ export const testimonials = [
       shirt: "#4a3a1a",
     },
     quote:
-      "I cannot recommend Aion highly enough. From the first session I felt **genuinely cared for**. The results have been beyond what I expected.",
+      "Very friendly and professional service. Really great and transformative experience.",
   },
   {
     id: 10,
-    name: "Marcus D",
-    age: 44,
-    complaint: "PTSD",
-    platform: "doctify",
+    name: "Joe S",
+    age: 34,
+    complaint: "Substance Addiction",
+    platform: "google",
     stars: 5,
     avatar: {
       skin: "#5C3A1E",
@@ -157,14 +157,14 @@ export const testimonials = [
       shirt: "#2E4E3F",
     },
     quote:
-      "The team at Aion are exceptional. I have tried many treatments over the years and **nothing has come close** to what this programme has done for me.",
+      "Incredible team, incredible life-changing treatment - would highly recommend!",
   },
   {
     id: 11,
-    name: "Yasmin K",
-    age: 33,
-    complaint: "Anxiety",
-    platform: "google",
+    name: "Mick C",
+    age: 47,
+    complaint: "PTSD",
+    platform: "doctify",
     stars: 5,
     avatar: {
       skin: "#C68642",
@@ -173,22 +173,70 @@ export const testimonials = [
       shirt: "#1a3a5c",
     },
     quote:
-      "Within just a few weeks I noticed a **significant change** in how I was coping day to day. The support was incredible throughout.",
+      "The service provided at Aion was exceptional. This was my second KAP course, and the support that I received throughout was brilliant - from exploring what was needed, the intent for each session, the flexibility in sessions and the practical delivery. I am now in a different place and very grateful to Aion for that.",
   },
   {
     id: 12,
-    name: "Daniel F",
-    age: 51,
-    complaint: "Treatment-Resistant Depression",
+    name: "Sean C",
+    age: 43,
+    complaint: "Anxiety & Depression",
+    platform: "doctify",
+    stars: 5,
+    avatar: {
+      skin: "#C68642",
+      hair: "#1C1C1C",
+      hairStyle: "short-m",
+      shirt: "#2c3a5c",
+    },
+    quote:
+      "All staff of the clinic worked together to create an environment in which any nervousness I had about the treatment was met with calm poise and reassurance. It was an excellent experience.",
+  },
+  {
+    id: 13,
+    name: "Mick C",
+    age: 47,
+    complaint: "PTSD",
     platform: "aion",
     stars: 5,
     avatar: {
-      skin: "#FDDBB4",
-      hair: "#A0A0A0",
-      hairStyle: "short-m",
-      shirt: "#4a2c6e",
+      skin: "#C68642",
+      hair: "#1C1C1C",
+      hairStyle: "long",
+      shirt: "#1a3a5c",
     },
     quote:
-      "After years of failed treatments, Aion gave me **real hope**. The combination of therapy and ketamine has **transformed my life** completely.",
+      "This was my second course, so I was mentally prepared. The treatment provided me a sense of; perspective, calm, respite and relief after significant 'bottling up’. Communications were excellent and ongoing support and updates were exceptional.",
+  },
+  {
+    id: 14,
+    name: "Sean C",
+    age: 43,
+    complaint: "Anxiety & Depression",
+    platform: "aion",
+    stars: 5,
+    avatar: {
+      skin: "#C68642",
+      hair: "#1C1C1C",
+      hairStyle: "short-m",
+      shirt: "#2c3a5c",
+    },
+    quote:
+      "All staff of the clinic worked together to create an environment in which any nervousness I had about the treatment was met with calm poise and reassurance. It was an excellent experience.",
+  },
+  {
+    id: 15,
+    name: "Sean C",
+    age: 43,
+    complaint: "Anxiety & Depression",
+    platform: "aion",
+    stars: 5,
+    avatar: {
+      skin: "#C68642",
+      hair: "#1C1C1C",
+      hairStyle: "short-m",
+      shirt: "#2c3a5c",
+    },
+    quote:
+      "Dr Debidin is -- by a very wide margin -- the best psychologist with whom I have had the good fortune to work in a long history of treatment. I am tremendously grateful to her for her sharply intelligent and deeply compassionate approach to the provision of psychotherapy.",
   },
 ];
