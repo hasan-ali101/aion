@@ -173,7 +173,7 @@ export const testimonials = [
       shirt: "#5c3a1a",
     },
     quote:
-      "I have tried many services over the years. This is the first one where I felt truly understood and supported without judgement. Exceptional care.",
+      "I have tried many services over the years. This is the first one where I felt truly understood and supported without judgement. **Exceptional care**.",
   },
   {
     id: 7,
