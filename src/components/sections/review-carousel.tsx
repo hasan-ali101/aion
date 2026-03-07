@@ -7,7 +7,7 @@ export default function AionTestimonialsHorizontal() {
   return (
     <section className="flex flex-col items-center gap-12 overflow-hidden bg-primary/95 px-4 pb-16 pt-12 text-white">
       <h2 className="text-center text-3xl font-semibold">
-        Real Stories, from Real People
+        Real Results for Real People
       </h2>
       {/* <div className="inline-flex w-fit items-center gap-2 whitespace-nowrap rounded-full bg-white px-[18px] py-2">
         <div className="flex gap-px">
