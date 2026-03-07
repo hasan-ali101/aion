@@ -3,7 +3,6 @@ import { JSX, useState } from "react";
 
 import { Carousel, CarouselContent, CarouselItem } from "@/components/carousel";
 import Image from "next/image";
-import { FadeIn } from "../fade-in";
 
 type TeamMember = {
   name: string;
