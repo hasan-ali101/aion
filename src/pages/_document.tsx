@@ -10,7 +10,7 @@ export default function Document() {
         <link rel="apple-touch-icon" href="/favicon.ico" />
 
  {/* Meta domain verification */}
-        <meta name="facebook-domain-verification" content="Dxg2OykH9zua8r3gorwp0p9lskegqf5" />
+        <meta name="facebook-domain-verification" content="0xg20ykh9zua8r3gorwp0p9skcgqf5" />
 
 {/* 1. Consent defaults — must be before GTM */}
         <script
