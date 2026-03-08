@@ -57,14 +57,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <script src="//code.tidio.co/owio4o90ktvdhweukqy6pqjube1kjn1u.js" async></script>
 
         {/* 4. Silktide JS */}
-        <script src="/cookie-banner/silktide-consent-manager.js" async></script>
+        <script src="/cookie-banner/silktide-consent-manager.js" defer></script>
 
         {/* 5. Silktide config */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              silktideCookieBannerManager.updateCookieBannerConfig({
-                background: { showBackground: true },
+function initSilktide() {
+              silktideCookieBannerManager.updateCookieBannerConfig({                
+              background: { showBackground: true },
                 cookieIcon: { position: "bottomLeft" },
                 cookieTypes: [
                   {
@@ -127,7 +128,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   }
                 },
                 position: { banner: "bottomLeft" }
-              });
+});
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSilktide);
+      } else {
+        initSilktide();
+      }
             `,
           }}
         />
