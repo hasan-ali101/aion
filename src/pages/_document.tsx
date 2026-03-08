@@ -9,7 +9,8 @@ export default function Document() {
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="/favicon.ico" />
 
-        {/* 1. Consent defaults — must be before GTM */}
+
+{/* 1. Consent defaults — must be before GTM */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -21,6 +22,27 @@ export default function Document() {
                 ad_user_data: 'denied',
                 ad_personalization: 'denied',
                 wait_for_update: 500
+              });
+            `,
+          }}
+        />
+
+        {/* 1b. Typeform postMessage listener */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.addEventListener('message', function(event) {
+                if (event.origin !== 'https://form.typeform.com') return;
+                var data = event.data;
+                if (!data || !data.type) return;
+                if (data.type === 'form-started') {
+                  window.dataLayer = window.dataLayer || [];
+                  window.dataLayer.push({ event: 'evt_f1', formId: data.formId });
+                }
+                if (data.type === 'form-submit') {
+                  window.dataLayer = window.dataLayer || [];
+                  window.dataLayer.push({ event: 'evt_f3', formId: data.formId });
+                }
               });
             `,
           }}
