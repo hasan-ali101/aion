@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import { JSX, useState } from "react";
 
 import { Carousel, CarouselContent, CarouselItem } from "@/components/carousel";
@@ -11,7 +10,7 @@ type TeamMember = {
   imageUrl: string;
 };
 
-const getTeam = (isHomePage: boolean): TeamMember[] => [
+const getTeam = (): TeamMember[] => [
   {
     name: " Dr Matthew Liveras ",
     role: "Consultant Psychiatrist & Chief Medical Officer",
@@ -19,9 +18,9 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
       <div className="flex flex-col gap-4">
         <p>
           {`Matt is a consultant psychiatrist and group analytic psychotherapist
-          with many years’ experience across inpatient and community settings in
+          with many years' experience across inpatient and community settings in
           the NHS, private and third sectors. He was previously the Medical Lead
-          to Awakn’s London clinic, which offered ${isHomePage ? "ketamine" : "medication"}-assisted
+          to Awakn's London clinic, which offered medication-assisted
           psychotherapy.`}
         </p>
         <p>
@@ -40,7 +39,7 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
       <div className="flex flex-col gap-4">
         <p>
           As Chief Executive Officer of Aion, Qasim is excited to change the
-          perception around psychedelic medicine and deliver transformative
+          perception around the field and deliver transformative
           experiences to those most in need.
         </p>
         <p>
@@ -61,8 +60,7 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
       <div className="flex flex-col gap-4">
         <p>
           Laurie is an experienced clinical psychologist. Laurie has worked as a
-          lead therapist on clinical trials using MDMA and psilocybin-assisted
-          psychotherapy. She has a special interest in working with complex
+          lead therapist on clinical trialsy. She has a special interest in working with complex
           trauma, addictions and the use of psychedelic therapy to treat a range
           of mental health difficulties.
         </p>
@@ -148,8 +146,7 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
           trauma, addiction and domestic violence.
         </p>
         <p>
-          Fardijah holds a certificate in Psychedelic Assisted Therapies and
-          Research from CIIS, which
+          Fardijah holds a certificate from CIIS, which
           includes the MAPS MDMA Therapy Training. Fardijah is registered with
           the HCPC and holds a Masters
           Degree in Medical Anthropology, Psychoanalytic and Observational
@@ -187,7 +184,7 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
         <p>
         Lisa Marie is a BABCP-registered CBT psychotherapist with an MSc in
         Addiction Studies from King's College London, where she also conducted
-        clinical research into ketamine. Her background spans the NHS, private
+        clinical research. Her background spans the NHS, private
         practice, and interdisciplinary health research at UCL and the United
         Nations.
         </p>
@@ -201,7 +198,7 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
     ),
     imageUrl: "/images/team_12.png",
   },
-    {
+  {
     name: "Lorelei Green",
     role: "Psychotherapist",
     description: (
@@ -209,7 +206,7 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
         <p>
         Lorelei is a BACP accredited therapist with a Masters in psychological
         trauma, working primarily from a humanistic and somatic approach. She
-        has served as lead therapist on several psychedelic clinical trials,
+        has served as lead therapist on several clinical trials,
         bringing specialist expertise to Aion's work.
         </p>
         <p>
@@ -236,14 +233,13 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
         <p>
           Carol is passionate about exploring alternative therapy models, such
           as Internal Family Systems (IFS). She has received training in MDMA
-          Assisted Therapy via the Multidisciplinary Association for Psychedelic
-          Studies (MAPS).
+          Assisted Therapy via MAPS.
         </p>
       </div>
     ),
     imageUrl: "/images/team_6.png",
   },
-    {
+  {
     name: "Steven Ford",
     role: "Psychotherapist",
     description: (
@@ -251,8 +247,7 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
         <p>
         Steven is an experienced clinical psychologist and qualified clinical
         supervisor with over 14 years of experience, specialising in substance
-        misuse and complex trauma. He has worked across research and clinical
-        settings using MDMA, psilocybin, and ketamine-assisted psychotherapy.
+        misuse and complex trauma.
         </p>
         <p>
         His collaborative approach draws on ACT, Compassion-Focused Therapy,
@@ -295,8 +290,7 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
           Steve is a highly experienced nurse with over 30 years in both general
           and psychiatric healthcare. He has worked across NHS and private
           sectors, bringing expertise from diverse settings including community
-          mental health, drug and alcohol services, trauma care, and
-          ketamine-assisted psychotherapy.
+          mental health, drug and alcohol services, trauma care.
         </p>
         <p>
           Known for his holistic and compassionate approach, Steve specialises
@@ -310,10 +304,8 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
 ];
 
 export const Team = () => {
-  const { pathname } = useRouter();
-  const isHomePage = pathname === "/";
   const [selectedTeamMember, setSelectedTeamMember] = useState<TeamMember>(
-    getTeam(isHomePage)[0],
+    getTeam()[0],
   );
 
   return (
@@ -332,13 +324,13 @@ export const Team = () => {
           </p>
           <p>
             Our multidisciplinary team are some of the most experienced
-            practitioners in psychedelic treatment in the country, ensuring we
+            practitioners in the country, ensuring we
             deliver a safe and effective service for you.
           </p>
         </div>
         <Carousel className="flex w-screen justify-center overscroll-x-none px-6 py-6">
           <CarouselContent className="-ml-3 md:-ml-5">
-            {getTeam(isHomePage).map((member: TeamMember, i: number) => {
+            {getTeam().map((member: TeamMember, i: number) => {
               const { role, name, imageUrl, description } = member;
               return (
                 <CarouselItem

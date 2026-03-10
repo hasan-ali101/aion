@@ -15,23 +15,18 @@ export const Hero = () => {
 
   let title = "Welcome to Aion Clinic";
   let subtitle =
-    "Ketamine-assisted therapy for treatment-resistant mental health and addiction";
+    "Medication-assisted therapy for treatment-resistant mental health and addiction";
 
   switch (condition) {
-    case "anxiety-treatment-clinic-uk":
+    case "therapy-programme-uk":
       title = "Private Anxiety Treatment in London";
       subtitle =
         "Discover our personalised 8-week anxiety-treatment programme delivered by expert clinicians";
       break;
-    case "depression-treatment-clinic-uk":
+    case "treatment-clinic-uk":
       title = "Private Depression Treatment in London";
       subtitle =
         "Evidence-based 8-week medication-assisted programme for treatment-resistant depression";
-      break;
-    case "mental-health-clinic":
-      title = "Private Mental Health Clinic in London";
-      subtitle =
-        "Medication-assisted therapy for mental health. Same-week consultant medical assessment to assess eligibility.";
       break;
   }
 
@@ -95,7 +90,7 @@ export const Hero = () => {
             </div>
           </TypeFormButton>
           <Link
-            href="/#what"
+            href="https://www.aion-clinic.com/#what"
             className="h-40 w-full overflow-clip rounded-xl border border-white/20 bg-tertiary pl-4 pt-4 font-medium shadow-lg md:h-52 md:max-w-80"
           >
             <div className="flex items-center gap-2">

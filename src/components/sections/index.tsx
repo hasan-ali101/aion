@@ -1,5 +1,4 @@
 export { Hero } from "./hero";
-export { PatientTestimonials } from "./patient-stories";
 export { What } from "./what";
 export { Eligibility } from "./eligibility";
 export { Team } from "./team";
@@ -8,5 +7,4 @@ export { Questions } from "./questions";
 export { Footer } from "./footer";
 export { How } from "./how";
 export { Programme } from "./programme";
-export { Science } from "./science";
 export { Why } from "./why";

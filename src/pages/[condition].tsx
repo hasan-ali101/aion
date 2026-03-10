@@ -9,17 +9,13 @@ import {
   Programme,
   Why,
 } from "@/components/sections";
+import AionTestimonialsHorizontal from "@/components/sections/review-carousel";
 import HeadWrapper from "@/components/headwrapper";
 import { GetServerSideProps } from "next";
 
 const conditions = [
-  "anxiety-treatment-clinic-uk",
-  "depression-treatment-clinic-uk",
-  "mental-health-clinic",
-  "ptsd",
-  "eating-disorder",
-  "alcohol-abuse",
-  "substance-abuse",
+  "therapy-programme-uk",
+  "treatment-clinic-uk",
 ] as const;
 
 export type Condition = (typeof conditions)[number];
@@ -29,6 +25,7 @@ export default function Home() {
     <HeadWrapper>
       <div className="relative flex flex-col text-black md:items-center">
         <Hero />
+        <AionTestimonialsHorizontal />
         <Why />
         <What />
         <Eligibility />

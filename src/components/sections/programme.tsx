@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import { FadeIn } from "../fade-in";
 
 import {
@@ -15,7 +14,7 @@ import { CheckBullet } from "@/components/check-bullet";
 import { Card } from "@/components/card";
 import { cn } from "@/utils";
 
-const getTreatmentSteps = (isHomePage: boolean) => [
+const getTreatmentSteps = () => [
   {
     title: (
       <div>
@@ -36,11 +35,11 @@ const getTreatmentSteps = (isHomePage: boolean) => [
         Week 3 - 6<br /> Active
       </div>
     ),
-    description: `${isHomePage ? "Ketamine" : "Dosing"} sessions are followed by talking therapy the next day to discuss and integrate experiences, supporting therapeutic change.`,
+    description: `Dosing sessions are followed by talking therapy the next day to discuss and integrate experiences, supporting therapeutic change.`,
     info: (
       <div>
         <CheckBullet className="text-left text-sm font-medium">
-          {`4 ${isHomePage ? "Ketamine" : "Dosing"} Sessions`}
+          4 Dosing Sessions
         </CheckBullet>
         <CheckBullet className="text-left text-sm font-medium">
           4 Talking Therapy sessions{" "}
@@ -55,7 +54,7 @@ const getTreatmentSteps = (isHomePage: boolean) => [
       </div>
     ),
     description:
-      "Following a week’s break to consolidate changes, we conclude with a final therapy session to review progress and plan next steps",
+      "Following a week's break to consolidate changes, we conclude with a final therapy session to review progress and plan next steps",
     info: (
       <CheckBullet className="text-left text-sm font-medium">
         1 Talking Therapy session{" "}
@@ -73,8 +72,6 @@ export const Programme = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
-  const { pathname } = useRouter();
-  const isHomePage = pathname === "/";
 
   useEffect(() => {
     if (!api) {
@@ -110,7 +107,7 @@ export const Programme = () => {
         </h2>
         <p className="max-w-[600px]">
           {`Our evidence-based approach combines transformative talking therapy with
-        precise ${isHomePage ? "ketamine" : "doses of"} treatment to facilitate therapeutic change and deliver
+        precise doses of treatment to facilitate therapeutic change and deliver
         life-changing experiences.`}
         </p>
         <div className="flex flex-col items-center gap-1">
@@ -127,7 +124,7 @@ export const Programme = () => {
           className="w-[85%] max-w-section lg:w-full"
         >
           <CarouselContent>
-            {getTreatmentSteps(isHomePage).map((step, index) => (
+            {getTreatmentSteps().map((step, index) => (
               <CarouselItem
                 key={index}
                 className="flex flex-col items-center justify-end lg:basis-1/3"
