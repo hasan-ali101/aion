@@ -60,7 +60,7 @@ const getTeam = (): TeamMember[] => [
       <div className="flex flex-col gap-4">
         <p>
           Laurie is an experienced clinical psychologist. Laurie has worked as a
-          lead therapist on clinical trialsy. She has a special interest in working with complex
+          lead therapist on clinical trials. She has a special interest in working with complex
           trauma, addictions and the use of psychedelic therapy to treat a range
           of mental health difficulties.
         </p>
