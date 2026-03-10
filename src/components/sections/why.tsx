@@ -8,7 +8,7 @@ export const Why = () => {
   const router         = useRouter();
   const { condition }  = router.query as { condition?: string };
 
-  /* ---------- default copy (mental-health clinic) ---------- */
+  /* ----------- default copy (mental-health clinic) ---------- */
   let cardTile_1     = "Same-week mental-health assessment";
   let cardContent_1  =
     "If your referral is approved, you can book a private 90-minute appointment with our consultant psychiatrist to assess your suitability for treatment at Aion.";
