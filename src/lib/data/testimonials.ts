@@ -93,7 +93,7 @@ export const testimonials = [
       shirt: "#5c1a1a",
     },
     quote:
-      "To anyone considering ketamine assisted therapy, you are in **very safest hands** with this highly experienced team - I couldn't have asked for a **more supportive and caring environment**.",
+      "To anyone considering this treatmenty, you are in **very safest hands** with this highly experienced team - I couldn't have asked for a **more supportive and caring environment**.",
   },
   {
     id: 15,

@@ -18,7 +18,7 @@ export const Footer = () => {
     <footer className="relative flex w-full flex-col items-center bg-gradient-to-t from-primaryDark to-primaryDark/85">
       <CirclesAnimation />
       <div className="flex w-full max-w-section flex-col items-center gap-6 py-16">
-        <Link href="/">
+        <Link href="<https://www.aion-clinic.com">
           <Image
             src="/images/logo_white.png"
             className="w-40"

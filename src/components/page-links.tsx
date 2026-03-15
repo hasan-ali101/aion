@@ -14,15 +14,15 @@ export const PageLinks = ({
   includeScience?: boolean;
 }) => {
   const links = [
-    { href: "/#what", label: "What" },
-    { href: "/#who", label: "Who" },
-    { href: "/#how", label: "How" },
-    { href: "/#where", label: "Where" },
-    { href: "/#us", label: "Us" },
+    { href: "https://www.aion-clinic.com/#what", label: "What" },
+    { href: "https://www.aion-clinic.com/#who", label: "Who" },
+    { href: "https://www.aion-clinic.com/#how", label: "How" },
+    { href: "https://www.aion-clinic.com/#where", label: "Where" },
+    { href: "https://www.aion-clinic.com/#us", label: "Us" },
   ];
 
   if (includeScience) {
-    links.push({ href: "/science", label: "Science" });
+    links.push({ href: "https://www.aion-clinic.com/science", label: "Science" });
   }
 
   return (

@@ -34,7 +34,7 @@ const Nav = () => {
             <Menu className="h-5 w-5 cursor-pointer" />
           </SheetTrigger>
           <SheetContent side={"left"}>
-            <Link href="/" className="flex flex-col items-center gap-6">
+            <Link href="https://www.aion-clinic.com" className="flex flex-col items-center gap-6">
               <Image
                 src="/images/logo_white.png"
                 className="mb-6 w-32"
@@ -46,12 +46,11 @@ const Nav = () => {
                 className="flex flex-col gap-6 text-lg font-medium"
                 sidebar={true}
               />
-              {/* <GetStartedButton variant="inverted" /> */}
             </Link>
           </SheetContent>
         </Sheet>
         {isTop ? (
-          <Link href="/">
+          <Link href="https://www.aion-clinic.com">
             <Image
               src="/images/logo_white.png"
               className="w-20 md:w-36"
@@ -61,7 +60,7 @@ const Nav = () => {
             />
           </Link>
         ) : (
-          <Link href="/">
+          <Link href="https://www.aion-clinic.com">
             <Image
               src="/images/logo_primary.png"
               className="w-20 md:w-36"
