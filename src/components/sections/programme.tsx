@@ -35,11 +35,11 @@ const getTreatmentSteps = () => [
         Week 3 - 6<br /> Active
       </div>
     ),
-    description: `Dosing sessions are followed by talking therapy the next day to discuss and integrate experiences, supporting therapeutic change.`,
+    description: `Ketamine sessions are followed by talking therapy the next day to discuss and integrate experiences, supporting therapeutic change.`,
     info: (
       <div>
         <CheckBullet className="text-left text-sm font-medium">
-          4 Dosing Sessions
+          4 Ketamine Dosing Sessions
         </CheckBullet>
         <CheckBullet className="text-left text-sm font-medium">
           4 Talking Therapy sessions{" "}

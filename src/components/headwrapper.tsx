@@ -21,21 +21,21 @@ export default function HeadWrapper({
   const { condition } = router.query;
 
   // --------- Auto SEO by route ---------
-  let autoTitle = "Aion Clinic | Medication-Assisted Therapy";
+  let autoTitle = "Aion Clinic | Ketamine-Assisted Therapy";
   let autoDesc =
-    "Delivering our transformative bespoke 8-week medication-assisted psychotherapy programme for those suffering from mental-health or addiction problems.";
+    "Delivering our transformative bespoke 8-week ketamine-assisted psychotherapy programme for those suffering from mental-health or addiction problems.";
 
   switch (condition) {
     case "therapy-programme-uk":
-      autoTitle = "Private Therapy For Anxiety in London | Aion Clinic";
+      autoTitle = "Private Ketamine Assisted Therapy For Anxiety in London | Aion Clinic";
       autoDesc =
         "8-week evidence-based therapy programme delivered by expert clinical team of consultant psychiatrists and experienced therapists.";
       break;
 
     case "treatment-clinic-uk":
-      autoTitle = "Private Treatment For Depression in London | Aion Clinic";
+      autoTitle = "Private Ketamine Treatment For Depression in London | Aion Clinic";
       autoDesc =
-        "Same-week consultant psychiatrist assessments and personalised medication-assisted therapy programmes at our CQC-registered clinic in Islington, London.";
+        "Same-week consultant psychiatrist assessments and personalised ketamine-assisted therapy programmes at our CQC-registered clinic in Islington, London.";
       break;
 
     default:

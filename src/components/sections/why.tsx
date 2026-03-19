@@ -14,7 +14,7 @@ export const Why = () => {
     "If your referral is approved, you can book a private 90-minute appointment with our consultant psychiatrist to assess your suitability for treatment at Aion.";
   let cardTile_2     = "Start treatment within 2 weeks";
   let cardContent_2  =
-    "Following your assessment, you will be eligible to begin our 8-week medication-assisted therapy programme at our lovely clinic in Islington, London.";
+    "Following your assessment, you will be eligible to begin our 8-week ketamine-assisted therapy programme at our lovely clinic in Islington, London.";
   let cardTitle_3   = "CQC-registered expert clinical service";
   let cardContent_3 =
     "Our experienced team of psychiatrists, nurses & therapists are fully regulated and approved by the CQC to safely deliver our treatment programme.";
@@ -27,7 +27,7 @@ export const Why = () => {
         "Private 90-minute assessment with our consultant psychiatrist focused on understanding your medical history & treatment-resistant anxiety.";
       cardTile_2    = "Start anxiety treatment within 2 weeks";
       cardContent_2 =
-        "Following assessment, you will be eligible to begin our 8-week medication-assisted anxiety therapy programme at our lovely clinic in London.";
+        "Following assessment, you will be eligible to begin our 8-week ketamine-assisted anxiety therapy programme at our lovely clinic in London.";
       cardTitle_3    = "CQC-registered specialist anxiety clinic in London";
       cardContent_3 = 
         "Our experienced team of psychiatrists, nurses & therapists are fully regulated and approved by the CQC to safely deliver our anxiety treatment.";
@@ -39,7 +39,7 @@ export const Why = () => {
         "Private 90-minute assessment with our consultant psychiatrist focused on understanding your medical history & treatment-resistant depression.";
       cardTile_2    = "Start depression treatment within 2 weeks";
       cardContent_2 =
-        "Following assessment, you will be eligible to begin our 8-week medication-assisted therapy programme at our lovely clinic in Islington, London.";
+        "Following assessment, you will be eligible to begin our 8-week ketamine-assisted therapy programme at our lovely clinic in Islington, London.";
       cardTitle_3    = "CQC-registered specialist depression clinic";
       cardContent_3 = 
         "Our experienced team of psychiatrists, nurses & therapists are fully regulated and approved by the CQC to safely deliver our depression treatment.";

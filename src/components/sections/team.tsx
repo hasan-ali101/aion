@@ -20,7 +20,7 @@ const getTeam = (): TeamMember[] => [
           {`Matt is a consultant psychiatrist and group analytic psychotherapist
           with many years' experience across inpatient and community settings in
           the NHS, private and third sectors. He was previously the Medical Lead
-          to Awakn's London clinic, which offered medication-assisted
+          to Awakn's London clinic, which offered ketamine-assisted
           psychotherapy.`}
         </p>
         <p>

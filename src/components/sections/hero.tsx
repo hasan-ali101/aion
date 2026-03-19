@@ -15,7 +15,7 @@ export const Hero = () => {
 
   let title = "Welcome to Aion Clinic";
   let subtitle =
-    "Medication-assisted therapy for treatment-resistant mental health and addiction";
+    "Ketamine-assisted therapy for treatment-resistant mental health and addiction";
 
   switch (condition) {
     case "therapy-programme-uk":
@@ -26,7 +26,7 @@ export const Hero = () => {
     case "treatment-clinic-uk":
       title = "Private Depression Treatment in London";
       subtitle =
-        "Evidence-based 8-week medication-assisted programme for treatment-resistant depression";
+        "Evidence-based 8-week ketamine-assisted programme for treatment-resistant depression";
       break;
   }
 

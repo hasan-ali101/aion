@@ -34,7 +34,7 @@ const MainCard = ({
         className="pointer-events-none absolute min-h-full min-w-[800px] select-none opacity-20"
       />
       <CardHeader>
-      <CardTitle>Medication-Assisted Therapy Programme</CardTitle>
+      <CardTitle>Ketamine-Assisted Therapy Programme</CardTitle>
       </CardHeader>
       <CardContent className="flex flex-col gap-6 pb-10 text-sm">
         <div className="flex items-center justify-between gap-2">
@@ -117,7 +117,7 @@ export const What = () => {
 
             <MainCard className="hidden lg:flex" />
             <ImageCardCollapsible
-              title="Dosing Sessions"
+              title="Ketamine Dosing Sessions"
               description={
                 <CheckBullet>4 sessions included in treatment</CheckBullet>
               }
@@ -129,7 +129,7 @@ export const What = () => {
                     perspectives.
                   </p>
                   <p>
-                    {`Scientific research has shown that medication, at controlled doses, can
+                    {`Scientific research has shown that ketamine, at controlled doses, can
                   increase plasticity in the brain.`}
                   </p>
                   <p>
