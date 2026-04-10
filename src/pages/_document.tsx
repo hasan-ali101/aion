@@ -23,7 +23,7 @@ export default function Document() {
                 ad_storage: 'denied',
                 ad_user_data: 'denied',
                 ad_personalization: 'denied',
-                wait_for_update: 500
+                wait_for_update: 2000
               });            `,
           }}
         />
@@ -85,7 +85,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <script src="/cookie-banner/silktide-consent-manager.js" defer></script>
 
         {/* 5. Silktide config - Removed for now 10/3/26. Added back 10/4/26 */}
-{/* 5. Silktide config - Removed for now 10/3/26. Added back 10/4/26 */}
       <script
         dangerouslySetInnerHTML={{
           __html: `
