@@ -19,12 +19,12 @@ export default function Document() {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('consent', 'default', {
-                analytics_storage: 'granted',
-                ad_storage: 'granted',
-                ad_user_data: 'granted',
-                ad_personalization: 'granted',
-              });
-            `,
+                analytics_storage: 'denied',
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied',
+                wait_for_update: 500
+              });            `,
           }}
         />
 
@@ -49,7 +49,9 @@ export default function Document() {
           }}
         />
 
-        {/* 2. Silktide CSS - Removed for now 10/3/26*/}
+        {/* 2. Silktide CSS - Removed for now 10/3/26. Added back 10/4/26 */}
+
+        <style dangerouslySetInnerHTML={{ __html: `@import url('/cookie-banner/silktide-consent-manager.css');` }} />
 
         {/* 3. Google Tag Manager */}
         <script
@@ -78,10 +80,91 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {/* Tidio */}
         <script src="//code.tidio.co/c2ozy1ksg8x5qatlh0rwof8q6jasaahv.js" async></script>
 
-        {/* 4. Silktide JS - Removed for now 10/3/26*/}
+        {/* 4. Silktide JS - Removed for now 10/3/26. Added back 10/4/26 */}
 
-        {/* 5. Silktide config - Removed for now 10/3/26*/}
+        <script src="/cookie-banner/silktide-consent-manager.js" defer></script>
 
+        {/* 5. Silktide config - Removed for now 10/3/26. Added back 10/4/26 */}
+{/* 5. Silktide config - Removed for now 10/3/26. Added back 10/4/26 */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+      function initSilktide() {
+        silktideCookieBannerManager.updateCookieBannerConfig({                
+          background: { showBackground: true },
+          cookieIcon: { position: "bottomLeft" },
+          cookieTypes: [
+            {
+              id: "necessary",
+              name: "Necessary",
+              description: "<p>These cookies are essential for Aion to function correctly. They cannot be switched off.</p>",
+              required: true,
+              onAccept: function() {}
+            },
+            {
+              id: "analytics",
+              name: "Analytics",
+              description: "<p>These cookies help us understand how visitors use our site. All data is anonymised.</p>",
+              defaultValue: false,
+              onAccept: function() {
+                gtag('consent', 'update', { analytics_storage: 'granted' });
+                dataLayer.push({ event: 'consent_accepted_analytics' });
+              },
+              onReject: function() {
+                gtag('consent', 'update', { analytics_storage: 'denied' });
+              }
+            },
+            {
+              id: "advertising",
+              name: "Advertising",
+              description: "<p>These cookies help us reach people who may benefit from our programme. They may be set by us or our partners.</p>",
+              defaultValue: false,
+              onAccept: function() {
+                gtag('consent', 'update', {
+                  ad_storage: 'granted',
+                  ad_user_data: 'granted',
+                  ad_personalization: 'granted',
+                });
+                dataLayer.push({ event: 'consent_accepted_advertising' });
+              },
+              onReject: function() {
+                gtag('consent', 'update', {
+                  ad_storage: 'denied',
+                  ad_user_data: 'denied',
+                  ad_personalization: 'denied',
+                });
+              }
+            }
+          ],
+          text: {
+            banner: {
+              description: "<p>Aion uses cookies to improve your experience and help us reach people who could benefit from our services. <a href='https://www.aion-clinic.com/cookie-policy' target='_blank'>Cookie Policy</a>.</p>",
+              acceptAllButtonText: "Accept all",
+              acceptAllButtonAccessibleLabel: "Accept all cookies",
+              rejectNonEssentialButtonText: "Reject non-essential",
+              rejectNonEssentialButtonAccessibleLabel: "Reject non-essential cookies",
+              preferencesButtonText: "Preferences",
+              preferencesButtonAccessibleLabel: "Manage cookie preferences"
+            },
+            preferences: {
+              title: "Your cookie preferences",
+              description: "<p>We respect your privacy. You can choose which cookies Aion uses. Your preferences can be updated at any time.</p>",
+              creditLinkText: "",
+              creditLinkAccessibleLabel: ""
+            }
+          },
+          position: { banner: "bottomLeft" }
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSilktide);
+      } else {
+        initSilktide();
+      }
+          `,
+        }}
+      />
         <NextScript />
       </body>
     </Html>
