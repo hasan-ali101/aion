@@ -11,13 +11,13 @@ export const Eligibility = () => {
 
   let cardTile_1 = "Clinical diagnosis of one of listed conditions";
   let cardContent_1 =
-    "Currently, ketamine can be prescribed in the UK 'off-label' to treat mental health and addiction disorders.";
+    "Our clinic provides treatment for those dealing with mental health and addiction disorders.";
   let cardTile_2 = "Tried more than one form of treatment for it";
   let cardContent_2 =
     "This could be anti-depressant or anxiety medication, therapy or rehabilitation, depending on your condition.";
   const cardTitle_3 = "Low neurological or physical risk";
   const cardContent_3 =
-    "We check for neurological and physical risk factors and assess potential safety or impact before proceeding.";
+    "We thoroughly screen for risk factors and assess potential safety or impact before proceeding.";
 
   switch (condition) {
     case "anxiety-treatment-clinic-uk":

@@ -35,31 +35,31 @@ export const Questions = () => {
           <Accordion type="single" collapsible className="w-full md:w-1/2">
             <AccordionItem value="item-1">
               <AccordionTrigger>
-                How does ketamine-assisted psychotherapy work?
+                How does your treatment work?
               </AccordionTrigger>
               <AccordionContent>
                 Treatment at Aion combines Acceptance and Commitment Therapy
-                (ACT) with ketamine-assisted sessions to support deep
+                (ACT) with psychedelic-assisted sessions to support deep
                 therapeutic change. ACT is an evidence-based approach that
                 fosters psychological flexibility — the ability to be present,
                 engage with painful emotions without avoidance, and act
                 according to personal values.
                 <br /> <br />
                 The program begins with preparatory talk therapy sessions to
-                clarify goals and prepare for ketamine experiences. This is
-                followed by four weekly ketamine sessions, each followed the
+                clarify goals and prepare for your dosing experiences. This is
+                followed by four weekly dosing sessions, each followed the
                 next day by an ACT-based integration session. These integration
                 sessions help process the psychedelic experience and embed
                 insights into ongoing therapy. Weekly exercises support progress
                 between sessions.
                 <br /> <br />
-                ACT and psychedelics like ketamine work well together, both
+                ACT and psychedelics work well together, both
                 promoting shifts in perspective and emotional openness. When
                 stuck in distress or addiction, we can develop rigid patterns to
                 avoid emotional pain. ACT helps gradually shift this
                 relationship with discomfort, encouraging openness and growth.
                 <br /> <br />
-                Ketamine, within a safe therapeutic setting, can create
+                Psychedelics, within a safe therapeutic setting, can create
                 temporary but powerful perspective shifts that accelerate
                 healing. The aim of the course of therapy is to provide you with
                 the tools, insights, and confidence to continue your personal
@@ -70,15 +70,15 @@ export const Questions = () => {
             <AccordionItem value="item-2">
               <AccordionTrigger>Is this treatment legal?</AccordionTrigger>
               <AccordionContent>
-                Ketamine is a licensed anaesthetic and pain-relief medication
-                widely used in the UK. Due to risks associated with recreational
+                We use a licensed anaesthetic and pain-relief medication
+                that is widely used in the UK. Due to risks associated with recreational
                 misuse, it is classified as a Class B controlled substance under
                 the Misuse of Drugs Act 1971. This means it is illegal to buy,
-                possess, or sell ketamine without proper medical authorisation.
+                possess, or sell without proper medical authorisation.
                 <br /> <br />
-                While ketamine can be legally prescribed, it is not currently
+                While it can be legally prescribed, it is not currently
                 licensed in the UK for treating mental health conditions.
-                Therefore, its use in ketamine-assisted psychotherapy is
+                Therefore, its use in our treatment is
                 considered off-label.
                 <br /> <br />
                 Prescribing any medication off-label requires the prescriber to
@@ -100,7 +100,7 @@ export const Questions = () => {
                 To meet these standards, Aion requires that you will have
                 already attempted conventional, licensed treatments for your
                 mental health condition without sufficient benefit before
-                starting ketamine-assisted therapy.
+                starting our treatment.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
@@ -108,13 +108,13 @@ export const Questions = () => {
                 Is this treatment safe? Does it have any risks or side effects?
               </AccordionTrigger>
               <AccordionContent>
-                Ketamine is a safe anaesthetic, even at doses much higher than
-                those used in therapy. It does not suppress breathing and mildly
+                The treatment uses a safe anaesthetic, at doses much lower than
+                those used in hospital. It does not suppress breathing and mildly
                 stimulates the heart, making it suitable for use without
                 advanced airway support. It is listed as an essential medicine
                 by the WHO.
                 <br /> <br />
-                While ketamine has abuse potential, therapeutic use under
+                While it has abuse potential, therapeutic use under
                 medical supervision has a very low risk of serious side effects.
                 Common side effects include nausea, headache, dizziness, or
                 anxiety, which are usually temporary. Anti-nausea medication can
@@ -122,14 +122,14 @@ export const Questions = () => {
                 any anxiety.
                 <br /> <br />
                 We screen for medical and psychiatric conditions that may make
-                ketamine unsafe, such as uncontrolled hypertension, severe
+                it unsafe, such as uncontrolled hypertension, severe
                 cardiovascular or neurological diseases, liver/kidney issues,
                 psychotic or manic states, and BMI outside 16–35. If risks are
                 identified, treatment may be delayed until conditions are
                 stabilized.
                 <br /> <br />
                 During sessions, vital signs are monitored, and a nurse and
-                psychiatrist are onsite for safety. Ketamine’s dissociative
+                psychiatrist are onsite for safety. The medication's dissociative
                 effects can feel unsettling but also offer therapeutic value. As
                 with other psychedelics, mindset and setting greatly influence
                 the experience. Rarely, sessions may lead to emotional
@@ -139,10 +139,10 @@ export const Questions = () => {
             </AccordionItem>
             <AccordionItem value="item-4">
               <AccordionTrigger>
-                What happens during a ketamine session?
+                What happens during a dosing session?
               </AccordionTrigger>
               <AccordionContent>
-                At the start of each ketamine session, our nurse will check your
+                At the start of each session, our nurse will check your
                 vitals (pulse, blood pressure) to ensure you&apos;re ready. Your
                 therapist will accompany you to the therapy room, which
                 you&apos;ll already know from preparatory sessions. You&apos;ll
@@ -155,7 +155,7 @@ export const Questions = () => {
                 anxious during the session. This may include reassuring physical
                 contact, such as holding your hand—always guided by your
                 preferences. <br /> <br />
-                The nurse will prepare and administer ketamine via a single
+                The nurse will prepare and administer the medication via a single
                 injection into your upper arm (like a flu jab). The initial dose
                 is at the lower end of the effective range and may be adjusted
                 over time in agreement with you and the clinical team,
@@ -171,12 +171,11 @@ export const Questions = () => {
           <Accordion type="single" collapsible className="w-full md:w-1/2">
             <AccordionItem value="item-1">
               <AccordionTrigger>
-                What will I feel during the ketamine sessions?
+                What will I feel during the dosing sessions?
               </AccordionTrigger>
               <AccordionContent>
-                Ketamine induces non-ordinary states of consciousness that vary
-                depending on dose, mindset, and setting. In ketamine-assisted
-                psychotherapy, preparatory sessions help you approach the
+                The medication induces non-ordinary states of consciousness that vary
+                depending on dose, mindset, and setting. In our treatment, preparatory sessions help you approach the
                 experience with openness and curiosity, including strategies to
                 lean into discomfort if it arises. While fear can occur, it is
                 generally uncommon. <br /> <br />
@@ -186,7 +185,7 @@ export const Questions = () => {
                 These may include sensory imagery, personal memories, or
                 transcendental experiences, often marked by a feeling of
                 movement or transformation. <br /> <br />
-                Unlike intravenous ketamine used medically for depression—where
+                Unlike intravenous treatment used medically for depression—where
                 dissociative effects are minimized - at Aion these psychedelic
                 aspects are embraced for their therapeutic value. They are more
                 likely to occur with a single intramuscular injection, the
@@ -206,7 +205,7 @@ export const Questions = () => {
               <AccordionContent>
                 Our 8-week programme costs £5000 per patient. This includes an
                 initial medical assessment (approximately 1.5 hours) and 11
-                sessions of therapy - 4 ketamine dosing sessions (2 hours each)
+                sessions of therapy - 4 dosing sessions (2 hours each)
                 and 7 sessions of talking therapy (1 hour each).
               </AccordionContent>
             </AccordionItem>

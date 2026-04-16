@@ -15,7 +15,7 @@ export const Hero = () => {
 
   let title = "Welcome to Aion Clinic";
   let subtitle =
-    "Ketamine-assisted therapy for treatment-resistant mental health and addiction";
+    "Medication-assisted therapy for treatment-resistant mental health and addiction";
 
   switch (condition) {
     case "anxiety-treatment-clinic-uk":

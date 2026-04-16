@@ -36,11 +36,11 @@ const getTreatmentSteps = (isHomePage: boolean) => [
         Week 3 - 6<br /> Active
       </div>
     ),
-    description: `${isHomePage ? "Ketamine" : "Dosing"} sessions are followed by talking therapy the next day to discuss and integrate experiences, supporting therapeutic change.`,
+    description: `${isHomePage ? "Dosing" : "Dosing"} sessions are followed by talking therapy the next day to discuss and integrate experiences, supporting therapeutic change.`,
     info: (
       <div>
         <CheckBullet className="text-left text-sm font-medium">
-          {`4 ${isHomePage ? "Ketamine" : "Dosing"} Sessions`}
+          {`4 ${isHomePage ? "Dosing" : "Dosing"} Sessions`}
         </CheckBullet>
         <CheckBullet className="text-left text-sm font-medium">
           4 Talking Therapy sessions{" "}
@@ -110,7 +110,7 @@ export const Programme = () => {
         </h2>
         <p className="max-w-[600px]">
           {`Our evidence-based approach combines transformative talking therapy with
-        precise ${isHomePage ? "ketamine" : "doses of"} treatment to facilitate therapeutic change and deliver
+        precise ${isHomePage ? "doses of" : "doses of"} treatment to facilitate therapeutic change and deliver
         life-changing experiences.`}
         </p>
         <div className="flex flex-col items-center gap-1">

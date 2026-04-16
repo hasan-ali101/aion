@@ -21,8 +21,7 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
           {`Matt is a consultant psychiatrist and group analytic psychotherapist
           with many years’ experience across inpatient and community settings in
           the NHS, private and third sectors. He was previously the Medical Lead
-          to Awakn’s London clinic, which offered ${isHomePage ? "ketamine" : "medication"}-assisted
-          psychotherapy.`}
+          to Awakn’s London clinic, which offered ${isHomePage ? "KAP" : "KAP"}.`}
         </p>
         <p>
           His approach is informed by the idea that many of the problems we

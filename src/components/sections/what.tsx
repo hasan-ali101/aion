@@ -39,7 +39,7 @@ const MainCard = ({
       <CardHeader>
         <CardTitle>
           {isHomePage
-            ? "Ketamine-Assisted Therapy Programme"
+            ? "Our Treatment Programme"
             : "Medication-Assisted Therapy Programme"}
         </CardTitle>
       </CardHeader>
@@ -48,7 +48,7 @@ const MainCard = ({
           <div className="flex flex-col gap-4">
             <CheckBullet>Comprehensive medical assessment</CheckBullet>
             <CheckBullet>8 week course</CheckBullet>
-            <CheckBullet>15 hours of treatment</CheckBullet>
+            <CheckBullet>16+ hours of treatment</CheckBullet>
           </div>
           <div className="flex min-h-24 min-w-24 flex-col justify-center rounded-full bg-white text-center text-primary">
             <p className="font-bold">£5000</p>
@@ -56,8 +56,8 @@ const MainCard = ({
           </div>
         </div>
         <p>
-          {`We use ${isHomePage ? "ketamine" : ""} dosing sessions to augment and accelerate progress
-          made in talking therapy to deliver tangible results within 8 weeks for
+          {`We use ${isHomePage ? "precise" : "precise"} doses of medication to augment and accelerate progress
+          made in talking therapy, delivering tangible improvements within 8 weeks for
           those most in need.`}
         </p>
       </CardContent>
@@ -102,7 +102,7 @@ export const What = () => {
                     We use Acceptance and Commitment Therapy (ACT) as the
                     framework for our therapeutic intervention.
                   </p>
-                  <p>ACT is an evidence-based thesey madel which focuses on:</p>
+                  <p>ACT is an evidence-based therapy model which focuses on:</p>
                   <ol className="flex list-decimal flex-col gap-2 pl-2">
                     <li>
                       Identifying your core values to help focus life around
@@ -126,7 +126,7 @@ export const What = () => {
 
             <MainCard className="hidden lg:flex" isHomePage={isHomePage} />
             <ImageCardCollapsible
-              title={isHomePage ? "Ketamine Sessions" : "Dosing Sessions"}
+              title={isHomePage ? "Dosing Sessions" : "Dosing Sessions"}
               description={
                 <CheckBullet>4 sessions included in treatment</CheckBullet>
               }
@@ -138,11 +138,11 @@ export const What = () => {
                     perspectives.
                   </p>
                   <p>
-                    {`Scientific research has shown that ${isHomePage ? "ketamine" : "medication"}, at controlled doses, can
+                    {`Scientific research has shown that ${isHomePage ? "medication" : "medication"}, at controlled doses, can
                   increase plasticity in the brain.`}
                   </p>
                   <p>
-                    {`Simply put, ${isHomePage ? "ketamine" : "our treatment"}  can make the brain more responsive and
+                    {`Simply put, ${isHomePage ? "certain medication" : "our treatment"}  can make the brain more responsive and
                   adaptive to change.`}
                   </p>
                   <CheckBullet>
@@ -153,7 +153,7 @@ export const What = () => {
                     psychiatrist){" "}
                   </CheckBullet>
                   <CheckBullet>
-                    {`Individually tailored intramuscular ${isHomePage ? "ketamine" : ""} doses
+                    {`Individually tailored intramuscular ${isHomePage ? "" : ""} doses
                   collaboratively agreed with clinical team`}
                   </CheckBullet>
                 </div>

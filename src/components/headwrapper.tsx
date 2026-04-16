@@ -21,9 +21,9 @@ export default function HeadWrapper({
   const { condition } = router.query;
 
   // --------- Auto SEO by route ---------
-  let autoTitle = "AION Clinic | Ketamine Assisted Therapy";
+  let autoTitle = "AION Clinic | Medication-Assisted Therapy";
   let autoDesc =
-    "Delivering our transformative bespoke 8-week ketamine-assisted psychotherapy programme for those suffering from mental-health or addiction problems.";
+    "Delivering our transformative bespoke 8-week pscyhedelic-assisted therapy programme for those suffering from mental-health or addiction problems.";
 
   switch (condition) {
     case "depression-treatment-clinic-uk":
@@ -47,21 +47,21 @@ export default function HeadWrapper({
 
     case "science":
       autoTitle =
-        "Science Behind Ketamine-Assisted Therapy | Aion Clinic Evidence Hub";
+        "Science Behind Psychedelic-Assisted Therapy | Aion Clinic Evidence Hub";
       autoDesc =
-        "Take a look at the vast evidence bank of peer-reviewed research on ketamine-assisted psychotherapy, safety data and outcome statistics.";
+        "Take a look at the vast evidence bank of peer-reviewed research on psychedelic-assisted psychotherapy, safety data and outcome statistics.";
       break;
 
     case "blog":
       autoTitle = "Mental-Health Insights Blog | Aion Clinic";
       autoDesc =
-        "We are on a mission to demistify psychedelic-assisted treatment options; take a look at our clinically reviewed articles on ketamine assisted therapy, depression, anxiety and many more areas.";
+        "We are on a mission to demistify psychedelic-assisted treatment options; take a look at our clinically reviewed articles on how our treatment can help with depression, anxiety and many more areas.";
       break;
 
-    case "ketamine-therapy-London":
-      autoTitle = "Ketamine-Assisted Therapy in London | Aion Clinic";
+    case "kap":
+      autoTitle = "Aion Clinic | Private KAP Treatment in London";
       autoDesc =
-        "Private ketamine clinic in Islington, London; learn more about our treatment, the evidence supporting it, and what to expect at each session.";
+        "Learn more about our treatment, our protocols and the scientific evidencen to support it, as well as what to expect at each session.";
       break;
 
     default:
