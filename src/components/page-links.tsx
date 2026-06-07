@@ -14,11 +14,12 @@ export const PageLinks = ({
   includeScience?: boolean;
 }) => {
   const links = [
-    { href: "/#what", label: "What" },
-    { href: "/#who", label: "Who" },
-    { href: "/#how", label: "How" },
-    { href: "/#where", label: "Where" },
-    { href: "/#us", label: "Us" },
+    { href: "/ketamine-assisted-therapy#what", label: "What" },
+    { href: "/ketamine-assisted-therapy#who", label: "Who" },
+    { href: "/ketamine-assisted-therapy#how-ketamine-works", label: "How" },
+    { href: "/ketamine-assisted-therapy#programme", label: "Programme" },
+    { href: "/ketamine-assisted-therapy#where", label: "Where" },
+    { href: "/ketamine-assisted-therapy#us", label: "Us" },
   ];
 
   if (includeScience) {

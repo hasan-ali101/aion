@@ -20,8 +20,10 @@ body {
   @apply font-sans;
 }
 h1,
-h2 {
+h2,
+h3 {
   @apply font-heading;
+  text-transform: capitalize;
 }
 
 h1 {

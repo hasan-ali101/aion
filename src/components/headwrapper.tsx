@@ -19,13 +19,14 @@ export default function HeadWrapper({
 }: HeadWrapperProps) {
   const router = useRouter();
   const { condition } = router.query;
+  const pageKey = (condition as string) || router.pathname.slice(1);
 
   // --------- Auto SEO by route ---------
-  let autoTitle = "AION Clinic | Medication-Assisted Therapy";
+  let autoTitle = "AION Clinic | Psychedelic-Assisted Therapy";
   let autoDesc =
     "Delivering our transformative bespoke 8-week pscyhedelic-assisted therapy programme for those suffering from mental-health or addiction problems.";
 
-  switch (condition) {
+  switch (pageKey) {
     case "depression-treatment-clinic-uk":
       autoTitle = "Private Depression Treatment Clinic in London | Aion Clinic";
       autoDesc =
@@ -47,7 +48,7 @@ export default function HeadWrapper({
 
     case "science":
       autoTitle =
-        "Science Behind Psychedelic-Assisted Therapy | Aion Clinic Evidence Hub";
+        "Science Behind Ketamine-Assisted Therapy | Aion Clinic Evidence Hub";
       autoDesc =
         "Take a look at the vast evidence bank of peer-reviewed research on psychedelic-assisted psychotherapy, safety data and outcome statistics.";
       break;
@@ -58,10 +59,10 @@ export default function HeadWrapper({
         "We are on a mission to demistify psychedelic-assisted treatment options; take a look at our clinically reviewed articles on how our treatment can help with depression, anxiety and many more areas.";
       break;
 
-    case "kap":
-      autoTitle = "Aion Clinic | Private KAP Treatment in London";
+    case "ketamine-assisted-therapy":
+      autoTitle = "Ketamine-Assisted Therapy in London | Aion Clinic";
       autoDesc =
-        "Learn more about our treatment, our protocols and the scientific evidencen to support it, as well as what to expect at each session.";
+        "Learn more about ketamine-assisted therapy - our service, our protocols and the scientific evidence supporting it, as well as what to expect at each session.";
       break;
 
     default:

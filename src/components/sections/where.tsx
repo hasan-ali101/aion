@@ -3,13 +3,13 @@ import { YouTubeEmbed } from "@next/third-parties/google";
 import Image from "next/image";
 import { memo, useState } from "react";
 
-const YOUTUBE_VIDEO_ID = "XaiAMhbPEnM";
+const YOUTUBE_VIDEO_ID = "i8nYvAKnYfc";
 const YOUTUBE_PARAMS = "controls=0";
 
 const IMAGES = [
-  "/images/room_4.png",
   "/images/room_5.png",
-  "/images/room_6.png",
+  "/images/room_7.png",
+  "/images/room_8.png",
 ];
 
 // Memoized map component to prevent unnecessary rerenders
@@ -34,7 +34,7 @@ const LocationMap = memo(() => (
 LocationMap.displayName = "LocationMap";
 
 export const Where = () => {
-  const [selectedImage, setSelectedImage] = useState(IMAGES[2]);
+  const [selectedImage, setSelectedImage] = useState("");
 
   const isVideoSelected = !selectedImage;
 

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 
 import {
   Card,
@@ -14,6 +15,44 @@ import { GetStartedButton } from "@/components/get-started-button";
 import { cn } from "@/utils";
 import { useRouter } from "next/router";
 import { FadeIn } from "../fade-in";
+
+const VIDEO_ID = "YWFAueUdXPU";
+
+const YoutubeEmbed = () => {
+  const [playing, setPlaying] = useState(false);
+  return (
+    <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "16/9", maxHeight: "140px" }}>
+      {playing ? (
+        <iframe
+          className="h-full w-full"
+          src={`https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1`}
+          title="What happens in a ketamine session"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+        />
+      ) : (
+        <button
+          onClick={() => setPlaying(true)}
+          className="group relative h-full w-full"
+        >
+          <Image
+            src={`https://img.youtube.com/vi/${VIDEO_ID}/hqdefault.jpg`}
+            alt="What happens in a ketamine session"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 flex items-center justify-center bg-black/30 transition group-hover:bg-black/40">
+            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 shadow-lg transition group-hover:scale-110">
+              <svg className="ml-1 h-6 w-6 fill-primary" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+          </div>
+        </button>
+      )}
+    </div>
+  );
+};
 
 const MainCard = ({
   className,
@@ -40,7 +79,7 @@ const MainCard = ({
         <CardTitle>
           {isHomePage
             ? "Our Treatment Programme"
-            : "Medication-Assisted Therapy Programme"}
+            : "Ketamine-Assisted Therapy Programme"}
         </CardTitle>
       </CardHeader>
       <CardContent className="flex flex-col gap-6 pb-10 text-sm">
@@ -51,19 +90,19 @@ const MainCard = ({
             <CheckBullet>16+ hours of treatment</CheckBullet>
           </div>
           <div className="flex min-h-24 min-w-24 flex-col justify-center rounded-full bg-white text-center text-primary">
-            <p className="font-bold">£5000</p>
+            <p className="text-xl font-bold">£5000</p>
             <p className="text-xs">per patient</p>
           </div>
         </div>
         <p>
-          {`We use ${isHomePage ? "precise" : "precise"} doses of medication to augment and accelerate progress
+          {`We use precise doses of ${isHomePage ? "medication" : "ketamine"} to augment and accelerate progress
           made in talking therapy, delivering tangible improvements within 8 weeks for
           those most in need.`}
         </p>
       </CardContent>
       <CardFooter className="flex h-full flex-col items-center justify-center gap-3 pb-10 lg:flex-row">
         <GetStartedButton variant="inverted" />
-        <Link href="/#programme" className="text-sm text-white underline">
+        <Link href="/ketamine-assisted-therapy#programme" className="text-sm text-white underline">
           See Treatment Plan
         </Link>
       </CardFooter>
@@ -126,24 +165,24 @@ export const What = () => {
 
             <MainCard className="hidden lg:flex" isHomePage={isHomePage} />
             <ImageCardCollapsible
-              title={isHomePage ? "Dosing Sessions" : "Dosing Sessions"}
+              title={isHomePage ? "Dosing Sessions" : "Ketamine Sessions"}
               description={
                 <CheckBullet>4 sessions included in treatment</CheckBullet>
               }
               content={
                 <div className="flex flex-col gap-y-4 p-2 text-sm">
+                  <YoutubeEmbed />
                   <p>
                     We use precise intramuscular doses to help you step out of
-                    your default reactions and help you form new, more positive
-                    perspectives.
+                    your default reactions and help you form new perspectives.
                   </p>
                   <p>
-                    {`Scientific research has shown that ${isHomePage ? "medication" : "medication"}, at controlled doses, can
-                  increase plasticity in the brain.`}
+                    {`Research has shown that ${isHomePage ? "medication" : "ketamine"}, at certain doses, can
+                  increase neuroplasticity.`}
                   </p>
                   <p>
-                    {`Simply put, ${isHomePage ? "certain medication" : "our treatment"}  can make the brain more responsive and
-                  adaptive to change.`}
+                    {`Simply put, ${isHomePage ? "certain medication" : "ketamine"}  can make the brain more responsive
+                   to change.`}
                   </p>
                   <CheckBullet>
                     2 hour in-person session with your expert therapist{" "}
@@ -153,8 +192,7 @@ export const What = () => {
                     psychiatrist){" "}
                   </CheckBullet>
                   <CheckBullet>
-                    {`Individually tailored intramuscular ${isHomePage ? "" : ""} doses
-                  collaboratively agreed with clinical team`}
+                    {`Individually tailored intramuscular ${isHomePage ? "" : "ketamine"} doses`}
                   </CheckBullet>
                 </div>
               }

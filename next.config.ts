@@ -2,7 +2,7 @@ const cspHeader = `
     default-src 'self';
     script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com/ https://static.cloudflareinsights.com/ https://www.youtube.com/;
     style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-    img-src 'self' https://i.ytimg.com blob: data: ;
+    img-src 'self' https://i.ytimg.com https://img.youtube.com blob: data: ;
     font-src 'self';
     object-src 'none';
     base-uri 'self';
@@ -32,6 +32,10 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "cdn.sanity.io",
+      },
+      {
+        protocol: "https",
+        hostname: "img.youtube.com",
       },
     ],
   },

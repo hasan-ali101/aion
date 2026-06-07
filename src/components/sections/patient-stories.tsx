@@ -1,26 +1,15 @@
 import { useState } from "react";
 
-const patients = [
-  {
-    videoId: "sXopFu_eiJA",
-    placeholder: "/images/jonny-t.jpg",
-    name: "Jonny T, 43",
-    condition: "PTSD + Anxiety",
-    stats: [
-      { label: "Anxiety",    pct: "-22.2%", before: { score: 18, severity: "Severe" },   after: { score: 14, severity: "Moderate" } },
-      { label: "Depression", pct: "-47.8%", before: { score: 23, severity: "Severe" },   after: { score: 12, severity: "Moderate" } },
-    ],
-  },
-  {
-    videoId: "dQw4w9WgXcQ",
-    name: "Sarah M, 38",
-    condition: "Depression + PTSD",
-    stats: [
-      { label: "Anxiety",    pct: "-38%",   before: { score: 21, severity: "Severe" },   after: { score: 13, severity: "Moderate" } },
-      { label: "Depression", pct: "-50%",   before: { score: 20, severity: "Severe" },   after: { score: 10, severity: "Mild" } },
-    ],
-  },
-];
+const patient = {
+  videoId: "G9BBwB5APgE",
+  placeholder: "/images/Harry cover photo.png",
+  name: "Harry S, 43",
+  condition: "Anxiety + Depression",
+  stats: [
+    { label: "Anxiety",    pct: "-22.2%", before: { score: 18, severity: "Severe" },   after: { score: 14, severity: "Moderate" } },
+    { label: "Depression", pct: "-47.8%", before: { score: 23, severity: "Severe" },   after: { score: 12, severity: "Moderate" } },
+  ],
+};
 
 const C = {
   dark:   "#1F3D2D",
@@ -38,8 +27,8 @@ type Stat = { label: string; pct: string; before: StatData; after: StatData };
 function StatPanel({ s, borderLeft }: { s: Stat; borderLeft: boolean }) {
   const maxScore = Math.max(s.before.score, s.after.score) * 1.15;
   const cols = [
-    { data: s.before, bg: "#E5E7EB", textColor: "#6B7280", scoreColor: "#6B7280", weight: 500, colLabel: "Before" },
-    { data: s.after,  bg: C.teal,   textColor: "white",    scoreColor: C.dark,   weight: 700, colLabel: "After"  },
+    { data: s.before, bg: "#E5E7EB", textColor: "#6B7280", weight: 500, colLabel: "Before" },
+    { data: s.after,  bg: C.teal,   textColor: "white",    weight: 700, colLabel: "After"  },
   ];
   return (
     <div style={{ flex: 1, padding: "16px 20px 14px", borderLeft: borderLeft ? `1px solid ${C.border}` : "none" }}>
@@ -49,13 +38,10 @@ function StatPanel({ s, borderLeft }: { s: Stat; borderLeft: boolean }) {
         <p style={{ margin: 0, fontSize: 22, fontWeight: 700, color: C.teal, lineHeight: 1 }}>{s.pct}</p>
       </div>
       <div style={{ display: "flex", gap: 10, alignItems: "flex-end", height: BAR_AREA + 32 }}>
-        {cols.map(({ data, bg, textColor, scoreColor, weight, colLabel }) => {
+        {cols.map(({ data, bg, textColor, weight, colLabel }) => {
           const barPx = Math.round((data.score / maxScore) * BAR_AREA);
           return (
             <div key={colLabel} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", height: "100%", justifyContent: "flex-end" }}>
-              <span style={{ fontSize: 12, fontWeight: weight, color: scoreColor, lineHeight: 1, marginBottom: 4 }}>
-                {data.score}
-              </span>
               <div style={{
                 width: "100%",
                 height: barPx,
@@ -81,27 +67,10 @@ function StatPanel({ s, borderLeft }: { s: Stat; borderLeft: boolean }) {
 }
 
 export function PatientTestimonials() {
-  const [cur, setCur]         = useState(0);
   const [playing, setPlaying] = useState(false);
-  const [hoverCTA,  setHoverCTA]  = useState(false);
-  const [hoverPrev, setHoverPrev] = useState(false);
-  const [hoverNext, setHoverNext] = useState(false);
-
-  const p = patients[cur];
-
-  function goTo(idx: number) {
-    if (idx < 0 || idx >= patients.length) return;
-    setCur(idx);
-    setPlaying(false);
-  }
-
-  const arrowBtns = [
-    { dir: -1, pts: "15 18 9 12 15 6", disabled: cur === 0,                   hover: hoverPrev, setHover: setHoverPrev },
-    { dir:  1, pts: "9 18 15 12 9 6",  disabled: cur === patients.length - 1, hover: hoverNext, setHover: setHoverNext },
-  ];
 
   return (
-    <section style={{ fontFamily: "'Montserrat', sans-serif", background: C.bg, padding: "60px 40px", width: "100%" }}>
+    <section id="patient-testimonials" style={{ fontFamily: "'Montserrat', sans-serif", background: C.bg, padding: "60px 40px", width: "100%" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Montserrat:wght@400;500&display=swap');
         .pt-thumb { overflow: hidden; }
@@ -110,7 +79,7 @@ export function PatientTestimonials() {
       `}</style>
       <div style={{ maxWidth: 860, margin: "0 auto" }}>
         <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 34, fontWeight: 700, color: C.dark, marginBottom: 32, lineHeight: 1.2, letterSpacing: "-0.02em" }}>
-          Hear from some of{" "}<span style={{ color: C.teal }}>our patients</span>
+          Hear from one of{" "}<span style={{ color: C.teal }}>our patients</span>
         </h2>
         <div style={{ background: "white", borderRadius: 20, overflow: "hidden", boxShadow: "0 4px 40px rgba(31,61,45,0.10)", border: `1px solid ${C.border}` }}>
           {/* Video */}
@@ -122,22 +91,14 @@ export function PatientTestimonials() {
             {playing ? (
               <iframe
                 style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: 0 }}
-                src={`https://www.youtube.com/embed/${p.videoId}?autoplay=1&rel=0`}
+                src={`https://www.youtube.com/embed/${patient.videoId}?autoplay=1&rel=0`}
                 allow="autoplay; encrypted-media"
                 allowFullScreen
               />
             ) : (
               <>
                 <img
-                  src={p.placeholder ?? `https://img.youtube.com/vi/${p.videoId}/maxresdefault.jpg`}
-                  onError={e => {
-                    const el = e.currentTarget as HTMLImageElement;
-                    if (!p.placeholder && el.src.includes("maxresdefault")) {
-                      el.src = `https://img.youtube.com/vi/${p.videoId}/hqdefault.jpg`;
-                    } else if (!p.placeholder) {
-                      el.style.display = "none";
-                    }
-                  }}
+                  src={patient.placeholder}
                   alt=""
                   style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center", transition: "transform 0.5s ease", display: "block" }}
                 />
@@ -154,47 +115,16 @@ export function PatientTestimonials() {
                   </svg>
                 </div>
                 <div style={{ position: "absolute", bottom: 22, left: 24, zIndex: 2 }}>
-                  <p style={{ fontFamily: "'Sora', sans-serif", color: "white", fontSize: 18, fontWeight: 700, margin: 0, lineHeight: 1.2, textShadow: "0 1px 14px rgba(0,0,0,0.4)" }}>{p.name}</p>
-                  <span style={{ display: "inline-block", marginTop: 7, background: C.teal, color: "white", fontSize: 10, fontWeight: 600, padding: "3px 10px", borderRadius: 100, letterSpacing: "0.04em", textTransform: "uppercase" }}>{p.condition}</span>
+                  <p style={{ fontFamily: "'Sora', sans-serif", color: "white", fontSize: 18, fontWeight: 700, margin: 0, lineHeight: 1.2, textShadow: "0 1px 14px rgba(0,0,0,0.4)" }}>{patient.name}</p>
+                  <span style={{ display: "inline-block", marginTop: 7, background: C.teal, color: "white", fontSize: 10, fontWeight: 600, padding: "3px 10px", borderRadius: 100, letterSpacing: "0.04em", textTransform: "uppercase" }}>{patient.condition}</span>
                 </div>
               </>
             )}
           </div>
           {/* Stats */}
           <div style={{ display: "flex", borderTop: `1px solid ${C.border}` }}>
-            {p.stats.map((s, i) => <StatPanel key={i} s={s} borderLeft={i > 0} />)}
+            {patient.stats.map((s, i) => <StatPanel key={i} s={s} borderLeft={i > 0} />)}
           </div>
-        </div>
-        {/* Nav */}
-        <div style={{ marginTop: 24, display: "flex", alignItems: "center", gap: 14 }}>
-          <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
-            {patients.map((_, i) => (
-              <button key={i} onClick={() => goTo(i)} style={{ width: i === cur ? 26 : 8, height: 8, borderRadius: 100, border: "none", padding: 0, cursor: "pointer", background: i === cur ? C.teal : "#C8CEC9", transition: "all 0.3s ease" }} />
-            ))}
-          </div>
-          <div style={{ display: "flex", gap: 8 }}>
-            {arrowBtns.map(({ dir, pts, disabled, hover, setHover }) => (
-              <button key={dir} onClick={() => goTo(cur + dir)} disabled={disabled}
-                onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}
-                style={{ width: 40, height: 40, borderRadius: "50%", border: `1px solid ${hover && !disabled ? C.teal : "rgba(31,61,45,0.18)"}`, background: hover && !disabled ? C.teal : "white", color: hover && !disabled ? "white" : C.dark, display: "flex", alignItems: "center", justifyContent: "center", cursor: disabled ? "default" : "pointer", opacity: disabled ? 0.2 : 1, transition: "all 0.2s ease", padding: 0 }}
-              >
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-                  <polyline points={pts} />
-                </svg>
-              </button>
-            ))}
-          </div>
-        </div>
-        {/* CTA */}
-        <div style={{ marginTop: 16 }}>
-          <a href="#team" onMouseEnter={() => setHoverCTA(true)} onMouseLeave={() => setHoverCTA(false)}
-            style={{ fontFamily: "'Sora', sans-serif", display: "inline-flex", alignItems: "center", gap: 8, background: hoverCTA ? C.teal : C.dark, color: "white", fontSize: 13, fontWeight: 600, padding: "12px 28px", borderRadius: 100, textDecoration: "none", boxShadow: hoverCTA ? "0 8px 28px rgba(0,121,107,0.32)" : "0 4px 20px rgba(31,61,45,0.22)", transform: hoverCTA ? "translateY(-1px)" : "translateY(0)", transition: "all 0.2s ease", letterSpacing: "0.01em" }}
-          >
-            Meet the team
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
-            </svg>
-          </a>
         </div>
       </div>
     </section>

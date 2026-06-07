@@ -1,13 +1,14 @@
-import { GetStartedButton } from "@/components/get-started-button";
 import HeadWrapper from "@/components/headwrapper";
-import { Science } from "@/components/sections";
+import { Science, HowKetamineWorks } from "@/components/sections";
 
 const Page = () => {
   return (
     <HeadWrapper>
-      <div className="flex flex-col items-center justify-start gap-2 bg-primary px-6 py-28">
-        <Science />;
-        <GetStartedButton variant="inverted" />
+      <div className="flex flex-col">
+        <div className="flex flex-col items-center justify-start gap-2 bg-primary px-6 pb-16 pt-28">
+          <Science />
+        </div>
+        <HowKetamineWorks onSciencePage />
       </div>
     </HeadWrapper>
   );

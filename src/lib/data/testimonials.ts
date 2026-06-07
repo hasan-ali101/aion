@@ -1,21 +1,5 @@
 export const testimonials = [
   {
-    id: 10,
-    name: "Joe S",
-    age: 34,
-    complaint: "Substance Addiction",
-    platform: "google",
-    stars: 5,
-    avatar: {
-      skin: "#5C3A1E",
-      hair: "#1C1C1C",
-      hairStyle: "short-m",
-      shirt: "#1a4a4a",
-    },
-    quote:
-      "Incredible team providing **life-changing treatment** - would highly recommend!",
-  },
-  {
     id: 14,
     name: "Sean C",
     age: 43,

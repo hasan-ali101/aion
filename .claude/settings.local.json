@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(curl -L -o /Users/qasimali/aion/public/images/bupa-logo.png \"https://logo.clearbit.com/bupa.com\")",
+      "Bash(curl -L -o /Users/qasimali/aion/public/images/vitality-logo.png \"https://logo.clearbit.com/vitality.co.uk\")",
+      "Bash(curl -L -o /Users/qasimali/aion/public/images/cigna-logo.png \"https://logo.clearbit.com/cigna.com\")",
+      "Bash(npx tsc *)",
+      "Bash(git checkout *)"
+    ]
+  }
+}

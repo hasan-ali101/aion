@@ -13,13 +13,13 @@ import { ArrowRight } from "lucide-react";
 
 export const Questions = () => {
   const { pathname } = useRouter();
-  const isHomePage = pathname === "/";
+  const isKapPage = pathname === "/ketamine-assisted-therapy";
 
   return (
     <div
       id="questions"
       className={cn(
-        isHomePage ? "justify-start" : "justify-center",
+        isKapPage ? "justify-start" : "justify-center",
         "flex min-h-[500px] w-full flex-col items-center gap-10 bg-white px-4 py-20 md:px-20",
       )}
     >
@@ -30,55 +30,55 @@ export const Questions = () => {
           We Have Answers
         </span>
       </h2>
-      {isHomePage ? (
+      {isKapPage ? (
         <div className="flex w-full max-w-section flex-col md:flex-row md:gap-6">
           <Accordion type="single" collapsible className="w-full md:w-1/2">
             <AccordionItem value="item-1">
               <AccordionTrigger>
-                How does your treatment work?
+                How does ketamine-assisted psychotherapy work?
               </AccordionTrigger>
               <AccordionContent>
                 Treatment at Aion combines Acceptance and Commitment Therapy
-                (ACT) with psychedelic-assisted sessions to support deep
+                (ACT) with ketamine-assisted sessions to support deep
                 therapeutic change. ACT is an evidence-based approach that
                 fosters psychological flexibility — the ability to be present,
                 engage with painful emotions without avoidance, and act
                 according to personal values.
                 <br /> <br />
                 The program begins with preparatory talk therapy sessions to
-                clarify goals and prepare for your dosing experiences. This is
-                followed by four weekly dosing sessions, each followed the
+                clarify goals and prepare for ketamine experiences. This is
+                followed by four weekly ketamine sessions, each followed the
                 next day by an ACT-based integration session. These integration
                 sessions help process the psychedelic experience and embed
                 insights into ongoing therapy. Weekly exercises support progress
                 between sessions.
                 <br /> <br />
-                ACT and psychedelics work well together, both
-                promoting shifts in perspective and emotional openness. When
-                stuck in distress or addiction, we can develop rigid patterns to
-                avoid emotional pain. ACT helps gradually shift this
-                relationship with discomfort, encouraging openness and growth.
+                ACT and ketamine work well together, both promoting shifts in
+                perspective and emotional openness. When stuck in distress or
+                addiction, we can develop rigid patterns to avoid emotional
+                pain. ACT helps gradually shift this relationship with
+                discomfort, encouraging openness and growth.
                 <br /> <br />
-                Psychedelics, within a safe therapeutic setting, can create
+                Ketamine, within a safe therapeutic setting, can create
                 temporary but powerful perspective shifts that accelerate
-                healing. The aim of the course of therapy is to provide you with
-                the tools, insights, and confidence to continue your personal
-                development, improve relationships, and enhance overall life
-                experience beyond the program.{" "}
+                healing. The aim of the course of therapy is to provide you
+                with the tools, insights, and confidence to continue your
+                personal development, improve relationships, and enhance
+                overall life experience beyond the program.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
-              <AccordionTrigger>Is this treatment legal?</AccordionTrigger>
+              <AccordionTrigger>Is ketamine legal in the UK?</AccordionTrigger>
               <AccordionContent>
-                We use a licensed anaesthetic and pain-relief medication
-                that is widely used in the UK. Due to risks associated with recreational
+                Ketamine is a licensed anaesthetic and pain-relief medication
+                widely used in the UK. Due to risks associated with recreational
                 misuse, it is classified as a Class B controlled substance under
                 the Misuse of Drugs Act 1971. This means it is illegal to buy,
-                possess, or sell without proper medical authorisation.
+                possess, or sell ketamine without proper medical authorisation.
                 <br /> <br />
-                While it can be legally prescribed, it is not currently
+                While ketamine can be legally prescribed, it is not currently
                 licensed in the UK for treating mental health conditions.
-                Therefore, its use in our treatment is
+                Therefore, its use in ketamine-assisted psychotherapy is
                 considered off-label.
                 <br /> <br />
                 Prescribing any medication off-label requires the prescriber to
@@ -88,33 +88,33 @@ export const Questions = () => {
                     Licensed alternatives have been tried and found ineffective,
                   </li>
                   <li>
-                    The off-label use is likely to better meet the patient’s
+                    The off-label use is likely to better meet the patient&apos;s
                     needs,
                   </li>
                   <li>
                     There is sufficient clinical evidence supporting its
                     off-label use.
                   </li>
-                </ul>{" "}
+                </ul>
                 <br />
                 To meet these standards, Aion requires that you will have
                 already attempted conventional, licensed treatments for your
                 mental health condition without sufficient benefit before
-                starting our treatment.
+                starting ketamine-assisted therapy.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
               <AccordionTrigger>
-                Is this treatment safe? Does it have any risks or side effects?
+                Is ketamine therapy safe? Does it have any risks or side effects?
               </AccordionTrigger>
               <AccordionContent>
-                The treatment uses a safe anaesthetic, at doses much lower than
-                those used in hospital. It does not suppress breathing and mildly
+                Ketamine is a safe anaesthetic, even at doses much higher than
+                those used in therapy. It does not suppress breathing and mildly
                 stimulates the heart, making it suitable for use without
                 advanced airway support. It is listed as an essential medicine
                 by the WHO.
                 <br /> <br />
-                While it has abuse potential, therapeutic use under
+                While ketamine has abuse potential, therapeutic use under
                 medical supervision has a very low risk of serious side effects.
                 Common side effects include nausea, headache, dizziness, or
                 anxiety, which are usually temporary. Anti-nausea medication can
@@ -122,14 +122,14 @@ export const Questions = () => {
                 any anxiety.
                 <br /> <br />
                 We screen for medical and psychiatric conditions that may make
-                it unsafe, such as uncontrolled hypertension, severe
+                ketamine unsafe, such as uncontrolled hypertension, severe
                 cardiovascular or neurological diseases, liver/kidney issues,
                 psychotic or manic states, and BMI outside 16–35. If risks are
                 identified, treatment may be delayed until conditions are
                 stabilized.
                 <br /> <br />
                 During sessions, vital signs are monitored, and a nurse and
-                psychiatrist are onsite for safety. The medication's dissociative
+                psychiatrist are onsite for safety. Ketamine&apos;s dissociative
                 effects can feel unsettling but also offer therapeutic value. As
                 with other psychedelics, mindset and setting greatly influence
                 the experience. Rarely, sessions may lead to emotional
@@ -139,27 +139,29 @@ export const Questions = () => {
             </AccordionItem>
             <AccordionItem value="item-4">
               <AccordionTrigger>
-                What happens during a dosing session?
+                What happens during a ketamine session?
               </AccordionTrigger>
               <AccordionContent>
-                At the start of each session, our nurse will check your
+                At the start of each ketamine session, our nurse will check your
                 vitals (pulse, blood pressure) to ensure you&apos;re ready. Your
                 therapist will accompany you to the therapy room, which
                 you&apos;ll already know from preparatory sessions. You&apos;ll
                 settle on a couch with a weighted blanket, and can choose to
                 wear headphones and an eye-mask to support an inward-focused
-                experience—these will have been introduced earlier. <br />{" "}
-                <br />
+                experience—these will have been introduced earlier.
+                <br /> <br />
                 In preparatory sessions, you&apos;ll also discuss with your
                 therapist how you&apos;d like them to support you if you become
                 anxious during the session. This may include reassuring physical
                 contact, such as holding your hand—always guided by your
-                preferences. <br /> <br />
-                The nurse will prepare and administer the medication via a single
+                preferences.
+                <br /> <br />
+                The nurse will prepare and administer ketamine via a single
                 injection into your upper arm (like a flu jab). The initial dose
                 is at the lower end of the effective range and may be adjusted
                 over time in agreement with you and the clinical team,
-                prescribed by our psychiatrist. <br /> <br />
+                prescribed by our psychiatrist.
+                <br /> <br />
                 The effects begin in 3–5 minutes, lasting about 45–60 minutes.
                 You&apos;ll then have time to rest and recover, with a
                 post-session check-up. You must be accompanied home, as with
@@ -171,25 +173,29 @@ export const Questions = () => {
           <Accordion type="single" collapsible className="w-full md:w-1/2">
             <AccordionItem value="item-1">
               <AccordionTrigger>
-                What will I feel during the dosing sessions?
+                What will I feel during the ketamine sessions?
               </AccordionTrigger>
               <AccordionContent>
-                The medication induces non-ordinary states of consciousness that vary
-                depending on dose, mindset, and setting. In our treatment, preparatory sessions help you approach the
+                Ketamine induces non-ordinary states of consciousness that vary
+                depending on dose, mindset, and setting. In ketamine-assisted
+                psychotherapy, preparatory sessions help you approach the
                 experience with openness and curiosity, including strategies to
                 lean into discomfort if it arises. While fear can occur, it is
-                generally uncommon. <br /> <br />
+                generally uncommon.
+                <br /> <br />
                 At therapeutic doses, the experience is often described as
                 dreamlike, with reduced bodily awareness and a sense of
                 journeying through varied, symbolic, or abstract scenarios.
                 These may include sensory imagery, personal memories, or
                 transcendental experiences, often marked by a feeling of
-                movement or transformation. <br /> <br />
-                Unlike intravenous treatment used medically for depression—where
-                dissociative effects are minimized - at Aion these psychedelic
+                movement or transformation.
+                <br /> <br />
+                Unlike intravenous ketamine used medically for depression—where
+                dissociative effects are minimized—at Aion these psychedelic
                 aspects are embraced for their therapeutic value. They are more
                 likely to occur with a single intramuscular injection, the
-                method used in our approach. <br /> <br />
+                method used in our approach.
+                <br /> <br />
                 After the session, people typically feel calm and reflective.
                 The following days offer a unique period of enhanced
                 psychological flexibility, allowing new insights to be
@@ -200,13 +206,23 @@ export const Questions = () => {
             </AccordionItem>
             <AccordionItem value="item-2">
               <AccordionTrigger>
-                How much is treatment at Aion?
+                How much does treatment cost?
               </AccordionTrigger>
               <AccordionContent>
-                Our 8-week programme costs £5000 per patient. This includes an
+                Our 8-week programme costs £5,000 per patient. This includes an
                 initial medical assessment (approximately 1.5 hours) and 11
-                sessions of therapy - 4 dosing sessions (2 hours each)
+                sessions of therapy — 4 ketamine dosing sessions (2 hours each)
                 and 7 sessions of talking therapy (1 hour each).
+                <br /> <br />
+                We also offer booster sessions where clinically appropriate:
+                <ul className="ml-4 mt-2 list-inside list-disc">
+                  <li>1-week booster: £1,400</li>
+                  <li>2-week booster: £2,600</li>
+                </ul>
+                <br />
+                Some insurance providers (including Vitality) cover therapy and
+                medical assessment costs, with up to £1,000 potentially
+                reimbursable.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
@@ -217,9 +233,10 @@ export const Questions = () => {
                 Our treatment protocol is based on a deep bed of scientific
                 research, taking evidence and findings generated from years of
                 published literature and incorporating them into our model of
-                care. <br /> <br />
+                care.
+                <br /> <br />
                 <Link className="text-tertiaryDark underline" href="/science">
-                  Find out more in our Science section.{" "}
+                  Find out more in our Science section.
                 </Link>
               </AccordionContent>
             </AccordionItem>
@@ -230,25 +247,26 @@ export const Questions = () => {
               <AccordionContent>
                 We have more advice and information in our blog section, which
                 contains medically verified and reviewed information for you to
-                take a look through. <br /> <br />
+                take a look through.
+                <br /> <br />
                 <Link className="text-tertiaryDark underline" href="/blog">
-                  Find out more in our Blog section.{" "}
-                </Link>{" "}
+                  Find out more in our Blog section.
+                </Link>
                 <br /> <br />
                 If you still have questions and would like to contact us
-                directly, please use the link below for our contact information.{" "}
+                directly, please use the link below for our contact information.
                 <br /> <br />
                 <Link className="text-tertiaryDark underline" href="/contact">
-                  Reach out directly to us on our Contact Us page.{" "}
+                  Reach out directly to us on our Contact Us page.
                 </Link>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
         </div>
       ) : (
-        <Link href={"/#questions"} scroll={false}>
+        <Link href={"/ketamine-assisted-therapy#questions"}>
           <Button className="text-lg">
-            Go to FAQs <ArrowRight className="w-4" />
+            View full FAQs <ArrowRight className="w-4" />
           </Button>
         </Link>
       )}
