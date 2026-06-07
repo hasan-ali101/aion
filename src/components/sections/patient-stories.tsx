@@ -32,8 +32,8 @@ function StatPanel({ s, borderLeft }: { s: Stat; borderLeft: boolean }) {
   ];
   return (
     <div style={{ flex: 1, padding: "16px 20px 14px", borderLeft: borderLeft ? `1px solid ${C.border}` : "none" }}>
-      {/* Header row: label left, big percentage right */}
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10 }}>
+      {/* Header: label on top, percentage below */}
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 3, marginBottom: 10 }}>
         <p style={{ margin: 0, fontSize: 11, fontWeight: 700, color: C.dark, letterSpacing: "0.06em", textTransform: "uppercase" as const }}>{s.label}</p>
         <p style={{ margin: 0, fontSize: 22, fontWeight: 700, color: C.teal, lineHeight: 1 }}>{s.pct}</p>
       </div>
@@ -41,7 +41,7 @@ function StatPanel({ s, borderLeft }: { s: Stat; borderLeft: boolean }) {
         {cols.map(({ data, bg, textColor, weight, colLabel }) => {
           const barPx = Math.round((data.score / maxScore) * BAR_AREA);
           return (
-            <div key={colLabel} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", height: "100%", justifyContent: "flex-end" }}>
+            <div key={colLabel} style={{ width: 52, flexShrink: 0, display: "flex", flexDirection: "column", alignItems: "center", height: "100%", justifyContent: "flex-end" }}>
               <div style={{
                 width: "100%",
                 height: barPx,

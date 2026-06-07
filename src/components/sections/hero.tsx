@@ -34,7 +34,7 @@ export const Hero = () => {
         "Medication-assisted therapy for mental health. Same-week consultant medical assessment to assess eligibility.";
       break;
     case "ketamine-assisted-therapy":
-      title = "Ketamine-Assisted Therapy";
+      title = "Ketamine Therapy";
       subtitle =
         "Learn about ketamine-assisted therapy and how it can help treat mental health and addiction.";
       break;      
