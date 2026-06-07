@@ -143,7 +143,7 @@ export const Hero = () => {
               <div id="09a6o5fu" className="[&_a]:!bg-transparent [&_a]:!p-1" />
             </div>
             <div className="absolute -bottom-5 right-0 flex justify-end">
-              <div className="relative -mr-10 mt-16 flex h-48 w-48 items-center justify-center rounded-full bg-[#557585]">
+              <div className="relative -mr-10 mt-0 flex h-48 w-48 items-center justify-center rounded-full bg-[#557585]">
                 <Image
                   src="/images/hero_2.png"
                   width={526}
