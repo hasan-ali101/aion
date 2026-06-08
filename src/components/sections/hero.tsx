@@ -29,9 +29,9 @@ export const Hero = () => {
         "Evidence-based 8-week medication-assisted programme for treatment-resistant depression";
       break;
     case "mental-health-clinic":
-      title = "Private Mental Health Clinic in London";
+      title = "Mental Health Clinic in London";
       subtitle =
-        "Medication-assisted therapy for mental health. Same-week consultant medical assessment to assess eligibility.";
+        "Private ketamine-assisted therapy for mental health. Same-week consultant medical assessment to assess eligibility.";
       break;
     case "ketamine-assisted-therapy":
       title = "Ketamine Therapy";
@@ -142,8 +142,8 @@ export const Hero = () => {
             >
               <div id="09a6o5fu" className="[&_a]:!bg-transparent [&_a]:!p-1" />
             </div>
-            <div className="absolute -bottom-5 right-0 flex justify-end">
-              <div className="relative -mr-10 mt-0 flex h-48 w-48 items-center justify-center rounded-full bg-[#557585]">
+            <div className="absolute -bottom-16 right-0 flex justify-end md:-bottom-5">
+              <div className="relative -mr-10 flex h-48 w-48 items-center justify-center rounded-full bg-[#557585]">
                 <Image
                   src="/images/hero_2.png"
                   width={526}
