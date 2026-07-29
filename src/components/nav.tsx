@@ -1,6 +1,7 @@
 import { Menu } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import { cn } from "@/utils";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/sheet";
@@ -9,6 +10,8 @@ import { PageLinks } from "./page-links";
 import Link from "next/link";
 
 const Nav = () => {
+  const router = useRouter();
+  const hideGetStarted = router.pathname.startsWith("/book");
   const [isTop, setIsTop] = useState(true);
   const handleScroll = useCallback(() => {
     setIsTop(window.scrollY <= 10);
@@ -73,7 +76,7 @@ const Nav = () => {
         )}
       </div>
       <PageLinks className="hidden md:flex" />
-      <GetStartedButton variant={isTop ? "inverted" : "default"} />
+      {!hideGetStarted && <GetStartedButton variant={isTop ? "inverted" : "default"} />}
     </div>
   );
 };
