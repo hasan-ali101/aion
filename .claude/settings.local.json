@@ -8,7 +8,15 @@
       "Bash(npx tsc *)",
       "Bash(git checkout *)",
       "Bash(npm run *)",
-      "Bash(echo \"PID: $!\")"
+      "Bash(echo \"PID: $!\")",
+      "Bash(npx eslint *)",
+      "Bash(curl -s \"http://localhost:3000/api/cliniko/available-times?serviceId=ima&from=2026-07-28\")",
+      "Bash(python3 -m json.tool)",
+      "Bash(curl -s -X POST http://localhost:3000/api/cliniko/patients -H 'Content-Type: application/json' -d '{ *)",
+      "Bash(curl -s -X POST http://localhost:3000/api/cliniko/appointments -H 'Content-Type: application/json' -d '{ *)",
+      "Bash(time curl -s \"http://localhost:3000/api/cliniko/invoice?appointmentId=2004509867028521241\")",
+      "Bash(npm install *)",
+      "Bash(pnpm add *)"
     ]
   }
 }

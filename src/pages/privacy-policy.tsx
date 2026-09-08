@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { Button } from "@/components/button";
 
-const LAST_UPDATED = "1 Oct 2025";
+const LAST_UPDATED = "7 Sept 2026";
 
 const sections = [
   { id: "introduction", label: "1. Introduction" },
@@ -91,20 +91,30 @@ export default function PrivacyPolicy() {
                 treatment, deliver our healthcare services, and meet legal and regulatory requirements. The
                 lawful basis is <strong>explicit consent</strong> and, where health data is involved,
                 Article 9(2)(h) UK GDPR (provision of healthcare).            </p>
+            <p>
+                <strong>3.3</strong> Where you tell us you’d like to be kept informed of future opportunities
+                (such as clinical trials or reduced-cost places), we will retain your name and contact
+                details for this purpose for up to 2 years, based on your <strong>consent</strong>, which
+                you can withdraw at any time.
+            </p>
 
             <h2 id="sharing" className="mt-10 mb-4 scroll-mt-24">4. Sharing Your Information</h2>
             <p>4.1 We will never sell your personal data.</p>
             <p>
               4.2 We may share information only with: (a) healthcare professionals directly involved
-              in your care; (b) regulators where required by law; and (c) trusted third-party
-              providers (such as Cliniko, HubSpot, and Google) who support our operations under
-              strict confidentiality and data protection agreements.
+              in your care; (b) regulators where required by law; (c) trusted third-party
+              providers (such as Typeform, Cliniko, HubSpot, and Google) who support our operations under
+              strict confidentiality and data protection agreements; and (d) in the event of a complaint
+              that cannot be resolved internally, independent bodies such as the Medical Mediation
+              Foundation or the Independent Sector Complaints Adjudication Service (ISCAS).
             </p>
 
             <h2 id="security" className="mt-10 mb-4 scroll-mt-24">5. Data Protection and Security</h2>
             <p>
-              5.1 All personal data is stored securely and only kept for as long as necessary to
-              deliver our services and meet legal obligations.
+              5.1 Referral and health information relating to your care is generally retained for
+              20 years, in line with legal requirements for mental health treatment records. Where
+              a referral does not progress to treatment, your information is reviewed quarterly and
+              deleted where it is no longer required.
             </p>
             <p>
               5.2 We use appropriate technical and organisational safeguards to protect your data
@@ -133,7 +143,7 @@ export default function PrivacyPolicy() {
 
             <h2 id="contact" className="mt-10 mb-4 scroll-mt-24">8. Contact Us</h2>
             <p className="not-prose rounded-xl border bg-neutral-50 p-4 text-sm leading-6">
-              <span className="block font-medium">Data Protection Lead</span>
+              <span className="block font-medium">Data Protection Officer</span>
               Dr Qasim Ali
               <br />
               Email: <a href="mailto:support@aion-clinic.com">support@aion-clinic.com</a>
