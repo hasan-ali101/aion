@@ -33,7 +33,7 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
     imageUrl: "/images/team_1.1.png",
   },
   {
-    name: "Dr Qasim Ali",
+    name: "Qasim Ali",
     role: "Chief Executive Officer",
     description: (
       <div className="flex flex-col gap-4">

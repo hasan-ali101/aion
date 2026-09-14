@@ -144,7 +144,7 @@ export default function PrivacyPolicy() {
             <h2 id="contact" className="mt-10 mb-4 scroll-mt-24">8. Contact Us</h2>
             <p className="not-prose rounded-xl border bg-neutral-50 p-4 text-sm leading-6">
               <span className="block font-medium">Data Protection Officer</span>
-              Dr Qasim Ali
+              Qasim Ali
               <br />
               Email: <a href="mailto:support@aion-clinic.com">support@aion-clinic.com</a>
               <br />
