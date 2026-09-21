@@ -60,7 +60,7 @@ const getTeam = (isHomePage: boolean): TeamMember[] => [
       <div className="flex flex-col gap-4">
         <p>
           Laurie is an experienced clinical psychologist. Laurie has worked as a
-          lead therapist on clinical trials, with a special interest in working 
+          lead therapist on many occasions, with a special interest in working 
           with complex trauma, addictions and the use of innovative therapy to treat 
           a range of mental health difficulties.
         </p>
