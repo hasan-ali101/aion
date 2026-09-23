@@ -31,7 +31,7 @@ export const Hero = () => {
     case "mental-health-clinic":
       title = "Private Mental Health Treatment";
       subtitle =
-        "Ketamine-assisted therapy program for £5000. Same-week consultant medical assessment to assess eligibility.";
+        "8 week ketamine-assisted therapy program for £5000. Same-week consultant medical assessment.";
       break;
     case "ketamine-assisted-therapy":
       title = "Ketamine Therapy";
