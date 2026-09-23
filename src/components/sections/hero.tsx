@@ -29,9 +29,9 @@ export const Hero = () => {
         "Evidence-based 8-week medication-assisted programme for treatment-resistant depression";
       break;
     case "mental-health-clinic":
-      title = "Mental Health Clinic in London";
+      title = "Private Mental Health Treatment";
       subtitle =
-        "Private ketamine-assisted therapy for mental health. Same-week consultant medical assessment to assess eligibility.";
+        "Ketamine-assisted therapy program for £5000. Same-week consultant medical assessment to assess eligibility.";
       break;
     case "ketamine-assisted-therapy":
       title = "Ketamine Therapy";
